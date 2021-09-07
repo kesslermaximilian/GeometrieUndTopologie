@@ -13,15 +13,23 @@ I recommend to directly clone the repository with the submodules, this can be do
 ```git clone --recurse-submodules https://github.com/kesslermaximilian/GeometrieUndTopologie.git```   
 Alternatively, you can clone this repository as usual (or if you have done so already and are now struggling with compiling) and then have to obtain the submodule directly via   
 ``` git submodule update --init --merge --recurse ```   
-This will then clone the submodule into the corresponding folder.
+This will then clone the submodule into the corresponding folder. This command will also be initiated by an easy `make init`
 
 #### SSH issues
 If you are usually accessing git using `ssh`, it is possible that you have trouble cloning the submodule, as this is added over `https`. You will have to clone the usual repository first and then edit the `.submodules` file `git` provides and change the url of the submodule to the `ssh` version manually. Then run `gut submodule update` with above arguments. This should clone the submodule via `ssh` now.
 
 ### Tell TeX  where to find the packages
-By default, TeX will try to search for packages in your source folder, your tex installation folder (e.g. TeXLive) or your custom TeX folder (typically `~/texmf/tex/latex`). We use the `TEXINPUTS` environment variable to achieve this, so before compiling just enter   
+By default, TeX will try to search for packages in your source folder, your tex installation folder (e.g. TeXLive) or your custom TeX folder (typically `~/texmf/tex/latex`).
+- We use the `TEXINPUTS` environment variable to achieve this, so before compiling just enter   
 ```export TEXINPUTS=LatexPackages//:`   
-in your shell. TeX will now look in this directory (relative to the source file) for packages and properly find the custom packages. Note that this only holds for the current shell, you will have to enter this for each new shell you start.
+in your shell.
+- TeX will now look in this directory (relative to the source file) for packages and properly find the custom packages. Note that this only holds for the current shell, you will have to enter this for each new shell you start.
+- To simplify, there is a shell script `export_texinputs.sh` that will execute exactly this
+
+## Compile with make
+To simplify the compilation process even further, there is a `Makefile` that will automatically export the corresponding path correctly and then compile the document properly. This uses `latexmk`.
+
+### Document structure
 
 ## File Structure
 The main ```.tex``` Files are ```master.tex``` and ```Topologie.tex```. They both include 
