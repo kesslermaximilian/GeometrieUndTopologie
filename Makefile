@@ -11,6 +11,7 @@ init:
 	@cp .travis/git-info-2.sh .git/hooks/post-merge
 	@cp .travis/git-info-2.sh .git/hooks/post-checkout
 	@cp .travis/git-info-2.sh .git/hooks/post-commit
+	@.travis/git-info-2.sh
 
 config:
 	@echo "[Make config] Setting git configs to prevent wrong pushes"
