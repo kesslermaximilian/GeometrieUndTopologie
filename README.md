@@ -29,21 +29,21 @@ in your shell.
 ## Compile with make
 To simplify the compilation process even further, there is a `Makefile` that will automatically export the corresponding path correctly and then compile the document properly. This uses `latexmk`.
 
-### Document structure
+## Document structure
 
-## File Structure
+### File Structure
 The main ```.tex``` Files are ```master.tex``` and ```Topologie.tex```. They both include 
 - The file ```preamble.tex``` which is shared among all courses
 - The short ```abstract.tex```
 - All the ```lec_01.tex`` files (which include the lectures)
 - The exercises at the back of the document, which are found in the ```exercises``` subfolder
 
-## Why two files?
+### Why two files?
 - I use the ```master.tex``` file for writing up the lecture, here several things are excluded, usually only 2 lectures are compiled and notes are also shown.
   This is to improve compiling speed, as i often save + compile the file while writing it
 - Contrarily, in ```Topology.tex``` 'everything' is included, which means proper Bibliography, Indexing, Table of Contents and Appendices. Notes are not compiled to not disturb.
 
-## Figures
+### Figures
 I use a combination of 
 - hand-drawn figures, if i did not have time to make a proper one yet (or no motivation)
 - inkscape figures in ```.pdf_tex``` format, the source files are in the ```figures``` directory
