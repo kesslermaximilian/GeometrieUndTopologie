@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.com/kesslermaximilian/GeometrieUndTopologie.svg)](https://travis-ci.com/kesslermaximilian/GeometrieUndTopologie)
+
 # Geometrie und Topologie
 
 These are my lecture notes for the 'Einführung in die Geometrie und Topologie', taught by [Daniel Kasprowski](http://www.math.uni-bonn.de/people/daniel/) in the summer term 2021 at the University of Bonn. There is no guarantee for completeness or correctness.
