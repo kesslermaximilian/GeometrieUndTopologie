@@ -27,7 +27,9 @@ in your shell.
 - To simplify, there is a shell script `export_texinputs.sh` that will execute exactly this. To call it, use `source ./export_texinputs.sh` so that the export command is executed in your current shell and not in a newly-created subshell
 
 ### Compile with make
-To simplify the compilation process even further, there is a `Makefile` that will automatically export the corresponding path correctly and then compile the document properly. This uses `latexmk`.
+To simplify the compilation process even further, there is a `Makefile` that will automatically export the corresponding path correctly and then compile the document properly. This uses `latexmk`. Run
+- `make master` to only compile the (smaller) master version.
+- `make full` or just `make` to compile the full document.
 
 ## Document structure
 
