@@ -1,3 +1,4 @@
 [submodule "LatexPackages"]
 	path = LatexPackages
-	url = https://github.com/kesslermaximilian/LatexPackages.git
+    url = https://github.com/kesslermaximilian/LatexPackages.git
+    branch = geometrie-und-topologie
