@@ -9,8 +9,6 @@ addons:
       - sourceline: 'ppa:jonathonf/texlive'
     packages:
       - wget
-      - freeglut3
-      - ghostscript
       - tree
       - texlive-latex-recommended
       - texlive-latex-extra
@@ -27,13 +25,7 @@ env:
     - TEXINPUTS='LatexPackages//:'
 
 script:
-    - ls
-    - cd figures
-    - ls
-    - cd ..
     - make full
-    # ...
-    # latexmk -pdf -halt-on-error -quiet -interaction=batchmode
 
 before_deploy:
     - mkdir dist
