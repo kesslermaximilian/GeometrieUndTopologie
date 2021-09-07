@@ -21,6 +21,10 @@ addons:
       - biber
       - make
       
+before_install:
+  - chmod +x .travis/git-info-2.sh
+  - ".travis/git-info-2.sh"
+
 env:
     - TEXINPUTS='LatexPackages//:'
 
