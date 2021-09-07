@@ -1,1 +1,1 @@
-export TEXINPUTS = LatexPackages//:
+export TEXINPUTS=LatexPackages//:
