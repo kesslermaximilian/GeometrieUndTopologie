@@ -27,7 +27,7 @@
 % Put x \to \infty below \lim
 \let\svlim\lim\def\lim{\svlim\limits}
 
-\input{exercises/preambleBlatt.tex}
+\import{inputs/exercises/}{preambleBlatt.tex}
 
 \usepackage{todonotes}
 \setuptodonotes{disable}
@@ -39,7 +39,7 @@
 \begin{document}
     \maketitle
 
-    \input{abstract.tex}
+    \import{inputs/}{abstract.tex}
 
     %Table of contents
     \cleardoublepage
@@ -54,29 +54,29 @@
 
     \cleardoublepage
     % start lectures
-    \import{lectures/}{lec_01.tex}
-    \import{lectures/}{lec_02.tex}
-    \import{lectures/}{lec_03.tex}
-    \import{lectures/}{lec_04.tex}
-    \import{lectures/}{lec_05.tex}
-    \import{lectures/}{lec_06.tex}
-    \import{lectures/}{lec_07.tex}
-    \import{lectures/}{lec_08.tex}
-    \import{lectures/}{lec_09.tex}
-    \import{lectures/}{lec_10.tex}
-    \import{lectures/}{lec_11.tex}
-    \import{lectures/}{lec_12.tex}
-    \import{lectures/}{lec_13.tex}
-    \import{lectures/}{lec_14.tex}
-    \import{lectures/}{lec_15.tex}
-    \import{lectures/}{lec_16.tex}
-    \import{lectures/}{lec_17.tex}
-    \import{lectures/}{lec_18.tex}
-    \import{lectures/}{lec_19.tex}
-    \import{lectures/}{lec_20.tex}
-    \import{lectures/}{lec_21.tex}
-    \import{lectures/}{lec_22.tex}
-    \import{lectures/}{lec_23.tex}
+    \import{inputs/lectures/}{lec_01.tex}
+    \import{inputs/lectures/}{lec_02.tex}
+    \import{inputs/lectures/}{lec_03.tex}
+    \import{inputs/lectures/}{lec_04.tex}
+    \import{inputs/lectures/}{lec_05.tex}
+    \import{inputs/lectures/}{lec_06.tex}
+    \import{inputs/lectures/}{lec_07.tex}
+    \import{inputs/lectures/}{lec_08.tex}
+    \import{inputs/lectures/}{lec_09.tex}
+    \import{inputs/lectures/}{lec_10.tex}
+    \import{inputs/lectures/}{lec_11.tex}
+    \import{inputs/lectures/}{lec_12.tex}
+    \import{inputs/lectures/}{lec_13.tex}
+    \import{inputs/lectures/}{lec_14.tex}
+    \import{inputs/lectures/}{lec_15.tex}
+    \import{inputs/lectures/}{lec_16.tex}
+    \import{inputs/lectures/}{lec_17.tex}
+    \import{inputs/lectures/}{lec_18.tex}
+    \import{inputs/lectures/}{lec_19.tex}
+    \import{inputs/lectures/}{lec_20.tex}
+    \import{inputs/lectures/}{lec_21.tex}
+    \import{inputs/lectures/}{lec_22.tex}
+    \import{inputs/lectures/}{lec_23.tex}
     % end lectures
 
     %Start appendix
@@ -85,11 +85,11 @@
     \part{Anhang}
 
     %Exercises of the lecture
-    \input{exercises/exercises.tex}
+    \import{inputs/exercises/}{exercises.tex}
     
     %Explanation of environments
     \cleardoublepage
-    \input{environments.tex}
+    \import{inputs/}{environments.tex}
 
     %Index
     \cleardoublepage
