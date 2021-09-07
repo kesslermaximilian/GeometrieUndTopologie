@@ -1,0 +1,53 @@
+sudo: true
+dist: bionic
+language: generic
+cache: apt
+
+addons:
+  apt:
+    sources:
+      - sourceline: 'ppa:jonathonf/texlive'
+    packages:
+      - wget
+      - freeglut3
+      - ghostscript
+      - tree
+      - texlive-latex-recommended
+      - texlive-latex-extra
+      - texlive-fonts-extra
+      - texlive-lang-german
+      - texlive-science
+      - texlive-bibtex-extra
+      - lmodern
+      - latexmk
+      - biber
+      - make
+      
+env:
+    - TEXINPUTS='LatexPackages//:'
+
+script:
+    - ls
+    - cd figures
+    - ls
+    - cd ..
+    - make full
+    # ...
+    # latexmk -pdf -halt-on-error -quiet -interaction=batchmode
+
+before_deploy:
+    - mkdir dist
+    - mv full.pdf dist/
+    - mv full.log dist/
+    - cd dist/
+    - ls
+    - tree -H '.' -I "index.html" -D --charset utf-8 -T "Geometrie und Topologie" > index.html
+
+deploy:
+    provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    local-dir: dist/
+    keep-history: false
+    on:
+        branch: master
