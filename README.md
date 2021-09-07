@@ -5,7 +5,7 @@
 These are my lecture notes for the 'Einführung in die Geometrie und Topologie', taught by [Daniel Kasprowski](http://www.math.uni-bonn.de/people/daniel/) in the summer term 2021 at the University of Bonn. There is no guarantee for completeness or correctness.
 
 - The homepage of the course can also be found [here](http://www.math.uni-bonn.de/people/daniel/2021/geotopo/)
-- The [most recent version](kesslermaximilian.github.io/GeometrieUndTopologie/full.pdf) of this script is made available with [Travis CI](https://github.com/traviscibot). You can also have a look at the [generated log files](kesslermaximilian.github.io/GeometrieUndTopologie/full.log)
+- The [most recent version](https://kesslermaximilian.github.io/GeometrieUndTopologie/full.pdf) of this script is made available with [Travis CI](https://github.com/traviscibot). You can also have a look at the [generated log files](https://kesslermaximilian.github.io/GeometrieUndTopologie/full.log)
 
 ## Set-up
 This document uses custom packages, so you you won't be directly able to compile this document. They are available as my [Latex Packages](https://github.com/kesslermaximilian/LatexPackages) repository and added as a submodule to this repository. You will have to clone them as well and tell TeX where to find these before compiling. Follow these steps:
