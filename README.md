@@ -2,7 +2,7 @@
 
 These are my lecture notes for the 'Einführung in die Geometrie und Topologie', taught by [Daniel Kasprowski](http://www.math.uni-bonn.de/people/daniel/) in the summer term 2021 at the University of Bonn. There is no guarantee for completeness or correctness.
 
-- The homepage of the course can also be found at TODO
+- The homepage of the course can also be found [here](http://www.math.uni-bonn.de/people/daniel/2021/geotopo/)
 - The most recent (compiled) version of the script can be found at TODO
 
 ## Set-up
