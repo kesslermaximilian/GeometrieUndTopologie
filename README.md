@@ -1,3 +1,17 @@
+# Geometrie und Topologie
+
+These are my lecture notes for the 'Einführung in die Geometrie und Topologie', taught by [Daniel Kasprowski](http://www.math.uni-bonn.de/people/daniel/) in the summer term 2021 at the University of Bonn. There is no guarantee for completeness or correctness.
+
+- The homepage of the course can also be found at TODO
+- The most recent (compiled) version of the script can be found at TODO
+
+## Set-up
+This document uses custom packages, so you you won't be directly able to compile this document. They are available as my [Latex Packages](https://github.com/kesslermaximilian/LatexPackages) repository and added as a submodule to this repository. You will have to clone them as well and tell TeX where to find these before compiling. Follow these steps:
+
+### Clone the repository
+        I recommend to directly clone the repository with the submodules, this can be done via
+```git clone --recurse-submodules https://github.com/kesslermaximilian/GeometrieUndTopologie.git```
+
 ## File Structure
 The main ```.tex``` Files are ```master.tex``` and ```Topologie.tex```. They both include 
 - The file ```preamble.tex``` which is shared among all courses
