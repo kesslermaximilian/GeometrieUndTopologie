@@ -26,7 +26,7 @@ in your shell.
 - TeX will now look in this directory (relative to the source file) for packages and properly find the custom packages. Note that this only holds for the current shell, you will have to enter this for each new shell you start.
 - To simplify, there is a shell script `export_texinputs.sh` that will execute exactly this. To call it, use `source ./export_texinputs.sh` so that the export command is executed in your current shell and not in a newly-created subshell
 
-## Compile with make
+### Compile with make
 To simplify the compilation process even further, there is a `Makefile` that will automatically export the corresponding path correctly and then compile the document properly. This uses `latexmk`.
 
 ## Document structure
