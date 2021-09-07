@@ -49,3 +49,7 @@
 
 ##idk what this is, but lets ignore it
 *.gnuplot
+
+
+## pdf files
+*.pdf
