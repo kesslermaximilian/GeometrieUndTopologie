@@ -31,8 +31,12 @@ env:
 
 script:
     - make full-with-gnuplots
+    - make gnuplots-master
 
 before_deploy:
+    - mkdir gnuplots
+    - mv full.gnuplots gnuplots
+    - mv master.gnuplots gnuplots
     - mkdir dist
     - mv full.pdf dist/2021_Topologie.pdf
     - mv full.log dist/2021_Topologie.log
@@ -41,10 +45,18 @@ before_deploy:
     - tree -H '.' -I "index.html" -D --charset utf-8 -T "Geometrie und Topologie" > index.html
 
 deploy:
-    provider: pages
-    skip-cleanup: true
-    github-token: $GITHUB_TOKEN
-    local-dir: dist/
-    keep-history: false
-    on:
+    - provider: pages
+      skip-cleanup: true
+      github-token: $GITHUB_TOKEN
+      local-dir: dist/
+      keep-history: false
+      on:
         branch: master
+    - provider: pages
+      skip-cleanup: true
+      github-token: $GITHUB_TOKEN
+      local-dir: gnuplots/
+      keep-history: false
+      target_branch: gnuplots
+      on:
+          branch: master
