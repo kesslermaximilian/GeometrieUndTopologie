@@ -62,21 +62,30 @@ gnuplots-master: master.gnuplots
 # (Re)computes all gnuplot files
 gnuplots: gnuplots-full gnuplots-master
 
+# Gets the current gnuplot directories from origin
 get-gnuplots:
-	git checkout gnuplots full.gnuplots
-	git checkout gnuplots master.gnuplots
+	git checkout origin/gnuplots full.gnuplots
+	git restore --staged full.gnuplots/
+	git checkout origin/gnuplots master.gnuplots
+	git restore --staged master.gnuplots/
 
 #### Initialization and configuration of git repository
 
-# Initializes submodule and git hooks for this repository
-init: get-gnuplots
+# Initializes the submodule, i.e. clones it correctly
+init-submodule:
 	@echo "[Make] Initialising submodules..."
 	@git submodule update --init --rebase
+
+# Sets up git hooks for gitinfo2 package
+init-git-hooks:
 	@echo "[Make] Setting up git hooks for package gitinfo2"
 	@cp .travis/git-info-2.sh .git/hooks/post-merge
 	@cp .travis/git-info-2.sh .git/hooks/post-checkout
 	@cp .travis/git-info-2.sh .git/hooks/post-commit
 	@.travis/git-info-2.sh
+
+# Initializes submodule and git hooks for this repository
+init: init-submodule init-git-hooks get-gnuplots
 
 # Sets appropriate git configuration for this repository
 config:
