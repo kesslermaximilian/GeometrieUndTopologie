@@ -37,15 +37,11 @@
 ##swap files
 *.swp
 
-##swp-files
-*.swp
-
 ##other help files
 *.idx
 *.ilg
 *.ind
 *.lec
-
 
 ## pdf files
 *.pdf
