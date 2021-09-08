@@ -47,9 +47,9 @@
 *.lec
 
 
-##idk what this is, but lets ignore it
-*.gnuplot
-
-
 ## pdf files
 *.pdf
+
+## Gnuplot directories
+master.gnuplots/
+full.gnuplots/
