@@ -23,6 +23,10 @@ full-with-gnuplots: gnuplots-full
 	@make full-pdflatex # This ensures re-compilation for the gnuplots
 	@make full # Latexmk now takes care of biber etc (possibly no further runs are required)
 
+# Compiles the master document, as well as re-computing the gnuplots.
+master-with-gnuplots: gnuplots-master
+	@make master-pdflatex
+	@make master
 
 #### Gnuplot-related targets
 
