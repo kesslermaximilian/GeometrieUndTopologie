@@ -19,6 +19,7 @@ addons:
       - lmodern
       - latexmk
       - biber
+      - gnuplot
       - make
       
 before_install:
@@ -29,7 +30,7 @@ env:
     - TEXINPUTS='LatexPackages//:'
 
 script:
-    - make full
+    - make full-with-gnuplots
 
 before_deploy:
     - mkdir dist
