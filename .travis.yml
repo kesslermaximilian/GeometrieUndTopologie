@@ -32,8 +32,6 @@ env:
 script:
     - make full-with-gnuplots
     - make gnuplots-master
-
-before_deploy:
     - mkdir gnuplots
     - mv full.gnuplots gnuplots
     - mv master.gnuplots gnuplots
