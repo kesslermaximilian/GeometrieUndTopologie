@@ -62,12 +62,14 @@ gnuplots-master: master.gnuplots
 # (Re)computes all gnuplot files
 gnuplots: gnuplots-full gnuplots-master
 
-
+get-gnuplots:
+	git checkout gnuplots full.gnuplots
+	git checkout gnuplots master.gnuplots
 
 #### Initialization and configuration of git repository
 
 # Initializes submodule and git hooks for this repository
-init:
+init: get-gnuplots
 	@echo "[Make] Initialising submodules..."
 	@git submodule update --init --rebase
 	@echo "[Make] Setting up git hooks for package gitinfo2"
