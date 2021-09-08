@@ -32,8 +32,8 @@ env:
 script:
     - make full-with-gnuplots
     - make gnuplots-master
-
-before_deploy:
+    - touch full.gnuplots/.gitkeep
+    - touch master.gnuplots/.gitkeep
     - mkdir gnuplots
     - mv full.gnuplots gnuplots
     - mv master.gnuplots gnuplots
