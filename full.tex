@@ -8,10 +8,12 @@
 \usepackage{mkessler-hypersetup}
 \usepackage{mkessler-math}
 \usepackage[lecturenumbers = true, number small environment = theorem]{mkessler-fancythm}
-\usepackage{mkessler-vocab}
+\usepackage[index]{mkessler-vocab}
 \usepackage{mkessler-bibliography}
 \usepackage[fancyhead]{mkessler-lectures}
-\usepackage{castel-figures}
+\usepackage{castel-incfig}
+
+\usepackage{removed}
 
 \usepackage{float}
 
@@ -19,7 +21,6 @@
 
 \usepackage{todonotes}
 \setuptodonotes{disable}
-
 
 \usepackage{import}
 
@@ -78,7 +79,7 @@
 
     %Index
     \cleardoublepage
-    \printindex
+    \printvocabindex
 
     %Image attributions
     \cleardoublepage
