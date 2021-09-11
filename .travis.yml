@@ -23,6 +23,7 @@ addons:
       - make
       
 before_install:
+  - wget 'https://packages.oth-regensburg.de/ctan/macros/latex/contrib/IEEEtran/tools/IEEEtrantools.sty'
   - chmod +x .travis/git-info-2.sh
   - ".travis/git-info-2.sh"
 
