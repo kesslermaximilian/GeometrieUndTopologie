@@ -5,36 +5,7 @@
 \assistant[f]{Arunima Ray}
 \author{Maximilian Keßler}
 
-\usepackage{mkessler-hypersetup}
-\usepackage{mkessler-math}
-\usepackage{mkessler-fancythm}
-\usepackage{mkessler-vocab}
-\usepackage{mkessler-bibliography}
-\usepackage[fancyhead]{mkessler-lectures}
-\usepackage{castel-figures}
-
-\RequirePackage{float}
-
-% for wrapping text around figures
-\RequirePackage{wrapfig}
-
-% Don't indent paragraphs, leave some space between them
-\RequirePackage{parskip}
-
-% Hide page number when page is empty
-\RequirePackage{emptypage}
-
-% Put x \to \infty below \lim
-\let\svlim\lim\def\lim{\svlim\limits}
-
-\import{inputs/exercises/}{preambleBlatt.tex}
-
-\usepackage{todonotes}
-\setuptodonotes{disable}
-
-
-\usepackage{import}
-
+\usepackage{mkessler-geotopo}
 
 \begin{document}
     \maketitle
@@ -47,12 +18,6 @@
     \summaryoflectures
     \newpage
     % start lectures
-    \setcounter{section}{20}
-    \setcounter{dummy}{8}
-    \setcounter{smalldummy}{0}
-    \setcounter{figure}{29}
-    \setcounter{claim}{1}
-    \setcounter{lecture}{22}
     \import{inputs/lectures/}{lec_23.tex}
     % end lectures
 \end{document}

@@ -1,10 +1,10 @@
 %! TEX root = ./master.tex
 \lecture[Kontravariante Funktoren. Dualkategorie. Dualraum als Funktor. Natürliche Transformationen und natürliche Äquivalenz von Kategorien. Doppelter Dualfunktor als natürliche Transformation. Abelisierung von Gruppen. Diagramme. Initial- und Terminalobjekte. Diagramme. Kegel, Kegelkategorie. Limiten und Kolimiten: Produkt, Koprodukt, Faserprodukt, Pushout.]{Di 01 Jun 2021 12:15}{Funktoren, Limiten}
 \begin{definition}[kontravarianter Funktor]\label{def:kontravarianter-funktor}
-   Ein \vocab{kontravarianter} Funktor $\mathcal{F} : \cat{C} \to  \cat{D}$ besteht aus
+   Ein \vocab{kontravarianter} Funktor $\mathcal{F} : \mathcat{C} \to  \mathcat{D}$ besteht aus
    \begin{itemize}
-       \item einer Abbildung $\mathcal{F}: \Ob(\mathcal{C}) \to  \Ob(\cat{D})$
-       \item Abbildungen $\mathcal{F}\colon  \Mor_{\mathcal{C}}(X,Y) \to  \Mor_{\cat{D}}(\mathcal{F}(Y), \mathcal{F}(X))$ für $X,Y \in  \Ob(\cat{C})$
+       \item einer Abbildung $\mathcal{F}: \Ob(\mathcal{C}) \to  \Ob(\mathcat{D})$
+       \item Abbildungen $\mathcal{F}\colon  \Mor_{\mathcal{C}}(X,Y) \to  \Mor_{\mathcat{D}}(\mathcal{F}(Y), \mathcal{F}(X))$ für $X,Y \in  \Ob(\mathcat{C})$
    \end{itemize}
    sodass
    \[
@@ -34,22 +34,22 @@
 \end{remark*}
 
 \begin{definition}[Dualkategorie]\label{def:dualkategorie}
-    Ist $\cat{C}$ eine Kategorie, so ist $\mathcal{C}^{\op}$ die Kategorie mit $\Ob(\mathcal{C}^{\op}) = \Ob(\cat{C})$, sowie $\Mor_{\cat{C}^{\op}}(X,Y) \coloneqq \Mor_{\cat{C}}(Y,X)$, und 'denselben' Verknüpfungen.
+    Ist $\mathcat{C}$ eine Kategorie, so ist $\mathcal{C}^{\op}$ die Kategorie mit $\Ob(\mathcal{C}^{\op}) = \Ob(\mathcat{C})$, sowie $\Mor_{\mathcat{C}^{\op}}(X,Y) \coloneqq \Mor_{\mathcat{C}}(Y,X)$, und 'denselben' Verknüpfungen.
 \end{definition}
 
 \begin{remark*}
-    'Dieselben' Verknüpfungen, d.h für $X,Y,Z \in  \Ob(\cat{C}^{\op}) = \Ob(\cat{C})$ definieren wir:
+    'Dieselben' Verknüpfungen, d.h für $X,Y,Z \in  \Ob(\mathcat{C}^{\op}) = \Ob(\mathcat{C})$ definieren wir:
         \begin{equation*}
-        \circ _{\cat{C}^{\op}}: \left| \begin{array}{c c l} 
-            \Mor_{\cat{C}^{\op}}(X,Y) \times  \Mor_{\cat{C}^{\op}}(Y,Z) & \longrightarrow & \Mor_{\cat{C}^{\op}}(X,Z) \\
-            (f,g) & \longmapsto &  f \circ _{\cat{C}} g
+        \circ _{\mathcat{C}^{\op}}: \left| \begin{array}{c c l} 
+            \Mor_{\mathcat{C}^{\op}}(X,Y) \times  \Mor_{\mathcat{C}^{\op}}(Y,Z) & \longrightarrow & \Mor_{\mathcat{C}^{\op}}(X,Z) \\
+            (f,g) & \longmapsto &  f \circ _{\mathcat{C}} g
         \end{array} \right.
     \end{equation*}
-    indem wir uns erinnern, dass $f \in \Mor_{\cat{C}}(Y,X)$ und $g\in \Mor_{\cat{C}}(Z,Y)$
+    indem wir uns erinnern, dass $f \in \Mor_{\mathcat{C}}(Y,X)$ und $g\in \Mor_{\mathcat{C}}(Z,Y)$
 \end{remark*}
 
 \begin{lemma}\label{lm:kovariante-funktoren-sind-funktoren-von-der-dualen-kategorie}
-    Ein kontravarianter Funktor $\mathcal{F}\colon \cat{C} \to  \cat{D}$ ist ein (kovarianter) Funktor $\mathcal{F}\colon  \cat{C}^{\op} \to  \cat{D}$.
+    Ein kontravarianter Funktor $\mathcal{F}\colon \mathcat{C} \to  \mathcat{D}$ ist ein (kovarianter) Funktor $\mathcal{F}\colon  \mathcat{C}^{\op} \to  \mathcat{D}$.
 \end{lemma}
 \begin{proof*}
     Nur Definitionen ausschreiben, wirklich nichts spannendes, sollte man aber einmal machen als Übung.
@@ -69,12 +69,12 @@ $\Vect_{\R}^{\op} \stackrel{(\cdot )^*}{\longrightarrow} \Vect_{\R}$ als kovaria
 \end{oral}
 
 \begin{definition}[natürliche Transformation und Äquivalenz]\label{def:natürliche-transformation-und-äquivalenz}
-    Seien $\mathcal{F},\mathcal{G}\colon  \cat{C} \to  \cat{D}$ zwei Funktoren. 
+    Seien $\mathcal{F},\mathcal{G}\colon  \mathcat{C} \to  \mathcat{D}$ zwei Funktoren. 
     \begin{enumerate}[i)]
         \item 
-    Eine \vocab{natürliche Transformation} $t\colon  \mathcal{F} \to  \mathcal{G}$ ist eine Familie von Morphismen (in $\cat{D}$)
+    Eine \vocab{natürliche Transformation} $t\colon  \mathcal{F} \to  \mathcal{G}$ ist eine Familie von Morphismen (in $\mathcat{D}$)
     \[
-        \left \{t_X \in  \Mor_{\cat{D}}(\mathcal{F}(X),\mathcal{G}(X))\right\} _{X\in \Ob(\cat{C})}
+        \left \{t_X \in  \Mor_{\mathcat{D}}(\mathcal{F}(X),\mathcal{G}(X))\right\} _{X\in \Ob(\mathcat{C})}
     .\] 
     sodass das Diagramm
     \begin{equation*}
@@ -85,7 +85,7 @@ $\Vect_{\R}^{\op} \stackrel{(\cdot )^*}{\longrightarrow} \Vect_{\R}$ als kovaria
     \end{equation*}
     kommutiert.
 \item $t$ ist eine  \vocab{natürliche Äquivalenz} (auch natürlicher Isomorphismus genannt), falls jedes $t_X$ ein Isomorphismus ist. 
-\item $\mathcal{F}\colon  \cat{C} \to  \cat{D}$ ist eine \vocab{Äquivalenz} (von Kategorien), falls es einen Funktor $\mathcal{G} \colon  \mathcal{D} \to  \cat{C}$ gibt, sodass $\mathcal{F} \circ  \mathcal{G}$ und $\mathcal{G} \circ  \mathcal{F}$ jeweils natürlich äquivalent zum Identitätsfunktor sind.
+\item $\mathcal{F}\colon  \mathcat{C} \to  \mathcat{D}$ ist eine \vocab{Äquivalenz} (von Kategorien), falls es einen Funktor $\mathcal{G} \colon  \mathcal{D} \to  \mathcat{C}$ gibt, sodass $\mathcal{F} \circ  \mathcal{G}$ und $\mathcal{G} \circ  \mathcal{F}$ jeweils natürlich äquivalent zum Identitätsfunktor sind.
     \end{enumerate}
 \end{definition}
 
@@ -149,8 +149,8 @@ und damit erhalten wir die gleiche reelle Zahl, also schlussendlich $(\ev_v^*)^*
 
     \begin{oral}
         Man kann zeigen, dass ein Funktor $\mathcal{F}$ genau dann eine natürliche Äquivalenz ist, wenn er essentiell surjektiv  und eine Bijektion auf den Morphismen ist. \\
-        Essentiell surjektiv bedeutet, dass für jedes Objekt $Y\in \cat{D}$ ein zu $Y$ isomorphes Objekt  $Z$ existiert, das im Bild von  $\mathcal{F}$ liegt. \\
-        Bijektion auf Morphismen heißt, dass $\mathcal{F}$ einen Isomorphismus $\Mor_{\cat{C}}(X,Y) \cong \Mor_{\cat{D}}(\mathcal{F}(X), \mathcal{F}(Y))$ mittels $f \mapsto \mathcal{F}(f)$ induziert.
+        Essentiell surjektiv bedeutet, dass für jedes Objekt $Y\in \mathcat{D}$ ein zu $Y$ isomorphes Objekt  $Z$ existiert, das im Bild von  $\mathcal{F}$ liegt. \\
+        Bijektion auf Morphismen heißt, dass $\mathcal{F}$ einen Isomorphismus $\Mor_{\mathcat{C}}(X,Y) \cong \Mor_{\mathcat{D}}(\mathcal{F}(X), \mathcal{F}(Y))$ mittels $f \mapsto \mathcal{F}(f)$ induziert.
     \end{oral}
 
 \begin{oral}
@@ -199,7 +199,7 @@ Es sei gesagt, dass wir jede Gruppe in obiger Form darstellen können, indem wir
 \subsection{Limiten und Kolimiten}
 Um Limiten und Kolimiten zu betrachten, brauchen wir sogenannte \vocab{Diagramme}:
 
-Sei $\cat{C}$ eine Kategorie und $\cat{I}$ eine kleine Kategorie. Wir stellen uns dann $\cat{I}$ als Diagramm vor, z.B. eines der folgenden drei Beispiele:
+Sei $\mathcat{C}$ eine Kategorie und $\mathcat{I}$ eine kleine Kategorie. Wir stellen uns dann $\mathcat{I}$ als Diagramm vor, z.B. eines der folgenden drei Beispiele:
 
 \begin{equation}
 \begin{tikzcd}
@@ -218,9 +218,9 @@ Sei $\cat{C}$ eine Kategorie und $\cat{I}$ eine kleine Kategorie. Wir stellen un
 \end{equation}
 
 \begin{definition}[Terminales Objekt]
-    Ein \vocab{terminales} Objekt in $\cat{C}$ ist ein Objekt $X\in \Ob(\cat{C})$, sodass es für alle $Y\in \Ob(\cat{C})$ enien eindeutigen Morphismus $Y \to  X$ gibt, d.h.
+    Ein \vocab{terminales} Objekt in $\mathcat{C}$ ist ein Objekt $X\in \Ob(\mathcat{C})$, sodass es für alle $Y\in \Ob(\mathcat{C})$ enien eindeutigen Morphismus $Y \to  X$ gibt, d.h.
      \[
-         \forall Y\in \Ob(\cat{C})\colon  \qquad \Mor_{\cat{C}}(Y,X) = \left \{\star\right\} 
+         \forall Y\in \Ob(\mathcat{C})\colon  \qquad \Mor_{\mathcat{C}}(Y,X) = \left \{\star\right\} 
     .\] 
 \end{definition}
 \begin{oral}
@@ -236,15 +236,15 @@ Sei $\cat{C}$ eine Kategorie und $\cat{I}$ eine kleine Kategorie. Wir stellen un
 \end{remark*}
 
 \begin{dabuse}
-    Sei $\cat{I}$ eine kleine Kategorie, $\cat{C}$ eine beliebige Kategorie und $X\colon  \cat{I} \to  \cat{C}$ ein Funktor. Für $i\in \Ob(\cat{I})$ schreiben wir auch kurz $X_i \coloneqq  X(i)$, um die entsprechenden Bildobjekte des Funktors in $\cat{C}$ zu bezeichnen.
+    Sei $\mathcat{I}$ eine kleine Kategorie, $\mathcat{C}$ eine beliebige Kategorie und $X\colon  \mathcat{I} \to  \mathcat{C}$ ein Funktor. Für $i\in \Ob(\mathcat{I})$ schreiben wir auch kurz $X_i \coloneqq  X(i)$, um die entsprechenden Bildobjekte des Funktors in $\mathcat{C}$ zu bezeichnen.
 \end{dabuse}
 
 \begin{remark*}
-    So sollte man auch wirklich über diese Diagramme nachdenken, $\cat{I}$ ist einfach eine elegante Möglichkeit, eine Menge von Objekten in $\cat{C}$ mittels $\cat{I}$ zu indizieren (= Indizes zu verteilen), und gleichzeitig einige Morphismen zwischen diesen Objekten mit zu beschreiben.
+    So sollte man auch wirklich über diese Diagramme nachdenken, $\mathcat{I}$ ist einfach eine elegante Möglichkeit, eine Menge von Objekten in $\mathcat{C}$ mittels $\mathcat{I}$ zu indizieren (= Indizes zu verteilen), und gleichzeitig einige Morphismen zwischen diesen Objekten mit zu beschreiben.
 \end{remark*}
 
 \begin{definition**}[Kegel]\label{def:kegel}
-    Sei $\cat{I}$ eine kleine Kategorie und $X: \cat{I} \to  \cat{C}$ ein Funktor. Ein \vocab{Kegel} über $X$ ist ein Objekt $N\in \Ob(\cat{C})$ mit einer Familie von Morphismen $\left \{f_i\right\} _{i\in \cat{I}}$, wobei $f_i \in  \Mor_{\cat{C}}(N, X_i)$, sodass für jeden Morphismus $h\in \Mor_{\cat{I}}(i,j)$ das folgende Diagramm kommutiert:
+    Sei $\mathcat{I}$ eine kleine Kategorie und $X: \mathcat{I} \to  \mathcat{C}$ ein Funktor. Ein \vocab{Kegel} über $X$ ist ein Objekt $N\in \Ob(\mathcat{C})$ mit einer Familie von Morphismen $\left \{f_i\right\} _{i\in \mathcat{I}}$, wobei $f_i \in  \Mor_{\mathcat{C}}(N, X_i)$, sodass für jeden Morphismus $h\in \Mor_{\mathcat{I}}(i,j)$ das folgende Diagramm kommutiert:
     \[
     \begin{tikzcd}
         & N \ar[swap]{dl}{f_i} \ar{dr}{f_j} \\
@@ -256,13 +256,13 @@ Sei $\cat{C}$ eine Kategorie und $\cat{I}$ eine kleine Kategorie. Wir stellen un
 \begin{dremark}
     Der name Kegel kommt daher, dass $N$ gewissermaßen mit den Morphismen  $f_i$ einen Kegel über den  $X_i$ erzeugt. Ist z.B.
      \[
-         \cat{I} = 
+         \mathcat{I} = 
     \begin{tikzcd}
         \star \ar{rr} \ar{dr} & & \star \ar{dl} \\
                               & \star
     \end{tikzcd}
 \]
-so ergibt sich als Ausschnitt der Kategorie $\cat{C}$ ein \textit{kommutatives} Diagramm (kommutativ wegen der Kommutativitätsbedingung in der Definition):
+so ergibt sich als Ausschnitt der Kategorie $\mathcat{C}$ ein \textit{kommutatives} Diagramm (kommutativ wegen der Kommutativitätsbedingung in der Definition):
 \[
 \begin{tikzcd}
     & Y\ar[bend right = 10, dashed,swap]{ddl}{f_1} \ar[dashed, "f_3" description, near start]{ddd} \ar[bend left = 10, dashed]{ddr}{f_2} \\
@@ -275,7 +275,7 @@ so ergibt sich als Ausschnitt der Kategorie $\cat{C}$ ein \textit{kommutatives} 
 \end{dremark}
 
 \begin{definition}[Kegelkategorie]\label{def:kegelkategorie}
-    Sei $X: \cat{I} \to  \cat{C}$ ein Funktor. Die \vocab{Kegelkategorie} $\cat{C} / X$ hat als Objekte genau die Kegel über $X$. Die Morphismen zwischen Kegeln $(Y, \left \{f_i\right\}) \to (Y', f_i')$ sind gegebene durch $g\in \Mor_{\cat{C}}(Y,Y')$ (also durch übliche Morphismen zwischen $Y,Y'$ als Objekten von  $\cat{C}$), sodass für alle $i\in \Ob(\cat{I})$ folgendes kommutiert:
+    Sei $X: \mathcat{I} \to  \mathcat{C}$ ein Funktor. Die \vocab{Kegelkategorie} $\mathcat{C} / X$ hat als Objekte genau die Kegel über $X$. Die Morphismen zwischen Kegeln $(Y, \left \{f_i\right\}) \to (Y', f_i')$ sind gegebene durch $g\in \Mor_{\mathcat{C}}(Y,Y')$ (also durch übliche Morphismen zwischen $Y,Y'$ als Objekten von  $\mathcat{C}$), sodass für alle $i\in \Ob(\mathcat{I})$ folgendes kommutiert:
     \[
     \begin{tikzcd}
         Y \ar{rr}{g} \ar[swap]{dr}{f_i} & & Y' \ar{dl}{f_i'} \\
@@ -285,7 +285,7 @@ so ergibt sich als Ausschnitt der Kategorie $\cat{C}$ ein \textit{kommutatives} 
 \end{definition}
 
 \begin{oral}
-    Ist $\cat{I}$ einelementig, so erhalten wir die Kategorie über  $X\in \Ob(\cat{C})$, vergleiche hierzu \autoref{aufgabe-6.4}.
+    Ist $\mathcat{I}$ einelementig, so erhalten wir die Kategorie über  $X\in \Ob(\mathcat{C})$, vergleiche hierzu \autoref{aufgabe-6.4}.
 \end{oral}
 
 \begin{remark*}
@@ -293,7 +293,7 @@ so ergibt sich als Ausschnitt der Kategorie $\cat{C}$ ein \textit{kommutatives} 
 \end{remark*}
 
 \begin{definition}[Limes]\label{def:limes}
-    Ein Limes für $X \colon  \cat{I} \to  \cat{C}$ ist ein terminales Objekt in $\cat{C} / X$.
+    Ein Limes für $X \colon  \mathcat{I} \to  \mathcat{C}$ ist ein terminales Objekt in $\mathcat{C} / X$.
     \[
     \begin{tikzcd}
         & {\color{blue}Y}\ar[bend right = 10, blue, swap]{ddl}{h_1} \ar[blue, bend left = 10]{ddr}{h_2} \ar[violet, dashed, "\exists !" description, near start]{d}  \\
@@ -302,10 +302,10 @@ so ergibt sich als Ausschnitt der Kategorie $\cat{C}$ ein \textit{kommutatives} 
          & X_0
     \end{tikzcd}
 \]
-Zur Erklärung des Diagramms: In rot und blau die beiden Kegel $\lim X$ und  $Y$ über dem Diagramm  $X$ (in schwarz). In violett der induzierte Morphismus  $Y \to  \lim X$ (der sogar ein Morphismus in $\cat{C} / X$ ist!), der eindeutig existiert, weil $\lim X$ ein Terminalobjekt in  $\cat{C} / X$ ist.
+Zur Erklärung des Diagramms: In rot und blau die beiden Kegel $\lim X$ und  $Y$ über dem Diagramm  $X$ (in schwarz). In violett der induzierte Morphismus  $Y \to  \lim X$ (der sogar ein Morphismus in $\mathcat{C} / X$ ist!), der eindeutig existiert, weil $\lim X$ ein Terminalobjekt in  $\mathcat{C} / X$ ist.
 \end{definition}
 \begin{dnotation}
-    Existiert 'der' (eigentlich ein) Limes von $X \colon  \cat{I} \to  \cat{C}$, so notieren wir ihn mit $\lim X$.
+    Existiert 'der' (eigentlich ein) Limes von $X \colon  \mathcat{I} \to  \mathcat{C}$, so notieren wir ihn mit $\lim X$.
 \end{dnotation}
 
 
@@ -317,7 +317,7 @@ Zur Erklärung des Diagramms: In rot und blau die beiden Kegel $\lim X$ und  $Y$
     Limiten sind eindeutig, wenn sie existieren (bis auf eindeutigen Isomorphismus)
 \end{oral}
 \begin{proof*}
-    Das ganze ist ein 'Standard'-Beweis für Objekte mit universeller Eigenschaft. Seien $Y, Y'$ beides Limiten über  $X \colon  \cat{I} \to  \cat{C}$, wir werden zeigen, dass diese isomorph mit eindeutigem Isomorphismus sind. Nach universeller Eigenschaft existiert zunächst eine (eindeutige) Abbildung $g\colon  Y \to  Y'$ in der Kegelkategorie, sodass das Diagramm
+    Das ganze ist ein 'Standard'-Beweis für Objekte mit universeller Eigenschaft. Seien $Y, Y'$ beides Limiten über  $X \colon  \mathcat{I} \to  \mathcat{C}$, wir werden zeigen, dass diese isomorph mit eindeutigem Isomorphismus sind. Nach universeller Eigenschaft existiert zunächst eine (eindeutige) Abbildung $g\colon  Y \to  Y'$ in der Kegelkategorie, sodass das Diagramm
     \[
     \begin{tikzcd}
         & {\color{blue}Y}\ar[bend right = 10, blue, swap]{ddl}{h_1} \ar[blue, bend left = 10]{ddr}{h_2} \ar[violet, dashed, "g" description]{d}  \\
@@ -333,12 +333,12 @@ Für die Eindeutigkeit von  $f,g$ reicht es zu bemerken, dass ja bereits die Abb
 
 \begin{example}
     \begin{enumerate}[1)]
-        \item Sei $\cat{I} = \emptyset$ die leere Kategorie, dann ist $\cat{C} / X \cong \cat{C}$. Also ist $\lim X$ ein terminalse Objekt.
-        \item Sei $\cat{I} = \left \{1,2\right\} $ (mit nur den Identitätsabbildungen). Sei $X\colon  \mathcal{I}t \to  \cat{C}$ gegeben ducrh $X_1,X_2\in \Ob(\cat{C})$, dann ist $\lim X$ das  \underline{Produkt} von $X_1$ und $X_2$. \\
+        \item Sei $\mathcat{I} = \emptyset$ die leere Kategorie, dann ist $\mathcat{C} / X \cong \mathcat{C}$. Also ist $\lim X$ ein terminalse Objekt.
+        \item Sei $\mathcat{I} = \left \{1,2\right\} $ (mit nur den Identitätsabbildungen). Sei $X\colon  \mathcal{I}t \to  \mathcat{C}$ gegeben ducrh $X_1,X_2\in \Ob(\mathcat{C})$, dann ist $\lim X$ das  \underline{Produkt} von $X_1$ und $X_2$. \\
             In $\Top$ und  $\Set$ ist dieses das klassiche / bekannte Produkt  $X_1\times X_2$ (mit Projektionen!)
         \item Sei 
             \[
-            \cat{I} = 
+            \mathcat{I} = 
             \begin{tikzcd}
                 & \star \ar{d} \\
                 \star \ar{r} & \star 
@@ -363,9 +363,9 @@ Für die Eindeutigkeit von  $f,g$ reicht es zu bemerken, dass ja bereits die Abb
 \end{oral}
 
 \begin{definition}[Initiales Objekt]\label{def:initiales-objekt}
-    Ein initiales Objekt in $\cat{C}$ ist ein Objekt $X\in \Ob(\cat{C})$, sodass für alle $Y\in \Ob(\cat{C})$ eine eindeutige Abbildung von $X$ nach  $Y$ existiert, d.h.
+    Ein initiales Objekt in $\mathcat{C}$ ist ein Objekt $X\in \Ob(\mathcat{C})$, sodass für alle $Y\in \Ob(\mathcat{C})$ eine eindeutige Abbildung von $X$ nach  $Y$ existiert, d.h.
      \[
-         \forall Y\in \Ob(\cat{C})\colon  \qquad \Mor_{\cat{C}}(X,Y) = \left \{\star\right\} 
+         \forall Y\in \Ob(\mathcat{C})\colon  \qquad \Mor_{\mathcat{C}}(X,Y) = \left \{\star\right\} 
     .\] 
 \end{definition}
 
@@ -377,14 +377,14 @@ Für die Eindeutigkeit von  $f,g$ reicht es zu bemerken, dass ja bereits die Abb
     Die Definition ist völlig analog zu der des Kegels, nur dass wir die Richtungen der Morphismen umdrehen:
 
 
-    Ein \vocab{Kokegel} über $X\colon  \cat{I} \to  \cat{C}$ ist ein Paar $(Y, \left \{f_i\right\} _{i\in \cat{I}})$, sodass $f_i \in  \Mor_{\cat{C}}(X_i, Y)$ (die Morphismen gehen jetzt in die andere Richtung) und für jeden Morphismus $h\in \Mor_{\cat{I}}(i,j)$ das entsprechende Diagramm
+    Ein \vocab{Kokegel} über $X\colon  \mathcat{I} \to  \mathcat{C}$ ist ein Paar $(Y, \left \{f_i\right\} _{i\in \mathcat{I}})$, sodass $f_i \in  \Mor_{\mathcat{C}}(X_i, Y)$ (die Morphismen gehen jetzt in die andere Richtung) und für jeden Morphismus $h\in \Mor_{\mathcat{I}}(i,j)$ das entsprechende Diagramm
     \[
     \begin{tikzcd}
         X_i \ar{rr}{X(h)} \ar[swap]{dr}{f_i} & & X_j \ar{dl}{f_j} \\
          & Y
     \end{tikzcd}
     .\] 
-    kommutiert. Die Kokegelkategoriebesteht $X / \cat{C}$ (sprich: '$\cat{C}$ unter $X$') besteht nun aus allen Kokegeln, wobei ein Morphismus $(Y, \left \{f_i\right\} ) \to  (Y', \left \{f_i'\right\} )$ gegeben ist durch $g\in \Mor_{\cat{C}}(Y,Y')$, sodass für alle $i\in \Ob(\cat{I})$ folgendes kommutiert:
+    kommutiert. Die Kokegelkategoriebesteht $X / \mathcat{C}$ (sprich: '$\mathcat{C}$ unter $X$') besteht nun aus allen Kokegeln, wobei ein Morphismus $(Y, \left \{f_i\right\} ) \to  (Y', \left \{f_i'\right\} )$ gegeben ist durch $g\in \Mor_{\mathcat{C}}(Y,Y')$, sodass für alle $i\in \Ob(\mathcat{I})$ folgendes kommutiert:
     \[
         \begin{tikzcd}
     & X_i \ar[swap]{dl}{f_i} \ar{dr}{f_j} \\
@@ -394,7 +394,7 @@ Für die Eindeutigkeit von  $f,g$ reicht es zu bemerken, dass ja bereits die Abb
 \end{definition}
 
 \begin{definition}[Kolimes]\label{def:kolimes}
-Ein \vocab{Kolimes} ist ein Initialobjekt in der Kokegelkategorie $X / \cat{C}$. 
+Ein \vocab{Kolimes} ist ein Initialobjekt in der Kokegelkategorie $X / \mathcat{C}$. 
 \end{definition}
 
 \begin{warning}
@@ -414,11 +414,11 @@ Ein \vocab{Kolimes} ist ein Initialobjekt in der Kokegelkategorie $X / \cat{C}$.
 
 \begin{example}
     \begin{enumerate}[1)]
-        \item Ist $\cat{I} = \emptyset$, so erhalten wir ein initiales Objekt.
-        \item Ist $\cat{I} = \left \{1,2\right\} $ und $X = X_1,X_2$, dann ist $\colim X$ das  \vocab{Koprodukt}. In $\Top$ bzw.  $\Set$ ist dieses  $X_1 \coprod X_2$ (mit den entsprechenden Inklusionen).
+        \item Ist $\mathcat{I} = \emptyset$, so erhalten wir ein initiales Objekt.
+        \item Ist $\mathcat{I} = \left \{1,2\right\} $ und $X = X_1,X_2$, dann ist $\colim X$ das  \vocab{Koprodukt}. In $\Top$ bzw.  $\Set$ ist dieses  $X_1 \coprod X_2$ (mit den entsprechenden Inklusionen).
         \item Betrachte
             \[
-            \cat{I} = 
+            \mathcat{I} = 
             \begin{tikzcd}
                 \star \ar{r} \ar{d} & \star \\
                 \star

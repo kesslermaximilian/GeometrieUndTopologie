@@ -42,6 +42,7 @@
 *.ilg
 *.ind
 *.lec
+*.cnt
 
 ## pdf files
 *.pdf

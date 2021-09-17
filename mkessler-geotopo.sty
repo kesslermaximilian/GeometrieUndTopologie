@@ -1,0 +1,25 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mkessler-geotopo}
+
+%% This is just a collection of the preamble for this lecture so that it can be included in both the master and the full file
+
+\usepackage{mkessler-hypersetup}
+\usepackage{mkessler-math}
+\usepackage[lecturenumbers = true, number small environment = theorem]{mkessler-fancythm}
+\usepackage[index]{mkessler-vocab}
+\usepackage[bibfile=references/bibliography.bib, imagefile=references/images.bib]{mkessler-bibliography}
+\usepackage[fancyhead]{mkessler-lectures}
+\usepackage{castel-incfig}
+\usepackage{mkessler-counters}
+\usepackage{mkessler-proof}
+\usepackage{mkessler-exsheet}
+\usepackage{mkessler-figures}
+\usepackage{mkessler-enumerate}
+
+\usepackage{import}
+
+\usepackage{todonotes}
+
+\newcommand{\emphasize}[1]{{\color{red} #1}}
+
+\import{inputs/exercises/}{preambleBlatt.tex}
