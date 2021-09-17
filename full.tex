@@ -14,6 +14,7 @@
 \usepackage{castel-incfig}
 \usepackage{mkessler-counters}
 \usepackage{mkessler-proof}
+\usepackage{mkessler-exsheet}
 
 \import{inputs/exercises/}{preambleBlatt.tex}
 
@@ -24,19 +25,17 @@
 %%%% From here on, the preamble is a single ugly hack to make this document work for now
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage[shortlabels]{enumitem}
 
-\newcommand{\emphasize}[1]{{\color{red} #1}}
-\newenvironment{proof*}{\begin{proof}}{\end{proof}}
+\usepackage[shortlabels]{enumitem}
 \makeatletter
 \newcommand\setItemnumber[1]{\setcounter{enum\romannumeral\@enumdepth}{\numexpr#1-1\relax}}
 \makeatother
 
-\usepackage{mkessler-exsheet}
+
+\newcommand{\emphasize}[1]{{\color{red} #1}}
+\newenvironment{proof*}{\begin{proof}}{\end{proof}}
 
 \usepackage{float}
-\def\category#1{\operatorname{\textbf{#1}}}
-
 
 \usepackage{import}
 
