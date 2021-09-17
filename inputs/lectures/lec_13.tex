@@ -2,19 +2,19 @@
 \lecture[Gruppen und Gruppenwirkungen als Kategorien. Produkt- und Funktorkategorie. Wedge- und Smash-Produkt als Funktoren. Homotopie, die Homotopiekategorie $\hTop$, Homotopieäquivalenz. Schleifen. Die Fundamentalgruppe und ihr Operator $\star$.  $\pi_1$ als Funktor $\Top_{\star} \to \Grp$]{Di 08 Jun 2021 12:15}{Homotopie}
 \begin{example}\label{ex:mehr-kategorien:gruppen-produkte-wedge-smash-einhängung-funktorkategorie}
     \begin{enumerate}[1)]
-        \item Wir können eine Gruppe $G$ als Kategorie auffassen, indem wir  $\Ob{\cat{G}} = \left \{\star\right\} $ und $\Mor_{\cat{G}}(\star,\star) = G$ setzen, wobei natürlich $g \circ  h = gh$. Man könnte das in etwa so skizzieren:
+        \item Wir können eine Gruppe $G$ als Kategorie auffassen, indem wir  $\Ob{\mathcat{G}} = \left \{\star\right\} $ und $\Mor_{\mathcat{G}}(\star,\star) = G$ setzen, wobei natürlich $g \circ  h = gh$. Man könnte das in etwa so skizzieren:
             \[
 \begin{tikzcd}
             \bullet \ar[loop left]{}{f} \ar[loop above]{}{\id} \ar[loop right]{}{g} \ar[loop below]{}{f \circ g}
 \end{tikzcd}
 \]
-\item Ein \vocab{G-Objekt} in einer Kategorie $\cat{C}$ ($G$ ist eine Gruppe) ist ein Funktor  $\cat{G} \to  \cat{C}$ (dieser Funktor besteht aus einem Objekt von $\cat{C}$ zusammen mit Endomorphismen dieses Objekts für jedes $g\in G$)
+\item Ein \vocab{G-Objekt} in einer Kategorie $\mathcat{C}$ ($G$ ist eine Gruppe) ist ein Funktor  $\mathcat{G} \to  \mathcat{C}$ (dieser Funktor besteht aus einem Objekt von $\mathcat{C}$ zusammen mit Endomorphismen dieses Objekts für jedes $g\in G$)
     \begin{remark*}
-        Ein typisches Beispiel sind Gruppenwirkungen, wählen wir hier $\cat{C} = \Set$, so sind die $G$-Objekte genau  $G$-Mengen bzw.  $G$ wirkt dann auf die entsprechende Menge  $\mathcal{F}(\cat{G})\in \Set$.
+        Ein typisches Beispiel sind Gruppenwirkungen, wählen wir hier $\mathcat{C} = \Set$, so sind die $G$-Objekte genau  $G$-Mengen bzw.  $G$ wirkt dann auf die entsprechende Menge  $\mathcal{F}(\mathcat{G})\in \Set$.
     \end{remark*}
-\item Sind $\cat{C}$, $\cat{D}$ Kategorien, so gibt es die \vocab{Produktkategorie} $\cat{C} \times  \cat{D}$, die wir erhalten, indem wir $\Ob{\cat{C} \times \cat{D}} = \Ob{\cat{C}} \times \Ob{\cat{D}} $ (dieses Produkt müssen wir potenziell als das von Klassen auffassen) setzen und als Morphismen
+\item Sind $\mathcat{C}$, $\mathcat{D}$ Kategorien, so gibt es die \vocab{Produktkategorie} $\mathcat{C} \times  \mathcat{D}$, die wir erhalten, indem wir $\Ob{\mathcat{C} \times \mathcat{D}} = \Ob{\mathcat{C}} \times \Ob{\mathcat{D}} $ (dieses Produkt müssen wir potenziell als das von Klassen auffassen) setzen und als Morphismen
     \[
-        \Mor_{\cat{C}\times \cat{D}}((X,Y),(X',Y')) \coloneqq  \Mor_{\cat{C}}(X,X') \times \Mor_{\cat{D}}(Y,Y') 
+        \Mor_{\mathcat{C}\times \mathcat{D}}((X,Y),(X',Y')) \coloneqq  \Mor_{\mathcat{C}}(X,X') \times \Mor_{\mathcat{D}}(Y,Y') 
     .\] 
     setzen mit komponentenweiser Komposition, d.h. $(f,g) \circ  (f', g') = (f \circ  f', g \circ  g')$.
 \item Das \nameref{def:wedge-produkt} ($\twedge$, siehe \autoref{def:wedge-produkt}) können wir nun als Funktor
@@ -73,7 +73,7 @@
                     \captionof{figure}{Einhängung des Kreises $C^1$}
                 \end{minipage}
 \end{minipage}
-\item Wir können die Funktorkategorie $\Mor(\cat{C},\cat{D})$ bilden, indem wir $\Ob(\Mor(\cat{C},\cat{D}))$ als die Menge der Funktoren von $\cat{C}$ nach $\cat{D}$, und $\Mor_{\Mor(\cat{C},\cat{D})}(\mathcal{F},\mathcal{G})$ als die Menge der natürlichen Transformationen von $\mathcal{F}$ nach $\mathcal{G}$ wählen.
+\item Wir können die Funktorkategorie $\Mor(\mathcat{C},\mathcat{D})$ bilden, indem wir $\Ob(\Mor(\mathcat{C},\mathcat{D}))$ als die Menge der Funktoren von $\mathcat{C}$ nach $\mathcat{D}$, und $\Mor_{\Mor(\mathcat{C},\mathcat{D})}(\mathcal{F},\mathcal{G})$ als die Menge der natürlichen Transformationen von $\mathcal{F}$ nach $\mathcal{G}$ wählen.
     \end{enumerate}
 \end{example}
 
