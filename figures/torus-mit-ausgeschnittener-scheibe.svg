@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="240mm"
-   height="120mm"
-   viewBox="0 0 240 120"
+   width="240.04135mm"
+   height="77.19619mm"
+   viewBox="0 0 240.04135 77.19619"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
@@ -19,19 +19,19 @@
   <defs
      id="defs2">
     <marker
-       markerWidth="0.911"
-       markerHeight="1.690"
+       markerWidth="0.91100001"
+       markerHeight="1.6900001"
        refX="0"
        refY="0"
        orient="auto-start-reverse"
        id="marker-arrow-0.5308">
       <g
          id="g894"
-         transform="scale(2.153529264004019)">
+         transform="scale(2.1535293)">
         <path
            id="path892"
            inkscape:connector-curvature="0"
-           style="fill:none;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+           style="fill:none;stroke:#000000;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
            d="M -1.55415,2.0722 C -1.42464,1.29512 0,0.1295 0.38852,0 0,-0.1295 -1.42464,-1.29512 -1.55415,-2.0722" />
       </g>
     </marker>
@@ -43,9 +43,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.406257"
-     inkscape:cx="402.87514"
-     inkscape:cy="274.81111"
+     inkscape:zoom="0.99437386"
+     inkscape:cx="465.15045"
+     inkscape:cy="37.738233"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -65,7 +65,9 @@
        spacingx="10"
        spacingy="10"
        empspacing="4"
-       dotted="false" />
+       dotted="false"
+       originx="-138.59589"
+       originy="-76.442121" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -83,7 +85,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-177)">
+     transform="translate(-0.24563723,-188.1567)">
     <ellipse
        style="opacity:1;vector-effect:none;fill:none;fill-opacity:0.25641031;stroke:#000000;stroke-width:0.36500001;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:0.0365, 0.0365;stroke-dashoffset:0;stroke-opacity:1;marker-start:none;marker-end:none"
        id="path816"
@@ -154,9 +156,53 @@
        rx="19.229439"
        ry="6.7901826" />
     <path
-       style="fill:none;stroke:black;stroke-width:0.14044083;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;marker-end:url(#marker-arrow-0.5308);marker-start:none;stroke-dasharray:none"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.14044084;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:url(#marker-arrow-0.5308)"
        d="m 86.343068,196.02251 c 0,0 -6.785049,-7.31721 -17.162182,0.53216 -10.377132,7.84937 -10.776254,8.91369 -10.776254,8.91369"
        id="path890"
        inkscape:connector-curvature="0" />
+    <text
+       id="text837"
+       xml:space="preserve"
+       style="font-size:2.64583325px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="233.46432"
+       x="100.57537"><tspan
+         id="tspan835"
+         sodipodi:role="line"
+         x="100.57537"
+         y="233.46432"
+         style="stroke-width:0.26458332">$X$</tspan></text>
+    <text
+       id="text851"
+       xml:space="preserve"
+       style="font-size:2.64583325px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="233.19286"
+       x="107.5056"><tspan
+         id="tspan849"
+         sodipodi:role="line"
+         x="107.5056"
+         y="233.19286"
+         style="stroke-width:0.26458332">$\simeq$</tspan></text>
+    <text
+       id="text865"
+       xml:space="preserve"
+       style="font-size:2.64583325px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="222.43422"
+       x="145.17256"><tspan
+         id="tspan863"
+         sodipodi:role="line"
+         x="145.17256"
+         y="222.43422"
+         style="stroke-width:0.26458332">$x_0$</tspan></text>
+    <text
+       id="text879"
+       xml:space="preserve"
+       style="font-size:2.64583325px;font-family:monospace;-inkscape-font-specification:'monospace, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="251.63655"
+       x="138.1048"><tspan
+         id="tspan877"
+         sodipodi:role="line"
+         x="138.1048"
+         y="251.63655"
+         style="stroke-width:0.26458332">$S^1\twedge S^1$</tspan></text>
   </g>
 </svg>
