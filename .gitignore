@@ -45,7 +45,8 @@
 *.cnt
 
 ## pdf files
-*.pdf
+full.pdf
+master.pdf
 
 ## Gnuplot directories
 master.gnuplots/
