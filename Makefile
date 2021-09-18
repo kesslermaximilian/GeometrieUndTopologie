@@ -28,6 +28,16 @@ master-with-gnuplots: gnuplots-master
 	@make master-pdflatex
 	@make master
 
+#### Clean targets
+
+clean: clean-master clean-full
+
+clean-master:
+	@ls | sed -n 's/^\(master\..*\)$$/\1/p' | sed -e '/master.tex/d' | sed -e '/master.gnuplots/d' | xargs --no-run-if-empty rm
+
+clean-full:
+	@ls | sed -n 's/^\(full\..*\)$$/\1/p' | sed -e '/full.tex/d' | sed -e '/full.gnuplots/d' | sed -e '/full.cnt/d' | xargs --no-run-if-empty rm
+
 #### Gnuplot-related targets
 
 # Creates the folder for gnuplots of full document
