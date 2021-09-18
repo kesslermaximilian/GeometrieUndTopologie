@@ -47,6 +47,7 @@ Wir werden diese allgemeine Version nicht beweisen, wir begnügen uns mit einige
     X = \underbrace{\bigcup_{i \in  I^0} e_i^0 }_{X^0} \cup \underbrace{\bigcup_{i \in  I^1} e_i^1
 }_{1-\text{Zellen}} 
     .\]
+    Dann gilt:
     \begin{enumerate}[(i)]
         \item Es existiert $J\subset I^1$, so dass
             \[
@@ -55,15 +56,17 @@ Wir werden diese allgemeine Version nicht beweisen, wir begnügen uns mit einige
             ein maximaler \vocab{Baum} (ein zusammenziehbarer Graph, kombinatorisch: ein kreisfreier, zusammenhängender Graph) in $X$ ist. 
         \item Für $J$ wie in  $(i)$ gilt
              \[
-                 \pi_1(X,x_0) \cong \coprod_{i\in I^1 \setminus J} \Z \cong \star_{i\in I^1 \setminus J} \Z
+                 \pi_1(X,x_0) \cong \coprod_{i\in I^1 \setminus J} \Z \cong \amalgprod_{i\in I^1 \setminus J} \Z
             .\] 
     \end{enumerate}
+    Insbesondere ist die Fundamentalgruppe eines Graphen stets frei.
 \end{theorem}
 
 \begin{oral}
     Auch hier begnügen wir uns mit Beispielen, und führen keinen Beweis.
 \end{oral}
 
+\todo{TikZ von den Graph erstellen}
 \begin{example}
     \begin{itemize}
         \item 
