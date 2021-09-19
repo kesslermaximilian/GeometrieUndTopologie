@@ -1,43 +1,118 @@
 %! TEX root = ../../master.tex
-\lecture[Beweis von Seifert-van-Kampen. Berechunng der Fundamentalgruppe von Graphen]{Di 13 Jul 2021}{Beweis des Satzes von Seifert-van-Kampen}
-
-\begin{remark*}
-    An dieser Stelle haben wir nun den Beweis von \autoref{thm:seifert-van-kampen} gemacht. Aus zeitlichen Gründen ist der noch nicht aufgeschrieben, es fehlt aber auch \textit{nur} der Beweis, danach geht es normal weiter.
-\end{remark*}
+\lecture{}{CW-Komplex}
+%\lecture[Beweis von Seifert-van-Kampen. Berechunng der Fundamentalgruppe von Graphen]{Di 13 Jul 2021}{Beweis des Satzes von Seifert-van-Kampen}
 
 
-\begin{theorem}[allgemeine Version von Seifert-van-Kampen]\label{thm:seifert-van-kampen-allgemein}
-    Sei $X$ ein Raum,  $x\in X$, und $\mathcal{U} = \left \{U_α\right\} _{α\in I}$ eine offene Überdeckung von $X$ mit  $x\in U_{α}$ für jedes $α\in I$. Sei für $α,β\in I$ stets $U_α \cap  U_β$ wegzusammenhängend. Die inklusionen
+\todo{Hier kommt Zeug zu CW-Komplexen}
+\begin{definition}[$k$-Zelle]\label{def:k-zelle}
+    Eine \vocab{$k$-Zelle},  $k\geq 0$, ist ein Raum der homöomorph zu $D^k$ ist. Eine \vocab{offene $k$-Zelle} ist eine ein Raum, der homöomorph zu ${D^k}\degree$  ist, wobei wie üblich
     \[
-        \left \{ι_α\colon  \pi_1(U_α,x) \to  \pi_1(X,x)\right\}
+        D^k \coloneqq  \left \{(x,\ldots,x_k) \mid  \sum x_i ^2 \leq  1\right\} \\
+        {D^k}\degree \coloneqq  \left \{(x_1,\ldots,x_k) \mid  \sum x_i^2 < 1\right\} 
     .\] 
-    induzieren eine Abbildung
-    \[
-        \psi \colon  \coprod \pi_1(U_α, x) \twoheadrightarrow \pi_1(X,x)
-    .\] 
-    Dann gilt:
-    \begin{enumerate}[1)]
-        \item $\psi $ ist surjektiv.
-        \item Falls darüber hinaus $U_α \cap  U_β \cap  U_γ$ wegzusammenhängend für $α,β,γ\in I$, dann ist der Kern von $\psi $ der Normalteiler erzeugt von
-            \[
-                \left \{ι_{α,β}(\omega ) ι_{β,α}(\omega )^{-1} \mid  \omega \in \pi_1(U_α \cap U_β, x), α,β\in I\right\} 
-            .\] 
+    Wir nenen $k$ die  \vocab{Dimension} der Zelle. 
+\end{definition}
+
+\begin{definition}{CW-Komplex}\label{def:cw-komplex}
+    Ein CW-Komplex  $X$ ist ein Hausdorff-Raum, der in offene Zellen  $\left \{c_i\right\} _{i \in I}$ zerfällt, wobei gilt:
+    \begin{enumerate}[1.]
+        \item Zu jeder $k$-Zelle  $c_i \subset X$ existiert eine stetige Abbildung $f_i \colon  D^k \to  X$, sodass ${D^k}\degree \subset D^k$ homöomorph auf $c_i$ und der Rand  $\partial D^k = S^{k-1} \subset D^k$ in eine Vereinigung von endlich vielen Zellen der Dimension $<k$ abgebildet wird. 
+        \item $M\subset X$ ist genau dann offen, wenn $M \cap f_i(D^k)$ für alle $i\in I$ offen ist.
     \end{enumerate}
-    wobei
-    \begin{IEEEeqnarray*}{rCl}
-        ι_{α,β}\colon  U_α \cap  U_β \hookrightarrow U_α \\
-        ι_{β,α}\colon  U_β \cap  U_α \hookrightarrow U_β
-    \end{IEEEeqnarray*}
-    die Inklusionen sind.
-\end{theorem}
+\end{definition}
 
 \begin{oral}
-    Man kann das im Wesentlichen aus dem üblichen Satz von \nameref{thm:seifert-van-kampen}   folgern, indem man induktiv auf endlich viele Mengen verallgemeinert. Für unendliche Mengen macht man dann ein Kolimes-Argument, indem man ausnutzt, dass wegen Kompaktheit jeder Weg und jede Homotopie schon in endlichen vielen der $U_i$ liegen muss.
-
-    Für einen vollständigen Beweis siehe  \cite[Satz 1.20]{algebraic-topology-hatcher}.
+    $C$ stet für 'closure finite', und  $W$ steht für 'weak'.
 \end{oral}
 
-Wir werden diese allgemeine Version nicht beweisen, wir begnügen uns mit einigen Berechnungen.
+\begin{dnotation}
+    Das \vocab{k}-Gerüst oder auch \vocab{k}-Skeleet von $X$, notiert  $X^k$, ist die Vereinigung aller seiner Zellen der Dimension  $\leq k$.  
+\end{dnotation}
+
+\begin{remark}
+    Jeder CW-Komplex ist normal (und Hausdorff) sowie lokal zusammenziehbar, d.h. jeder Punkt besitzt eine zusammenziehbare Umgebung.
+
+    Insbesondere ist jeder CW-Komplex
+    \begin{itemize}
+        \item lokal wegzusammenhängend
+        \item (semi) lokal einfachzusammenhängend
+    \end{itemize}
+    und damit besitzt er eine universelle Überlagerung.
+\end{remark}
+
+
+\begin{question}
+    Wie bildet man einen CW-Komplex?
+\end{question}
+
+Meistens erfolgt das mit einer induktiven / rekursiven Konstruktion, indem wir nacheinander die $k$-Skelette spezifizieren. Wir starten mit 
+ \begin{enumerate}[1.]
+     \item $X^0$, das  $0$-Gerüst, ist ein diskreter Raum (Punkte sind  $0$-Zellen).
+     \item Haben wir das $k$-Gerüst $X^k$, $k\geq 0$ bereits gegebn, und eine Abbildung
+         \[
+         \varphi _{α}\colon  \partial D^{k+1} = S^k \longrightarrow  X^k
+         .\] 
+         so können wir eine $k+1$-Zelle an  $X^k$ 'ankleben'. Dazu betrachte
+          \[
+\faktor{X^k \bigsqcup D^{k+1}}{x \sim  \varphi _{α}(x)} =: X^k \cup_{\varphi _{α}} D^{k+1}
+         .\] 
+         so setzen wir
+         \[
+             X^{k+1} \coloneqq  X^k \cup _{\left \{\varphi _{α}\right\} } (D^{k+1})_{α}
+         .\] 
+         indem wir alle $k+1$-Zellen gleichzeitig ankleben.
+\end{enumerate}
+
+\begin{remark}
+    Für endliche CW-Komplexe stimmen die Quotiententopologie und die schwache Topologie überein.
+\end{remark}
+
+\begin{oral}
+    Für unendliche Räume erhalten wir genau die Koprodukttopologie.
+\end{oral}
+
+\begin{oral}
+    Der Hawaiianische Ohrring ist kein CW-Komplex.
+\end{oral}
+
+\begin{notation*}
+    Ist $X$ ein CW-Komplex, und existiert  $N$, sodass  $X = X^N$ mit  $N$ minimal, so heißt  $N$ die  \vocab{Dimension} von $X$. 
+\end{notation*}
+
+\begin{example}
+    Ein 1-dimensionaler CW-Komplex heißt auch \vocab{Graph}. Er besteht aus 0-Zellen und 1-Zellen. Die 0-Zellen nennen wir \vocab{Ecken} oder auch \vocab{Knoten}, die 1-Zellen \vocab{Kanten}.
+\[
+    \begin{tikzpicture}
+        \draw (0,0) circle (1);
+        \fill (0,-1) circle (2pt);
+    \end{tikzpicture}
+\]
+\missingfigure{Graph}
+\begin{oral}
+    \begin{warning}
+        Man muss aufpassen, was passiert, wenn es unendlich viele Kanten in einem Punkt gib.
+    \end{warning}
+\end{oral}
+\end{example}
+
+\begin{example}[zwei-dimensional]
+    Die Sphäre kann auch als CW-Komplex realisiert werden, indem wir eine 0-Zelle und eine 2-Zelle verwenden. Starten wir mit einem Punkt, so gibt es eine offensichtliche Abbildung $\partial D^2 \to  X^0 = \left \{S\right\} $. Wir kleben dann einfach den Rand von $D^2$ an den Punkt und erhalten sofort die Kugel.
+
+    Alternativ kann man $S^n$ auch induktiv aufbauen, indem wir verwenden, dass  $S^n$ der Äquator von  $S^{n+1}$ ist, und dann jeweils 2 $n+1$-Zellen an  $S^n$ kleben, um  $S^{n+1}$ zu erhalten.
+
+    Schauen wir nun auf $\R\mathbb{P}^n \coloneqq  \faktor{S^n}{x \sim -x}$, so sehen wir, dass wir die beiden Zellen, die wir für $S^n$ bekommen haben, jeweils identifizieren. Wir können  $\R\mathbb{P}^n$ also realisieren als CW-Komplex mit einer 0, einer 1, \ldots, und einer $n$-Zelle.
+
+    Ein weiterer toller Punkt dieser auf den ersten Blick aufwendigeren Zellstruktur für  $S^n $ ist, dass wir nun
+    \[
+    S^{\infty} \coloneqq  \bigcup_{k=0}^{\infty} S^k 
+    .\] 
+    als die unendlich-dimensionale Sphäre als CW-Komplex definiert / realisiert haben.
+
+    Der Torus kann ebenfalls so realisiert werden, hierzu benötigen wir eine 0-Zelle, zwei 1-Zellen sowie eine 2-Zelle.
+
+    Erinnern wir uns an $\R\mathbb{P}^2 \coloneqq  \faktor{S^2}{x \sim  -x} \cong \faktor{D^2}{x \sim  -x \text{ für }x \in \partial D^2}$. Damit erhalten wir wieder eine Darstellung von $\R\mathbb{P}^2$ als eine 0, eine 1 und eine 2-Zelle.
+\end{example}
+
 
 \subsection{Berechnung der Fundamentalgruppe eines CW Komplexes}
 
