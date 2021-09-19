@@ -54,7 +54,7 @@ G_1 \star G_2 \coloneqq      \left< E_1 \cup E_2\mid R_1 \cup R_2 \right>
 \begin{example}\label{ex:fundamentalgruppe-von-s1-wedge-s1}
     Betrachte $S^1 \twedge S^1$, wir wollen $\pi_1(S^1 \twedge S^1, 1)$ berechnen, und haben dazu $U_1 = ι_1(S^1)$ und $U_2 = ι_2(S^1)$, dann sind beide offenen Mengen nichtleer und wegzusammenhängend, und es ist $U_1 \cap U_2 = \left \{1\right\} $ einelementig. Also ergibt sich
     \[
-        \pi_1(S^1 \twedge S^1,1) \cong \pi_1(S^1,1) \star_{\pi_1(\left \{1\right\} ,1)} \pi_1(S^1,1) \cong \pi_1(S^1,1) \star \pi_1(S^1,1) \cong \Z \star \Z \cong F_2 = \left< a,b \right> 
+        \pi_1(S^1 \twedge S^1,1) \cong \pi_1(S^1,1) \star_{\pi_1(\left \{1\right\} ,1)} \pi_1(S^1,1) \cong \pi_1(S^1,1) \star \pi_1(S^1,1) \cong \mathbb{Z} \star \mathbb{Z} \cong F_2 = \left< a,b \right> 
     .\] 
     \begin{oral}
         Eigentlich hätten wir $U_1,U_2$ hier offen wählen müssen, um den Satz anwenden zu können. Die Umgebung 'ein bisschen' größer zu machen zerstört aber offensichtlich nichts an der Fundamentalgruppe von $S^1$, deswegen ist das in Ordnung und einfach ein formales Ausformulieren.
@@ -64,7 +64,7 @@ G_1 \star G_2 \coloneqq      \left< E_1 \cup E_2\mid R_1 \cup R_2 \right>
 \begin{example}[Nicht-Beispiel]
     Der Wegzusammenhang ist essentiell!. Wenn wir $S^1 = D^1 \cup_{S^0} D^1$ schreiben, so ist der Schnitt nicht zusammenhängend, weswegen wir nicht die falsche Aussage
     \[
-        \Z \cong \pi_1(S^1,1) \cong \pi_1(D^1,1) \star_{\pi_1(S^0,1)} \pi_1(D^1,1) \cong \left \{1\right\}  \star_{\left \{1\right\} \star \left \{1\right\} } \cong \left \{1\right\} 
+        \mathbb{Z} \cong \pi_1(S^1,1) \cong \pi_1(D^1,1) \star_{\pi_1(S^0,1)} \pi_1(D^1,1) \cong \left \{1\right\}  \star_{\left \{1\right\} \star \left \{1\right\} } \cong \left \{1\right\} 
     .\] 
     folgern.
 
@@ -96,7 +96,7 @@ G_1 \star G_2 \coloneqq      \left< E_1 \cup E_2\mid R_1 \cup R_2 \right>
    .\] 
    Dann ist $U_3 \cong {D^2}\degree \setminus \left \{\text{Mittelpunkt}\right\} \simeq S^1$ und somit
    \[
-       \pi_1(X) \cong \pi_1(U_1) \star_{\pi_1(U_3)} \pi_1(U_2) \cong \left \{1\right\} \star_{\Z} \pi_1(Y) \cong \faktor{\pi_1(Y)}{\left< \left< r \right>  \right> } = \left< a_1,\ldots,a_n|r \right>  = G
+       \pi_1(X) \cong \pi_1(U_1) \star_{\pi_1(U_3)} \pi_1(U_2) \cong \left \{1\right\} \star_{\mathbb{Z}} \pi_1(Y) \cong \faktor{\pi_1(Y)}{\left< \left< r \right>  \right> } = \left< a_1,\ldots,a_n|r \right>  = G
    .\] 
 \end{example}
 
@@ -181,12 +181,12 @@ Wählen wir nun Gruppendarstellungen
         \pi_1(X) \cong \pi_1(U_1,x ) \star_{\pi_1(U_3,x)} \pi_1(U_2, x) 
     .\] 
 
-Da wir schon wissen, dass $\pi_1(T_1) \cong \Z \times  \Z$ die Fundamentalgruppe des Torus ist, und das lässt sich darstellen als
+Da wir schon wissen, dass $\pi_1(T_1) \cong \mathbb{Z} \times  \mathbb{Z}$ die Fundamentalgruppe des Torus ist, und das lässt sich darstellen als
 \begin{IEEEeqnarray*}{rCl}
     \pi_1(T_1) & = & \left< a,b \mid  ab a^{-1} b^{-1} \right> \\
     \pi_1(T_2)               & = & \left< c,d \mid  cdc^{-1}d^{-1} \right> 
 \end{IEEEeqnarray*}
-Man überlegt sich noch, dass $U_3 = A_1 \cup A_2 \simeq S^1$, auch indem wir die extra 'Schläuche' stetig verkürzen, also $\pi_1(U_3) = \Z = \left< γ \mid  \right> $.
+Man überlegt sich noch, dass $U_3 = A_1 \cup A_2 \simeq S^1$, auch indem wir die extra 'Schläuche' stetig verkürzen, also $\pi_1(U_3) = \mathbb{Z} = \left< γ \mid  \right> $.
 \begin{IEEEeqnarray*}{rCl}
     \pi_1(X,x) & = & \left< a,b,c,d \mid  aba^{-1}b^{-1}, cdc^{-1}d^{-1}, a  =  c \right> \\
                                                                             & = & \left< a,b,c,d \mid aba^{-1}b^{-1}, cdc^{-1}d^{-1}, ac^{-1} \right> 
@@ -207,9 +207,9 @@ Man überlegt sich noch, dass $U_3 = A_1 \cup A_2 \simeq S^1$, auch indem wir di
 \end{example}
 
 \begin{dnotation}[Freie Gruppen]
-    Die Notation $\left< a \mid  \right> $ heißt natürlich, dass wir keine Relationen fordern, also $\left<  a \mid  \right>  \cong \Z$. Manchmal lässt man diesen Strich dann auch weg, und schreibt einfach sofort
+    Die Notation $\left< a \mid  \right> $ heißt natürlich, dass wir keine Relationen fordern, also $\left<  a \mid  \right>  \cong \mathbb{Z}$. Manchmal lässt man diesen Strich dann auch weg, und schreibt einfach sofort
     \[
-    \left< a \right>  \cong \Z
+    \left< a \right>  \cong \mathbb{Z}
     .\] 
     Das darf man aber nicht verwechseln mit der von $g$ erzeugten Untergruppe, wenn  $g\in G$ bereits ein Element ist, hier erhalten wir natürlich implizit alle Relationen, die $g$ als Element von $G$ besitzt.
 \end{dnotation}

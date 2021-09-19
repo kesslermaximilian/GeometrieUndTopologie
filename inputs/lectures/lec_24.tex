@@ -116,10 +116,10 @@ Wir sehen nun, dass die beiden Hebungen der 1-Zelle von $S^1$ nun die beiden 1-Z
 \begin{example}
     Wir bauen nun den Torus auf, indem wir eine Scheibe entfernen und mittels des Satzes wieder ankleben, siehe hierzu \autoref{fig:torus-mit-ausgeschnittener-scheibe}. Man überlegt sich nun, dass die Relation, entlang derer wir ankleben, $aba^{-1}b^{-1}$ ist, dann ergibt sich als Quotient
     \[
-        \pi_1(T^2) \cong \faktor{\pi_1(X)}{\left< aba^{-1}b^{-1} \right> } \cong \Z^2
+        \pi_1(T^2) \cong \faktor{\pi_1(X)}{\left< aba^{-1}b^{-1} \right> } \cong \mathbb{Z}^2
     \] 
 
-    Wir wissen auch, dass wir den Torus als den Quotienten des Einheitsquadrates schreiben können, das damit eine CW-Struktur aus zwei 1-Zellen und einer 2-Zelle besitzt. Erneut stellen wir fest, dass wir die 2-Zelle entlang $aba^{-1}b^{-1}$ an das 1-Skelett geklebt haben, und wir erhalten wieder $\Z^2$ als Fundamentalgruppe des Torus.
+    Wir wissen auch, dass wir den Torus als den Quotienten des Einheitsquadrates schreiben können, das damit eine CW-Struktur aus zwei 1-Zellen und einer 2-Zelle besitzt. Erneut stellen wir fest, dass wir die 2-Zelle entlang $aba^{-1}b^{-1}$ an das 1-Skelett geklebt haben, und wir erhalten wieder $\mathbb{Z}^2$ als Fundamentalgruppe des Torus.
 \end{example}
 
 \begin{figure}[ht]
@@ -132,7 +132,7 @@ Wir sehen nun, dass die beiden Hebungen der 1-Zelle von $S^1$ nun die beiden 1-Z
 \begin{example}
     Wir wissen, dass $\R\mathbb{P}^2$ als CW-Struktur aus einer Schleife hervorgeht, wenn wir die $2$-Zelle entlang  $x \mapsto x^2$ ankleben. Also ergibt sich
     \[
-        \pi_1(\R\mathbb{P}^2,x) = \left< a | a^2 \right>  = \faktor{\Z}{2\Z}
+        \pi_1(\R\mathbb{P}^2,x) = \left< a | a^2 \right>  = \faktor{\mathbb{Z}}{2\mathbb{Z}}
     \] 
 \end{example}
 
@@ -143,7 +143,7 @@ Wir sehen nun, dass die beiden Hebungen der 1-Zelle von $S^1$ nun die beiden 1-Z
 \begin{proof}
     Sei $G = \left< E | R \right> $ eine Darstellung der Gruppe. Setze nun $X^0 = \left \{x_0\right\} $ als das 0-Gerüst. Für jeden Erzeuger $e\in E$ kleben wir nun eine 1-Zelle an das 0-Gerüst an, wir erhalten also bereits
     \[
-        \pi_1(X^1) \cong \coprod _{i \in I^1 = E} \Z \cong \left< E |  \right> 
+        \pi_1(X^1) \cong \coprod _{i \in I^1 = E} \mathbb{Z} \cong \left< E |  \right> 
     \] 
     Für jede Relation $r\in R$ der Form
     \[
@@ -178,7 +178,7 @@ Wir sehen nun, dass die beiden Hebungen der 1-Zelle von $S^1$ nun die beiden 1-Z
 \begin{example}
     Wenn wir nun $\R\mathbb{P}^n$ betrachten wollen, so wissen wir, dass es sich um die gleiche 2-Struktur handelt wie die von $\R\mathbb{P}^2$, also wissen wir
     \[
-        \pi_1(\R\mathbb{P}^n) \cong \pi_1(\R\mathbb{P}^2) \cong  \Z / 2 \Z
+        \pi_1(\R\mathbb{P}^n) \cong \pi_1(\R\mathbb{P}^2) \cong  \mathbb{Z} / 2 \mathbb{Z}
     \] 
 \end{example}
 
@@ -209,12 +209,12 @@ Wir sehen nun, dass die beiden Hebungen der 1-Zelle von $S^1$ nun die beiden 1-Z
         \R\mathbb{P}^2 \ar{r}{\overline{g}} & \R\mathbb{P}^1
     \end{tikzcd}
 \]
-Sei nun $w$ ein Weg von  $x_0\in S^2$ zu $-x_0$. Dann ist $[p(w)] \in \pi_1(\R\mathbb{P}^2, p(x_0)) \cong \Z /2$ ein Erzeuger; die Klasse ist nicht trivial, weil ihre Hebung $w$ keine Schleife ist. Es ist  $g(w)$ ein Weg von  $g(x_0)$ nach $g(-x_0) = -g(x_0)$. Also ist in $\pi_1(\R\mathbb{P}^1, p(g(x_0))$ wieder 
+Sei nun $w$ ein Weg von  $x_0\in S^2$ zu $-x_0$. Dann ist $[p(w)] \in \pi_1(\R\mathbb{P}^2, p(x_0)) \cong \mathbb{Z} /2$ ein Erzeuger; die Klasse ist nicht trivial, weil ihre Hebung $w$ keine Schleife ist. Es ist  $g(w)$ ein Weg von  $g(x_0)$ nach $g(-x_0) = -g(x_0)$. Also ist in $\pi_1(\R\mathbb{P}^1, p(g(x_0))$ wieder 
 
 \[
     0 \neq  [p(g(w))] = [\overline{g}(p(w))] = \overline{g}_*[p(w)] = 0
 \]
-Denn jede Abbildung $\Z / 2 \cong \pi_1(\R \mathbb{P}^2) \to  \pi_1(\R\mathbb{P}^1) \cong \Z$ ist trivial. \contra.
+Denn jede Abbildung $\mathbb{Z} / 2 \cong \pi_1(\R \mathbb{P}^2) \to  \pi_1(\R\mathbb{P}^1) \cong \mathbb{Z}$ ist trivial. \contra.
 \end{proof}
 
 \begin{corollary}
@@ -233,7 +233,7 @@ Denn jede Abbildung $\Z / 2 \cong \pi_1(\R \mathbb{P}^2) \to  \pi_1(\R\mathbb{P}
 Wir haben bereits den Funktior $\pi_1$ kennegelernt, der uns
 \[
     \pi_1(S^n) \cong \begin{cases}
-        \Z & n = 1 \\
+        \mathbb{Z} & n = 1 \\
         0 & n \neq 1
     \end{cases}
 \] 
@@ -243,7 +243,7 @@ liefert. Außerdem wissen wir bereits, dass die $S^n$ beispielsweise als Baustei
      Wir wollen für jedes $k\in \mathbb{N}$ einen Funktor $F_k$ mit 
      \[
          F_k(S^n) \cong \begin{cases}
-             \Z & k = n \\
+             \mathbb{Z} & k = n \\
              0 & \text{sonst}
          \end{cases}
      \]
