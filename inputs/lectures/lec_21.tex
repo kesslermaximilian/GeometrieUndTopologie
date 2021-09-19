@@ -1,12 +1,8 @@
 %! TEX root = ../../master.tex
-\lecture{}{Seifert van Kampen}
-%\lecture[Beispiele zu Seifert van Kampen. $k$-Zellen. CW-Komplexe. Realisierung von Sphären, Tori und  $\R\mathbb{P}^n$ als CW-Komplexe.]{Di 06 Jul 2021}{CW-Komplexe}
 
-\begin{orga}
-    Es gibt jetzt mehr Infos zur Klausur. Dazu findet sich auf eCampus ein Merkblatt zur Klausur. Das wichtigste ist vor allem, eine Ausweiskopie vorher einzusenden.
-\end{orga}
+\lecture[Satz von Seifert van Kampen. Wiederholung: Pushouts. Freie und amalgisierte Produkte von Gruppen als Pushouts in $\Grp$. Die Fundamentalgruppe  $F_2$ von  $S^1 \twedge S^1$. Konstruktion von Räumen mit 'fast' freier Fundamentalgruppe.]{Do 01 Jul 2021}[20]{Seifert van Kampen}[Fortsetzung]
 
-\section{Der Satz von Seifert von Kampen und CW-Komplexe}
+\section{Der Satz von Seifert von Kampen und CW-Komplexe}\label{sec:seifert-van-kampen}
 
 \begin{restatable}[Seifert-van-Kampen]{theorem}{ThmSeifertVanKampen}\label{thm:seifert-van-kampen}
     Sei $X$ ein Raum, seien  $U_1,U_2\subset X$ offen, sodass $U_1\cup U_2 = X$, und bezeichne  $U_3 \coloneqq  U_1 \cap U_2$.
@@ -104,7 +100,7 @@ G_1 \star G_2 \coloneqq      \left< E_1 \cup E_2\mid R_1 \cup R_2 \right>
    .\] 
 \end{example}
 
-\todo{Hier erwähnen, dass eine neue Vorlesung beginnt?}
+\lecture[Beispiele zu Seifert van Kampen.]{Di 06 Jul 2021}[21]{CW-Komplexe}
 
 \begin{figure}[ht]
     \centering
@@ -113,7 +109,7 @@ G_1 \star G_2 \coloneqq      \left< E_1 \cup E_2\mid R_1 \cup R_2 \right>
     \label{fig:skizze-zu-seifert-van-kampen}
 \end{figure}
 
-Betrachte Abbildung \ref{fig:skizze-zu-seifert-van-kampen}, da 'sieht man' viel zur Intuition von Seifert van Kampen.
+Betrachte nun Abbildung \ref{fig:skizze-zu-seifert-van-kampen}, da 'sieht man' viel zur Intuition von Seifert van Kampen.
 
 Wir erinnerns uns hier auch noch an \autoref{def:wedge-produkt}, das letztendlich auch nur ein Pushout von Räumen ist. Wir können also Seifert van Kampen auch umformulieren zu 'Seifert van Kampen erhält \textit{schöne} Pushouts'.
 
@@ -218,42 +214,6 @@ Man überlegt sich noch, dass $U_3 = A_1 \cup A_2 \simeq S^1$, auch indem wir di
     Das darf man aber nicht verwechseln mit der von $g$ erzeugten Untergruppe, wenn  $g\in G$ bereits ein Element ist, hier erhalten wir natürlich implizit alle Relationen, die $g$ als Element von $G$ besitzt.
 \end{dnotation}
 
-\todo{Hier Beweis von Seifert van Kampen einfügen}
 \begin{remark*}
-    An dieser Stelle haben wir nun den Beweis von \autoref{thm:seifert-van-kampen} gemacht. Aus zeitlichen Gründen ist der noch nicht aufgeschrieben, es fehlt aber auch \textit{nur} der Beweis, danach geht es normal weiter.
+    Vorlesung 21 setzt hier direkt mit CW-Komplexen, d.h. \autoref{sec:cw-komplexe} fort. Wir geben hier direkt den Rest von \autoref{sec:seifert-van-kampen} wieder.
 \end{remark*}
-
-
-\begin{theorem}[allgemeine Version von Seifert-van-Kampen]\label{thm:seifert-van-kampen-allgemein}
-    Sei $X$ ein Raum,  $x\in X$, und $\mathcal{U} = \left \{U_α\right\} _{α\in I}$ eine offene Überdeckung von $X$ mit  $x\in U_{α}$ für jedes $α\in I$. Sei für $α,β\in I$ stets $U_α \cap  U_β$ wegzusammenhängend. Die inklusionen
-    \[
-        \left \{ι_α\colon  \pi_1(U_α,x) \to  \pi_1(X,x)\right\}
-    .\] 
-    induzieren eine Abbildung
-    \[
-        \psi \colon  \coprod \pi_1(U_α, x) \twoheadrightarrow \pi_1(X,x)
-    .\] 
-    Dann gilt:
-    \begin{enumerate}[1)]
-        \item $\psi $ ist surjektiv.
-        \item Falls darüber hinaus $U_α \cap  U_β \cap  U_γ$ wegzusammenhängend für $α,β,γ\in I$, dann ist der Kern von $\psi $ der Normalteiler erzeugt von
-            \[
-                \left \{ι_{α,β}(\omega ) ι_{β,α}(\omega )^{-1} \mid  \omega \in \pi_1(U_α \cap U_β, x), α,β\in I\right\} 
-            .\] 
-    \end{enumerate}
-    wobei
-    \begin{IEEEeqnarray*}{rCl}
-        ι_{α,β}\colon  U_α \cap  U_β \hookrightarrow U_α \\
-        ι_{β,α}\colon  U_β \cap  U_α \hookrightarrow U_β
-    \end{IEEEeqnarray*}
-    die Inklusionen sind.
-\end{theorem}
-
-\begin{oral}
-    Man kann das im Wesentlichen aus dem üblichen Satz von \nameref{thm:seifert-van-kampen}   folgern, indem man induktiv auf endlich viele Mengen verallgemeinert. Für unendliche Mengen macht man dann ein Kolimes-Argument, indem man ausnutzt, dass wegen Kompaktheit jeder Weg und jede Homotopie schon in endlichen vielen der $U_i$ liegen muss.
-
-    Für einen vollständigen Beweis siehe  \cite[Satz 1.20]{algebraic-topology-hatcher}.
-\end{oral}
-
-Wir werden diese allgemeine Version nicht beweisen, wir begnügen uns mit einigen Berechnungen.
-
