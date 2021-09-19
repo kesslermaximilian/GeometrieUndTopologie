@@ -23,7 +23,7 @@ Wir erinnern uns daran, dass wir gerade dabei waren, \autoref{thm:urysohn} zu be
 
 \begin{proof}[Beweis von \autoref{thm:urysohn} (\nameref{thm:urysohn})]
     \begin{goal}
-        $\forall r\in \Q\cap [0,1]$ konstruiere $V_r \subset X$ offen, sodass
+        $\forall r\in \mathbb{Q}\cap [0,1]$ konstruiere $V_r \subset X$ offen, sodass
          \begin{enumerate}[1.]
             \item $A\subset V_0$
             \item $B\subset X\setminus V_1$
@@ -36,7 +36,7 @@ Dies genügt, denn dann wissen wir mit \autoref{lm:stetige-abbildung-durch-famil
         f(x) & = & 0 \quad \forall x\in V_0 \supset A
         \\ f(x) & = & 1 \quad \forall x \in  X \setminus V_1\supset B
 \end{IEEEeqnarray*}
-Wähle hierzu eine Abzählung $p_1,p_2,\ldots$ von $\Q\cap [0,1]$, sodass $p_1 = 1$ und $p_2 = 0$. Definiere nun $\left \{V_r\right\} $ rekursiv, wobei wir auch induktiv die Invariante erhalten wollen, dass $r<r' \implies \overline{V_r} \subset V_{r'}$.
+Wähle hierzu eine Abzählung $p_1,p_2,\ldots$ von $\mathbb{Q}\cap [0,1]$, sodass $p_1 = 1$ und $p_2 = 0$. Definiere nun $\left \{V_r\right\} $ rekursiv, wobei wir auch induktiv die Invariante erhalten wollen, dass $r<r' \implies \overline{V_r} \subset V_{r'}$.
 \begin{itemize}
     \item $p_1 = 1$. Setze $V_1 \coloneqq X\setminus B$ (offen, weil $B$ abgeschlossen ist)
     \item  $p_2 = 0$. Nach \autoref{trennung-von-mengen-in-normalem-raum-für-urysohn-lemma} mit $A = A$ und  $U = X\setminus B$ finden wir $V_0$ offen mit 

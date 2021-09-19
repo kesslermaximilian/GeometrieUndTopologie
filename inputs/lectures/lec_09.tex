@@ -25,11 +25,11 @@
 \begin{example}
     \begin{enumerate}[1)]
         \item $\R\setminus \left \{0\right\}  = (-\infty,0) \cup (0,\infty)$ und $(-\infty,0),(0,\infty)$ sind offen, disjunkt und nicht leer, also ist $\R\setminus \left \{0\right\} $ \underline{nicht} zusammenhängend. 
-        \item Betrachte $\Q\subset \R$ mit der Unterraumtopologie. Dann ist
+        \item Betrachte $\mathbb{Q}\subset \R$ mit der Unterraumtopologie. Dann ist
             \[
-                \Q = (\Q \cap (-\infty,\sqrt{2})) \cup (\Q \cap (\sqrt{2},\infty))  
+                \mathbb{Q} = (\mathbb{Q} \cap (-\infty,\sqrt{2})) \cup (\mathbb{Q} \cap (\sqrt{2},\infty))  
             .\] 
-            eine Zerlegung in offene, disjunkte, nichtleere Mengen, also ist auch $\Q$ nicht zusammenhängend.
+            eine Zerlegung in offene, disjunkte, nichtleere Mengen, also ist auch $\mathbb{Q}$ nicht zusammenhängend.
     \end{enumerate}
 \end{example}
 
@@ -253,7 +253,7 @@ und wir wissen schon, dass $\R^n \setminus \left \{0\right\}$ wegzusammenhängen
 
 
 \begin{lemma}\label{lm:stetige-abbildung-durch-familie-von-rationalen-offenen-mengen}
-    Sei $X$ ein topologischer Raum, sodass für jedes $r\in [0,1]\cap \Q$ offene $V_r \subset X$, sodass $r < r' \implies \overline{V_r} \subset V_{r'}$. Dann existiert eine stetige Abbildung $f: X \to  [0,1]$, sodass $f(x) = 0$ für  $x\in V_0$ und $f(x) = 1$ für  $x\not\in V_1$.
+    Sei $X$ ein topologischer Raum, sodass für jedes $r\in [0,1]\cap \mathbb{Q}$ offene $V_r \subset X$, sodass $r < r' \implies \overline{V_r} \subset V_{r'}$. Dann existiert eine stetige Abbildung $f: X \to  [0,1]$, sodass $f(x) = 0$ für  $x\in V_0$ und $f(x) = 1$ für  $x\not\in V_1$.
 \end{lemma}
 
 \begin{figure}[ht]
@@ -283,7 +283,7 @@ und wir wissen schon, dass $\R^n \setminus \left \{0\right\}$ wegzusammenhängen
     \begin{IEEEeqnarray*}{rCl}
         x\in f^{-1}([0,a)) & \iff & f(x) < a \leq  1 \\
                            & \stackrel{\text{Def von $f$}}{\iff} &  \inf \left \{r \mid  x\in V_r\right\} <a \\
-                           &\stackrel{\Q \text{ ist dicht}}{\iff} & \exists r < a, r\in \Q \colon x\in V_r \\
+                           &\stackrel{\mathbb{Q} \text{ ist dicht}}{\iff} & \exists r < a, r\in \mathbb{Q} \colon x\in V_r \\
                            & \iff&  x\in \bigcup_{r<a} V_r 
     \end{IEEEeqnarray*}
     Für den zweiten Typ von Basielementen ist
@@ -292,8 +292,8 @@ und wir wissen schon, dass $\R^n \setminus \left \{0\right\}$ wegzusammenhängen
                 x\not\in V_1 &\text{oder} \\
                 x\in V_1, a < f(x) = \inf \left \{r\mid x\in V_r\right\}
         \end{cases} \\
-                           & \iff  & \exists r'>a, r'\in \Q, x\not\in V_{r'} \\
-                           & \stackrel{\overline{V_r} \subset V_{r'}}{\iff}  & \exists r\in \Q, a<r < r', x\not\in \overline{V_r} \\
+                           & \iff  & \exists r'>a, r'\in \mathbb{Q}, x\not\in V_{r'} \\
+                           & \stackrel{\overline{V_r} \subset V_{r'}}{\iff}  & \exists r\in \mathbb{Q}, a<r < r', x\not\in \overline{V_r} \\
                            & \iff  & x\in \bigcup_{r>a} \left( X \setminus \overline{V_r} \right)  
     \end{IEEEeqnarray*}
     also ist auch $f^{-1}((a,1])$ eine Vereinigung von offenen Mengen. \\
