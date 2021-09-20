@@ -8,7 +8,7 @@ full: full.gnuplots
 
 # Compiles the master document, assuming gnuplots already exist
 master: master.gnuplots
-	@TEXINPUTS=${TEXINPUTS} latexmk -pdf -dvi master.tex
+	@TEXINPUTS=${TEXINPUTS} latexmk -pdf -dvi- master.tex
 
 # Runs pdflatex on the full document
 full-pdflatex: full.gnuplots
