@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{680.31496063bp}%
+    \setlength{\unitlength}{684.94613047bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,15 +50,26 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.5)%
+  \begin{picture}(1,0.38224258)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{skizze-zu-seifert-van-kampen.pdf}}%
-    \put(0.39086822,0.21661714){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_0$\end{tabular}}}}%
+    \put(0.45060337,0.16219815){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_0$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{skizze-zu-seifert-van-kampen.pdf}}%
-    \put(0.42614578,0.37262255){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_2$\end{tabular}}}}%
-    \put(0.35559063,0.30833893){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_1$\end{tabular}}}}%
-    \put(0.28352693,0.10843252){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\pi_1(U_1,x_0) \star \pi_1(U_2,x_0) \twoheadrightarrow \pi_1(x,x_0)$\end{tabular}}}}%
-    \put(0.32061288,0.07725563){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(Die Skizze wird natürlich noch verbessert)\end{tabular}}}}%
+    \put(0.42145258,0.29923993){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_2$\end{tabular}}}}%
+    \put(0.35624108,0.24896855){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_1$\end{tabular}}}}%
+    \put(0.23239766,0.01430362){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\pi_1(U_1,x_0) \star \pi_1(U_2,x_0) \twoheadrightarrow \pi_1(X,x_0)$\end{tabular}}}}%
+    \put(0.82728437,0.20966618){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\color{red} U_2$\end{tabular}}}}%
+    \put(0.05331005,0.22212454){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\color{red} U_1$\end{tabular}}}}%
+    \put(0.28153679,0.35556357){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\color{red} U_3 \coloneqq  U_1 \cap  U_2$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{skizze-zu-seifert-van-kampen.pdf}}%
+    \put(0.70594767,0.23900247){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\color{blue} α$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{skizze-zu-seifert-van-kampen.pdf}}%
+    \put(0.3720787,0.19496908){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\color{purple!80!black} r_1$\end{tabular}}}}%
+    \put(0.47062669,0.24971717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\color{purple!80!black} r_2$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{skizze-zu-seifert-van-kampen.pdf}}%
+    \put(0.1748878,0.26027818){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\color{purple!80!black} α_3$\end{tabular}}}}%
+    \put(0.26730345,0.18786406){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\color{purple!80!black} α_1$\end{tabular}}}}%
+    \put(0.56897927,0.29220267){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\color{purple!80!black} α_2$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
