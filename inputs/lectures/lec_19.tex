@@ -1,5 +1,5 @@
 %! TEX root = ../../master.tex
-\lecture[Decktransformationen von $\exp\colon\R -> S^1$. Normalisatoren. Gruppenisomorphismus $\Delta(p)\cong H \backslash N_{pi1(X,x0)}H$ zwischen Decktransformationen und ~Fundamentalgruppe. Gruppenwirkungen. Semidirekte Produkte und die Fundamentalgruppe des Torus $\mathbb{Z} \rtimes \mathbb{Z}$.]{Di 29 Jun 2021}{Decktransformationen}
+\lecture[Decktransformationen von $\exp\colon\R -> S^1$. Normalisatoren. Gruppenisomorphismus $\Delta(p)\cong \cofaktor{H}{N_{\pi_1(X,x_0)}H}$ zwischen Decktransformationen und ~Fundamentalgruppe. Gruppenwirkungen. Semidirekte Produkte und die Fundamentalgruppe des Torus $\mathbb{Z} \rtimes \mathbb{Z}$.]{Di 29 Jun 2021}{Decktransformationen}
 \begin{example}
     \begin{enumerate}[1)]
         \item Betrachte wieder die Überlagerung $\exp \colon  \R \to  S^1$.
@@ -68,7 +68,7 @@
 \end{remark}
 
 \begin{remark}
-    Per Definition ist $H$ normal in  $N_GH$. Also ist $H \backslash N_GH$ (die Menge der Linksnebenklassen) wieder eine Gruppe mittels
+    Per Definition ist $H$ normal in  $N_GH$. Also ist $\cofaktor{H}{N_GH}$ (die Menge der Linksnebenklassen) wieder eine Gruppe mittels
     \[
         (Hg) (Hg') = H(gg')
     .\] 
@@ -104,12 +104,12 @@ Insbesondere erhalten wir auch eine Bijektion
     \begin{enumerate}[1)]
         \item Für $f\in \Delta(p)$ ist
             \[
-                \varphi (f(e_0)) \in H \backslash N_{\pi_1(X,x_0)}H
+                \varphi (f(e_0)) \in \cofaktor{H}{N_{\pi_1(X,x_0)}H}
             .\] 
         \item Die Abbildung
                 \begin{equation*}
                 \psi : \left| \begin{array}{c c l} 
-                    \Delta(p) & \longrightarrow & H \backslash N_{\pi_1(X,x_0)}H \\
+                    \Delta(p) & \longrightarrow & \cofaktor{H}{N_{\pi_1(X,x_0)}H} \\
                     f & \longmapsto &  \varphi (f(e_0))
                 \end{array} \right.
             \end{equation*}
@@ -159,7 +159,7 @@ Insbesondere erhalten wir auch eine Bijektion
     .\] 
     also folgt $[p \circ v] \in N_{\pi_1(X,x_0)} H$, und somit insbesondere
     \[
-        \varphi (f(e_0)) = [p \circ  v]_H \in H \backslash N_{\pi_1(X,x_0)} H
+        \varphi (f(e_0)) = [p \circ  v]_H \in \cofaktor{H}{N_{\pi_1(X,x_0)} H}
     .\] 
 \item
     \begin{description}
@@ -236,7 +236,7 @@ Eine Links-$G$-Menge ist nämlich nichts anderes als Ein Funktor  $\mathcat{G} \
 \end{trivial}
 
 \begin{example}
-    Ist $H\leq G$, so ist $H \backslash G$ eine  $G$-Menge mittels  $(Hg)g' = H(gg')$.
+    Ist $H\leq G$, so ist $\cofaktor{H}{G}$ eine  $G$-Menge mittels  $(Hg)g' = H(gg')$.
 \end{example}
 
 \begin{nexample}\label{ex:fundamentalgruppe-der-kleinschen-flasche-mittels-semidirektem-produkt-z-z}

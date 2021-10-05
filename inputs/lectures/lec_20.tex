@@ -33,7 +33,7 @@ Insgesamt können wir folgendes zusammenfassen:
 \end{dnotation}
 
 \begin{example}
-    Sei $H\subset G$ eine Untergruppe. Dann ist $H \backslash G$, die Menge der Nebenklassen von  $H$, eine transitive  $G$-Menge. Für  $Hg, Hg' \in  H \backslash G$ haben wir nämlich die Wirkung $Hg.(g^{-1}g') = Hg'$.
+    Sei $H\subset G$ eine Untergruppe. Dann ist $\cofaktor{H}{G}$, die Menge der Nebenklassen von  $H$, eine transitive  $G$-Menge. Für  $Hg, Hg' \in  \cofaktor{H}{G}$ haben wir nämlich die Wirkung $Hg.(g^{-1}g') = Hg'$.
 \end{example}
 
 \begin{lemmadef}[Bahn]\label{def:bahn-orbit}
@@ -97,13 +97,13 @@ Sei $X$ eine  $G$-Menge. Seien $x,x' \in X$ beliebig. Dann ist $x.G = x'.G$ oder
 \end{proof}
 
 \begin{lemma}
-    Sei $X$ eine  $G$-Menge und  $x\in X$. Dann ist $x.G$ isomorph (als  $G$-Menge) zu  $G_x \backslash G$.
+    Sei $X$ eine  $G$-Menge und  $x\in X$. Dann ist $x.G$ isomorph (als  $G$-Menge) zu  $\cofaktor{G_x}{G}$.
 \end{lemma}
 \begin{proof}
     Definiere
         \begin{equation*}
         \varphi : \left| \begin{array}{c c l} 
-        G_x \backslash G & \longrightarrow & x.G \\
+            \cofaktor{G_x}{G} & \longrightarrow & x.G \\
         G_xg & \longmapsto &  x.g
         \end{array} \right.
     \end{equation*}
@@ -137,10 +137,10 @@ Sei $X$ eine  $G$-Menge. Seien $x,x' \in X$ beliebig. Dann ist $x.G = x'.G$ oder
         Auch, wenn das im Allgemeinen nicht so ist, dass Mengentheorischer Isomorphismus + Kategorientheoretischer Homomorphismus $\implies$ Kategorieller Isomorphismus (das gilt ja z.B. in $\Top$ nicht, siehe  $\exp \colon  [0,1) \to  S^1$), gilt dies für $G$-Mengen (und im Übrigen auch für Gruppen).
     \end{oral}
 
-Also ist jede $G$-menge isomorph zu einer disjunkten Vereinigung um $G$-Mengen der Form $H \backslash G$, wobei  $H\leq G$.
+    Also ist jede $G$-menge isomorph zu einer disjunkten Vereinigung um $G$-Mengen der Form $\cofaktor{H}{G}$, wobei  $H\leq G$.
 
 \begin{warning}
-    Auch, wenn wir die Notation $H \backslash G$ verwendet haben, wollen wir damit nicht notwendigerweise ausdrücken, dass  $H$ normal ist in  $G$, wir haben nur die Menge der Nebenklassen betrachtet, und zwar als Menge.
+    Auch, wenn wir die Notation $\cofaktor{H}{G}$ verwendet haben, wollen wir damit nicht notwendigerweise ausdrücken, dass  $H$ normal ist in  $G$, wir haben nur die Menge der Nebenklassen betrachtet, und zwar als Menge.
 \end{warning}
 
 \section{Hauptsatz der Überlagerungstheorie}
@@ -259,7 +259,7 @@ Sei in diesem Kapitel stets $p\colon  E\to X$ eine Überlagerung.
     An dieser Stelle haben wir nun \nameref{thm:seifert-van-kampen} eingeführt, und weite Teile von \autoref{sec:seifert-van-kampen} vorgezogen, damit diese vor der Klausur bekannt sind. Erst danach sind wir hierher zurückgekommen, und haben den \nameref{thm:hauptsatz-der-überlagerungstheorie} bewiesen. 
 \end{remark*}
 
-\lecture[Bijektion zwischen Orbits und Wegekomponenten. Morphismen von transitiven $g$-Mengen. Alternativer Beweis des Isomorphismus  $\Delta(p) \cong H \backslash N_{\pi_1(X,x_0)}H$.]{Do 08 Jul 2021}[22]{Beweis des Hauptsatzes der Überlagerungstheorie}
+\lecture[Bijektion zwischen Orbits und Wegekomponenten. Morphismen von transitiven $g$-Mengen. Alternativer Beweis des Isomorphismus  $\Delta(p) \cong \cofaktor{H}{N_{\pi_1(X,x_0)}H}$.]{Do 08 Jul 2021}[22]{Beweis des Hauptsatzes der Überlagerungstheorie}
 
 Wir erinnerns uns daran, dass die Wirkung von $\pi_1(X,x_0)$ auf $p^{-1} (x_0)$ durch
 \[
@@ -292,7 +292,7 @@ gegeben ist.
 
 Ist $e\in p^{-1} (x_0)$, so ist der Orbit
 \[
-    e.\pi_1(x,x_0) \cong_{\pi_1(X,x_0)-\text{Menge}} \pi_1(X,x_0)_e \backslash \pi_1(X,x_0)
+    e.\pi_1(x,x_0) \cong_{\pi_1(X,x_0)-\text{Menge}} \cofaktor{\pi_1(X,x_0)_e}{\pi_1(X,x_0)}
 .\] 
 
 Also interessieren wir uns auch für Elemente aus dem Stabilisator $\pi_1(x,x_0)_e$. Hierzu ist
@@ -300,12 +300,12 @@ Also interessieren wir uns auch für Elemente aus dem Stabilisator $\pi_1(x,x_0)
     e.[w] = e \iff  L(w,e)(1) = e \iff  L(w,e) \text{ ist Schleife an } e \iff  [w] \in  p_*(\pi_1(E,e))
 .\] 
 
-Also ist $e.\pi_1(X,x_0) \cong p_*(\pi_1(E,e)) \backslash \pi_1(X,x_0)$.
+Also ist $e.\pi_1(X,x_0) \cong \cofaktor{p_*(\pi_1(E,e))}{\pi_1(X,x_0)}$.
 
 \begin{proof}[Beweis von \autoref{thm:hauptsatz-der-überlagerungstheorie}]
     \underline{1. Schritt} Wir zeigen die essentielle Surjektivität. Sei $M$ eine  $\pi_1(X,x_0)$-Menge. Dann ist $M$ isomorph zu einer disjunkten Vereinigung
     \[
-        M = \bigsqcup_{i\in I} H_i \backslash \pi_1(X,x_0)
+        M = \bigsqcup_{i\in I} \cofaktor{H_i}{\pi_1(X,x_0)}
     .\] 
     Mit $H_i \leq  \pi_1(X,x_0)$. Nach \autoref{thm:universelle-überlagerungen-existieren-genau-für-semilokal-einfachzusammenhängende-lokal-wegzusammenhängenden-zusammenhängende-räume} existieren Räume $E(H_i)$, sodass
      \[
@@ -315,13 +315,13 @@ Also ist $e.\pi_1(X,x_0) \cong p_*(\pi_1(E,e)) \backslash \pi_1(X,x_0)$.
     \[
         p(H_i)_* \pi_1(E(H_i),e_i) = H_i
     .\] 
-    Dann ist $p(H_i)^{-1}(x_0)$ isomorph zu $H_i \backslash \pi_1(X,x_0)$ nach \autoref{prop:wegekomponenten-von-überlagerungsraum-sind-bahnen-von-faser-bezüglich-fundamentalgruppe-wenn-basisraum-wegzusammenhängend} und der Vorüberlegung. Wir betrachten nun die disjunkte Vereinigung
+    Dann ist $p(H_i)^{-1}(x_0)$ isomorph zu $\cofaktor{H_i}{\pi_1(X,x_0)}$ nach \autoref{prop:wegekomponenten-von-überlagerungsraum-sind-bahnen-von-faser-bezüglich-fundamentalgruppe-wenn-basisraum-wegzusammenhängend} und der Vorüberlegung. Wir betrachten nun die disjunkte Vereinigung
     \[
         p\coloneqq  \coprod p(H_i) \colon  \coprod _{i \in I} E(H_i) \to  X
     .\] 
     so ist
     \[
-        p^{-1} (x_0) = \bigsqcup p(H_i)^{-1}(x_0) \cong \coprod_{i \in I} H_i \backslash \pi_1(X,x_0) \cong M
+        p^{-1} (x_0) = \bigsqcup p(H_i)^{-1}(x_0) \cong \coprod_{i \in I} \cofaktor{H_i}{\pi_1(X,x_0)} \cong M
     .\] 
     \begin{remark}
         Es fehlt noch zu zeigen, dass $p$ überhaupt eine Überlagerung ist, im allgemeinen ist das Koprodukt von Überlagerungen nämlich \textit{nicht} zwingend wieder eine Überlagerung. Wir müssen das also in diesem konkreten Fall noch zeigen.
@@ -359,7 +359,7 @@ Also ist $e.\pi_1(X,x_0) \cong p_*(\pi_1(E,e)) \backslash \pi_1(X,x_0)$.
 
     Sei $e\in p^{-1} (x_0) \cap \tilde{E}$, dann ist
     \[
-        p^{-1} (x_0) \cap  \tilde{E} \cong \underbrace{p_*(\pi_1(E,e))}_{\coloneqq H} \backslash \pi_1(X,x_0)
+        p^{-1} (x_0) \cap  \tilde{E} \cong \cofaktor{\underbrace{p_*(\pi_1(E,e))}_{\coloneqq H}}{\pi_1(X,x_0)}
     .\] 
     nach der Vorüberlegung. Es ist $\tilde{f}(e) \in p'^{-1}(x_0)$.
 
@@ -435,28 +435,27 @@ Mit dem \autoref{thm:hauptsatz-der-überlagerungstheorie} ergibt sich nun der fo
 
 \begin{proof}[Alternativer Beweis von \autoref{thm:isomorphismus-von-decktransformationen-mit-nebenklassengruppe-von-charakteristischer-untergruppe-in-seinem-normalisator}]
     
-Es sind $\Delta(p)$ genau die Automorphismen der Überlagerung  $p\colon  E \to X$. Nach dem Hauptsatz sind diese also isomorph zu den Automorphismen von $p^{-1} (x_0)$ als $\pi_1(X,x_0)$-Mengen, die wiederum isomorph sind zu den Automorphismen $p_*(\pi_1(E,e_0)) \backslash \pi_1(X,x_0)$, d.h.
+    Es sind $\Delta(p)$ genau die Automorphismen der Überlagerung  $p\colon  E \to X$. Nach dem Hauptsatz sind diese also isomorph zu den Automorphismen von $p^{-1} (x_0)$ als $\pi_1(X,x_0)$-Mengen, die wiederum isomorph sind zu den Automorphismen von $\cofaktor{p_*(\pi_1(E,e_0))}{\pi_1(X,x_0)}$, d.h.
 \[
     \Delta(p) = \Aut \left(
     \begin{tikzcd}
         E \ar{d}{p} \\ X
     \end{tikzcd}\right) 
-    \cong \Aut_{\pi_1(X,x_0)-\text{Mengen}} (p^{-1} (x_0)) \cong \Aut \left( p_*(\pi_1(E,e_0)) \backslash \pi_1(x,x_0) \right) 
+    \cong \Aut_{\pi_1(X,x_0)-\text{Mengen}} (p^{-1} (x_0)) \cong \Aut \left( \cofaktor{p_*(\pi_1(E,e_0)}{\pi_1(x,x_0)} \right) 
 .\] 
 \end{proof}
-\todo{Das Faktor-Package auch mal für links-faktoren machen und einbinden}
 
 \begin{proposition}
     Es ist
     \[
-        \Aut_{G-\text{Mengen}}(H \backslash G) \cong H \backslash N_GH
+        \Aut_{G-\text{Mengen}}\left(\cofaktor{H}{G}\right) \cong \cofaktor{H}{N_GH}
     .\] 
 \end{proposition}
 \begin{proof}
-    Sei $f\colon  H \backslash G \to  H \backslash G\in \Aut (H \backslash G)$ ein solcher Automorphismus.
+    Sei $f\colon  \cofaktor{H}{G} \to  \cofaktor{H}{G}\in \Aut \left(\cofaktor{H}{G}\right)$ ein solcher Automorphismus.
     \begin{enumerate}[1)]
     \item Dann ist $f$ bereits eindeutig bestimmt durch  $f(H)$ nach \autoref{lm:morphismus-von-g-mengen-von-transitiver-menge-ist-auf-einem-element-bestimmt}.
-    \item $f(H.1) \in H \backslash N_GH$. ist $f(H.1) = H.g_0$, dann ist für alle $h\in H$ auch $H.g_0 = f(H.1) = f(H.h) = f(H.1).h = H.g_0.h$.
+    \item $f(H.1) \in \cofaktor{H}{N_GH}$. ist $f(H.1) = H.g_0$, dann ist für alle $h\in H$ auch $H.g_0 = f(H.1) = f(H.h) = f(H.1).h = H.g_0.h$.
 
         Daraus folgt bereits, dass $\exists h_1,h_1 \in H$ mit $h_1g_0 = h_2g_0h$, also nach umformen
         \[
