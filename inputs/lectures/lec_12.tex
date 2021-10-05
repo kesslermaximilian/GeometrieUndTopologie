@@ -143,7 +143,7 @@ und damit erhalten wir die gleiche reelle Zahl, also schlussendlich $(\ev_v^*)^*
     \end{example}
 
     \begin{oral}[In der Pause]
-        Es ist $\Vect_{\R}^{f.d.}$ keine kleine Kategorie, denn wir können z.B. für jede beliebige Menge $X$ die Menge  $\R^n \times \left \{X\right\} $ bilden und diese kanonisch wideer als $\R^n$ auffassen, damit erhalten wir also für jede Menge (mindestens) ein Objekt in $\Vect_{\R}^{f.d.}$, und damit können wir auch die Menge aller Mengen basteln. \\
+        Es ist $\Vect_{\R}^{f.d.}$ keine kleine Kategorie, denn wir können z.B. für jede beliebige Menge $X$ die Menge  $\R^n \times \left \{X\right\} $ bilden und diese kanonisch wieder als $\R^n$ auffassen, damit erhalten wir also für jede Menge (mindestens) ein Objekt in $\Vect_{\R}^{f.d.}$, und damit können wir auch die Menge aller Mengen basteln. \\
         Umgekehrt ist aber die Kategorie der endlich dimensionalen Untervektorräume von $\R^{\infty}$ eine kleine Kategorie, weil jedes Objekt ja insbesondere eine Teilmenge von $\R^{\infty}$ (zumindest die Trägermenge) ist, und wir damit wieder eine Menge erhalten.
     \end{oral}
 
@@ -218,7 +218,7 @@ Sei $\mathcat{C}$ eine Kategorie und $\mathcat{I}$ eine kleine Kategorie. Wir st
 \end{equation}
 
 \begin{definition}[Terminales Objekt]
-    Ein \vocab{terminales} Objekt in $\mathcat{C}$ ist ein Objekt $X\in \Ob(\mathcat{C})$, sodass es für alle $Y\in \Ob(\mathcat{C})$ enien eindeutigen Morphismus $Y \to  X$ gibt, d.h.
+    Ein \vocab{terminales} Objekt in $\mathcat{C}$ ist ein Objekt $X\in \Ob(\mathcat{C})$, sodass es für alle $Y\in \Ob(\mathcat{C})$ einen eindeutigen Morphismus $Y \to  X$ gibt, d.h.
      \[
          \forall Y\in \Ob(\mathcat{C})\colon  \qquad \Mor_{\mathcat{C}}(Y,X) = \left \{\star\right\} 
     .\] 
@@ -275,7 +275,7 @@ so ergibt sich als Ausschnitt der Kategorie $\mathcat{C}$ ein \textit{kommutativ
 \end{dremark}
 
 \begin{definition}[Kegelkategorie]\label{def:kegelkategorie}
-    Sei $X: \mathcat{I} \to  \mathcat{C}$ ein Funktor. Die \vocab{Kegelkategorie} $\mathcat{C} / X$ hat als Objekte genau die Kegel über $X$. Die Morphismen zwischen Kegeln $(Y, \left \{f_i\right\}) \to (Y', f_i')$ sind gegebene durch $g\in \Mor_{\mathcat{C}}(Y,Y')$ (also durch übliche Morphismen zwischen $Y,Y'$ als Objekten von  $\mathcat{C}$), sodass für alle $i\in \Ob(\mathcat{I})$ folgendes kommutiert:
+    Sei $X: \mathcat{I} \to  \mathcat{C}$ ein Funktor. Die \vocab{Kegelkategorie} $\mathcat{C} / X$ hat als Objekte genau die Kegel über $X$. Die Morphismen zwischen Kegeln $(Y, \left \{f_i\right\}) \to (Y', \left \{f_i'\right\} )$ sind gegebene durch $g\in \Mor_{\mathcat{C}}(Y,Y')$ (also durch übliche Morphismen zwischen $Y,Y'$ als Objekten von  $\mathcat{C}$), sodass für alle $i\in \Ob(\mathcat{I})$ folgendes kommutiert:
     \[
     \begin{tikzcd}
         Y \ar{rr}{g} \ar[swap]{dr}{f_i} & & Y' \ar{dl}{f_i'} \\
@@ -334,7 +334,7 @@ Für die Eindeutigkeit von  $f,g$ reicht es zu bemerken, dass ja bereits die Abb
 \begin{example}
     \begin{enumerate}[1)]
         \item Sei $\mathcat{I} = \emptyset$ die leere Kategorie, dann ist $\mathcat{C} / X \cong \mathcat{C}$. Also ist $\lim X$ ein terminalse Objekt.
-        \item Sei $\mathcat{I} = \left \{1,2\right\} $ (mit nur den Identitätsabbildungen). Sei $X\colon  \mathcal{I}t \to  \mathcat{C}$ gegeben ducrh $X_1,X_2\in \Ob(\mathcat{C})$, dann ist $\lim X$ das  \underline{Produkt} von $X_1$ und $X_2$. \\
+        \item Sei $\mathcat{I} = \left \{1,2\right\} $ (mit nur den Identitätsabbildungen). Sei $X\colon  \mathcal{I} \to  \mathcat{C}$ gegeben durch $X_1,X_2\in \Ob(\mathcat{C})$, dann ist $\lim X$ das  \underline{Produkt} von $X_1$ und $X_2$. \\
             In $\Top$ und  $\Set$ ist dieses das klassiche / bekannte Produkt  $X_1\times X_2$ (mit Projektionen!)
         \item Sei 
             \[
@@ -384,7 +384,7 @@ Für die Eindeutigkeit von  $f,g$ reicht es zu bemerken, dass ja bereits die Abb
          & Y
     \end{tikzcd}
     .\] 
-    kommutiert. Die Kokegelkategoriebesteht $X / \mathcat{C}$ (sprich: '$\mathcat{C}$ unter $X$') besteht nun aus allen Kokegeln, wobei ein Morphismus $(Y, \left \{f_i\right\} ) \to  (Y', \left \{f_i'\right\} )$ gegeben ist durch $g\in \Mor_{\mathcat{C}}(Y,Y')$, sodass für alle $i\in \Ob(\mathcat{I})$ folgendes kommutiert:
+    kommutiert. Die Kokegelkategoriebesteht $X / \mathcat{C}$ (sprich: '$\mathcat{C}$ unter $X$') nun aus allen Kokegeln, wobei ein Morphismus $(Y, \left \{f_i\right\} ) \to  (Y', \left \{f_i'\right\} )$ gegeben ist durch $g\in \Mor_{\mathcat{C}}(Y,Y')$, sodass für alle $i\in \Ob(\mathcat{I})$ folgendes kommutiert:
     \[
         \begin{tikzcd}
     & X_i \ar[swap]{dl}{f_i} \ar{dr}{f_j} \\
@@ -402,15 +402,12 @@ Ein \vocab{Kolimes} ist ein Initialobjekt in der Kokegelkategorie $X / \mathcat{
 \end{warning}
 
 \begin{oral}
-    Auch das Konzept des Kolimes kann man wieder auf das des Limes zurückführen, indem wir die duale Kategorie einführen.
+    Auch das Konzept des Kolimes kann man wieder auf das des Limes zurückführen, indem wir die duale Kategorie betrachten. Alle Ergebnisse über Limiten gelten also auch (dual) für Kolimiten.
 \end{oral}
 
 \begin{lemma**}[Kolimes als Limes in der Dualkategorie]
-    TODO
+    Wir fassen das Diagramm $X\colon  \mathcat{I} \to  \mathcat{C}$ als Funktor $X^{\op}\colon \mathcat{I}^{\op} \to \mathcat{C}^{\op}$ auf. Es ist nun $(X / \mathcat{C})^{\op} \cong \mathcat{C}^{\op} / X^{\op}$. Untere diesem Isomorphismus, zsuammen mit dem kanonisch kontravarianten Funktor $X / \mathcat{C} \to  \left( X / \mathcat{C} \right) ^{\op}$ geht nun $\colim X$ in $\lim X^{\op}$ über.
 \end{lemma**}
-
-
-\todo{ausarbeiten}
 
 \begin{example}
     \begin{enumerate}[1)]

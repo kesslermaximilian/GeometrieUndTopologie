@@ -31,7 +31,7 @@
     \end{equation*}
     ist stetig und bijektiv, allerdings kein Homöomorphismus, denn $\left[ 0, \frac{1}{2} \right) \subset [0,1)$ ist offen, aber $f\left(\left[ 0,\frac{1}{2} \right)\right) = \left( f^{-1} \right) ^{-1}\left( \left[ 0,\frac{1}{2} \right)  \right) $ ist nicht offen im Kreis.
 \end{remark}
-\begin{example}
+\begin{example}\label{ex:quotientenräume}
     \begin{enumerate}[1)]
         \item Sei $X = [0,1]^2 \subset \R$. Identifiziere nun $(t,0) \sim  (t,1)$ sowie $(0,s) \sim  (1,s)$ für $s,t\in [9,1]$. Dann ist $X / \sim $ der Torus.
 
@@ -133,17 +133,16 @@
             X / A := X / \sim 
             .\] 
             Damit ergibt sich
-                \item $[0,1] / \left \{0,1\right\} \cong S^1$ 
+        \item\label{item:sierpinski-raum-als-quotient-von-einheitsintervall} $[0,1] / \left[0,1\right) \cong S$  ist der Sierpinski-Raum, vergleiche auch \autoref{ex:sierpinski-raum}.
     \begin{proof}
     $[0,1] / [0,1)$ hat zwei Punkte  $[0,1)$ und  $\left \{1\right\} $. Es ist $[0,1) \subset [0,1]$ offen, aber $\left \{1\right\} $ nicht, also handelt es sich um den Sierpinski-Raum.
     \end{proof}
     \end{enumerate}
 \end{example}
+
 \begin{remark}
-    Quotientenräume von metrischen Räumen sind im Allgemeinen nicht metrisierbar.
+    Quotientenräume von metrischen Räumen sind im Allgemeinen nicht metrisierbar, \autoref{ex:quotientenräume} \autoref{item:sierpinski-raum-als-quotient-von-einheitsintervall} liefert hier ein gewünschtes Gegenbeispiel.
 \end{remark}
-
-
 
 
 \section{Trennungsaxiome}
@@ -168,9 +167,9 @@
     .\] 
     Dann ist $U_x \cap U_y = \emptyset$, denn für alle $z\in U_x \cap U_y$ ist
     \[
-        d(x,y) \leq  d(x,z) + d(z,y) < \frac{d(x,y)}{2} + \frac{d(x,y)}{2} = d(x,y)
-    .\] 
-    , was nicht sein kann.
+        d(x,y) \leq  d(x,z) + d(z,y) < \frac{d(x,y)}{2} + \frac{d(x,y)}{2} = d(x,y),
+    \] 
+    was nicht sein kann.
 \end{proof}
 \begin{example}
     $\R^n$ ist Hausdorffsch.
@@ -182,7 +181,7 @@
     Für $y\neq x$ existiert $U_y$ offen mit  $x\not\in U_y$ und $y\in U_y$. Dann ist
     \[
     X \setminus \left \{x\right\}  = \bigcup_{y\neq x} U_y 
-    .\] 
+    \] 
     offen. \\
 \end{proof}
     \begin{minipage}{\textwidth}
@@ -196,7 +195,7 @@
 \begin{remark*}
     Man findet in der Literatur auch folgende Definition: \\
     Ein topologischer Raum heißt $T_1$-Raum, wenn es für je zwei verschieden Punkte $x\neq y$ Umgebungen $U_x,U_y$ gibt mit  $x\in U_x, y\in U_y$ und $x\not\in U_y, y\not\in U_x$. \\
-    Im Gegensatz zum Hausdorff-Raum trennen wir zwei Punkte also durch 2 nicht notwendigerweies offene Umgebungen. Mit dem gleichen Beweis wie in \autoref{thm:hausdorff-impliziert-t1} zeigen wir dann, dass jeder Punkt abgeschlossen ist. Ist umgekehrt $X$ ein Raum, in dem alle Punkte abgeschlossen sind, so können wir  $x,y$ stets durch die offenen Umgebungen  $y\in X \setminus \left \{x\right\} $ sowie $x\in X \setminus \left \{y\right\} $ trennen. Die beiden Definitionen sind also äquivalent.
+    Im Gegensatz zum Hausdorff-Raum trennen wir zwei Punkte also durch 2 nicht notwendigerweies disjunkte Umgebungen / offene Mengen. Mit dem gleichen Beweis wie in \autoref{thm:hausdorff-impliziert-t1} zeigen wir dann, dass jeder Punkt abgeschlossen ist. Ist umgekehrt $X$ ein Raum, in dem alle Punkte abgeschlossen sind, so können wir  $x,y$ stets durch die offenen Umgebungen  $y\in X \setminus \left \{x\right\} $ sowie $x\in X \setminus \left \{y\right\} $ trennen. Die beiden Definitionen sind also äquivalent.
 
 
     \begin{minipage}{\textwidth}
@@ -213,8 +212,8 @@
 \begin{proof}
     Sei $x\neq y\in A$. Dann existieren $U_x, U_y\subset X$ offen mit $x\in U_x$ und $y\in U_y$ sowie $U_x \cap U_y = \emptyset$. Dann sind
     \[
-    U_x \cap A \qquad U_y \cap A \subset A
-    .\] 
+    U_x \cap A \qquad \text{und} \qquad U_y \cap A \subset A
+    \] 
     offen in $A$ und erfüllen die Bedingungen.
 \end{proof}
 
@@ -226,7 +225,7 @@
     Für jedes $y\neq x$ existiert ein $U_x^y$ offen mit  $x\in U_x^y$ und $y\not\in U_x^y$. Dann ist aber
     \[
     \left \{x\right\}  = \bigcap_{y\neq x} U_x^{y}
-    .\] 
+    \] 
     offen (da $X$ endlich), also ist $X$ diskret. Die Umkehrung ist offensichtlich.
 \end{proof}
 \begin{example}

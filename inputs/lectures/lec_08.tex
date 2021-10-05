@@ -32,7 +32,7 @@ Damit ist insbesondere
 
 \begin{trivial*}
     Bei $\coprod_{i \in I}X_i$ handelt es sich um das Koprodukt der $X_i$ in  $\Set$. \\
-    Ein Koprodukt erfüllt die gleiche Universelle Eigenschaft, wenn man die Richtung aller Abbildungen umdreht, d.h. $X$ ist Koprodukt der  $X_i$ in  $\Set$ genau dann, wenn  $X$ Produkt der  $X_i$ in  $\Set\op$ ist. Für eine genauere Formulierung vergleiche \autoref{thm:universelle-eigenschaft-koprodukt}.
+    Ein Koprodukt erfüllt die gleiche Universelle Eigenschaft, wenn man die Richtung aller Abbildungen umdreht, d.h. $X$ ist Koprodukt der  $X_i$ in  $\Set$ genau dann, wenn  $X$ Produkt der  $X_i$ in  $\Set^{\op}$ ist. Für eine genauere Formulierung vergleiche \autoref{thm:universelle-eigenschaft-koprodukt}.
 \end{trivial*}
 
 \begin{notation**}
@@ -100,7 +100,6 @@ Damit ist insbesondere
 \begin{example}
     \begin{enumerate}[1.]
         \item Betrachte einen Kreis und einen Torus, die getrennt in $\R^3$ liegen. Die Unterraumtopologie auf dieser Menge ist die gleiche wie die Topologie der disjunkten Vereinigung.
-            \missingfigure{Disjunkte Vereinigung von Kreis und Torus in $\R^3$}
         \item Auch wenn $[0,1]\cup [\frac{1}{2},1] = [0,1]$ ist die Koprodukttopologie auf $[0,1] \sqcup [\frac{1}{2},1]$ nicht die Unterraumtopologie auf $[0,1]$. (die beiden Räume sind schon als Mengen nicht gleich).
     \end{enumerate}
 \end{example}
@@ -144,7 +143,6 @@ Sei $X$ ein topologischer Raum und $X_1,X_2\subset X$ Unterräume sowie $X_1\cup
 
 \begin{example}
     Sei $X = [0,1], X_1 = [0,\frac{1}{2}]$ und $X_2 = (\frac{1}{2},1]$, also $X = X_1 \sqcup X_2$. Allerdings ist $X_1 \coprod X_2 \neq X$, weil die Menge $[0,\frac{1}{2}]$ offen in $X_1\coprod X_2$ ist, allerdings nicht in $[0,1]$. 
-    \missingfigure{Intervalle skizzieren}
 \end{example}
 
 \begin{remark*}
@@ -303,7 +301,7 @@ Es ist z.B. $S^1\tsmash S^1 \cong S^2$ und sogar allgemein $S^n \tsmash S^n \con
 %\end{gag}
 
 
-\missingfigure{Torus als Smash-Produkt $S^1 \tsmash S^1$}
+\missingfigure{Torus als Wedge-Produkt $S^1 \twedge S^1$ und $S^2$ als Smash Produkt $S^1 \tsmash S^1$}
 %%%%%Für die Latex-Nutzer: Ich verwende die Befehle \twedge und \tsmash, um die topologischen wedge und smash- symbole zu erzeugen. Ich bin ein Fan von semantischen Commands, das ermöglich a) sich nicht verwirren zu lassen, wenn man TeXt, wenn man den Code wieder liest etc und vermeidet Konflikte mit anderen Definitionen bzw. Dateien (und verwirrt mich weniger). Außerdem hat es den Vorteil, dass ich jederzeit \twedge und \tsmash neu definieren kann, sollte es nötig sein. Die No tation ist etwas analog zu \land und \lor für 'logic and" und 'logic ar' etc.
 \begin{remark*}
     In der Pause stellte sich die Frage, ob es ein Beispiel für einen nicht-normalen Hausdorff-Raum gibt. Siehe hierzu \cite[][Gegenbeispiel 86]{counterexamples}.

@@ -46,7 +46,6 @@
             Also ist $\Delta(p) \cong \mathbb{Z} / 2\mathbb{Z}$, denn es gibt nur eine Gruppe mit 2 Elementen.
     \end{enumerate}
 \end{example}
-\todo{Buchstabe für die Antipodalabbildung?}
 
 \begin{notation*}
     Ist $H$ eine Untergruppe von  $G$, so schreiben wir  $H \leq G$, nicht wie ansonsten üblich $H \subset G$.
@@ -86,8 +85,14 @@
 e & \longmapsto &  \left[ p \circ  v \right] _H
     \end{array} \right.
 \end{equation*}
-eine Bijektion, wobei $v$ ein Weg von  $e_0$ nach $e$ sei.
-\todo{Erklärung davon}
+eine Bijektion, wobei $v$ ein Weg von  $e_0$ nach $e$ sei. Nach \autoref{thm:äquivalenz-von-überlagerungen-über-lokal-wegzsuammenhängendem-wegzusammenhängendem-raum} ist nämlich der Isomorphismus
+    \begin{equation*}
+    \begin{array}{c c l} 
+        E & \longrightarrow & E(H) \\
+        e_0 & \longmapsto &  \left[ c_{p(e_0)} \right] _H
+    \end{array}
+\end{equation*}
+durch Wegeliftung bestimmt. $\left[ p \circ  v \right] _H$ ist nun aber per Definition der Endpunkt der Liftung von $p \circ  v$ mit Startpunkt $\left[ c_{p(e_0)} \right] _{H}$, also genau das Bild von $e$ unter dem bereits bekannten Isomorphismus.
 
 Insbesondere erhalten wir auch eine Bijektion
 \[
@@ -277,5 +282,5 @@ Eine Links-$G$-Menge ist nämlich nichts anderes als Ein Funktor  $\mathcat{G} \
 \end{nexample}
 
 \begin{oral}
-    Semidirekte Produkte machen zwischen beliebigen Gruppen $G, H$ sind, wenn wir eine Wirkung von $G$ auf  $H$ haben. In obigem Fall gibt es aber nur eine nichttriviale Wirkung von  $\mathbb{Z}$ auf $\mathbb{Z}$, weswegn wir von \textit{dem} semidirekten Produkt $\mathbb{Z} \rtimes \mathbb{Z}$ sprechen können. 
+    Semidirekte Produkte machen zwischen beliebigen Gruppen $G, H$ Sinn, wenn wir eine Wirkung von $G$ auf  $H$ haben. In obigem Fall gibt es aber nur eine nichttriviale Wirkung von  $\mathbb{Z}$ auf $\mathbb{Z}$, weswegn wir von \textit{dem} semidirekten Produkt $\mathbb{Z} \rtimes \mathbb{Z}$ sprechen können. 
 \end{oral}
