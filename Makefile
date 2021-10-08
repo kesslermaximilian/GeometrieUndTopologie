@@ -1,4 +1,4 @@
-TEXINPUTS=LatexPackages//:
+TEXINPUTS=LatexPackagesBuild//:
 
 ### Compilation of the document
 
