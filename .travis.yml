@@ -31,7 +31,6 @@ env:
     - TEXINPUTS='LatexPackages//:'
 
 script:
-    - tree
     - make full-with-gnuplots
     - make gnuplots-master
     - touch full.gnuplots/.gitkeep
@@ -43,7 +42,6 @@ script:
     - mv full.pdf dist/2021_Topologie.pdf
     - mv full.log dist/2021_Topologie.log
     - cd dist/
-    - ls
     - tree -H '.' -I "index.html" -D --charset utf-8 -T "Geometrie und Topologie" > index.html
 
 deploy:
