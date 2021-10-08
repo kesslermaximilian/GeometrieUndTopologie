@@ -59,6 +59,6 @@
     \put(0.42614578,0.37262255){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_2$\end{tabular}}}}%
     \put(0.35559063,0.30833893){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_1$\end{tabular}}}}%
     \put(0.28352693,0.10843252){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\pi_1(U_1,x_0) \star \pi_1(U_2,x_0) \twoheadrightarrow \pi_1(x,x_0)$\end{tabular}}}}%
-    \put(0.32061288,0.07725563){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(Die Skizze wird natürlich noch verbessert)\end{tabular}}}}%
+    \put(0.32061288,0.07725563){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(Die Skizze wird natuerlich noch verbessert)\end{tabular}}}}%
   \end{picture}%
 \endgroup%

@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.5, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'k-blättrige-überlagerung-des-kreises.pdf' (pdf, eps, ps)
+%% Accompanies image file 'sternfoermige-menge.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{714.46016567bp}%
+    \setlength{\unitlength}{686.26418707bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,15 +50,16 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.39460424)%
+  \begin{picture}(1,0.35262944)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{k-blättrige-überlagerung-des-kreises.pdf}}%
-    \put(0.54149693,0.15419817){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p$\end{tabular}}}}%
-    \put(0.24041761,0.19072042){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$z \mapsto z^4$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=2]{k-blättrige-überlagerung-des-kreises.pdf}}%
-    \put(0.24940937,0.10097995){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$S^1$\end{tabular}}}}%
-    \put(0.24887668,0.32999188){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$S^1$\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=3]{k-blättrige-überlagerung-des-kreises.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{sternfoermige-menge.pdf}}%
+    \put(0.66987967,0.1979321){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x_0$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{sternfoermige-menge.pdf}}%
+    \put(0.55753274,0.22697809){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y_1$\end{tabular}}}}%
+    \put(0.85173291,0.15829737){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y_2$\end{tabular}}}}%
+    \put(0.60693044,0.1163312){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y_3$\end{tabular}}}}%
+    \put(0.16373415,0.2637957){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x$\end{tabular}}}}%
+    \put(0.35059036,0.09694468){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$y$\end{tabular}}}}%
   \end{picture}%
 \endgroup%
