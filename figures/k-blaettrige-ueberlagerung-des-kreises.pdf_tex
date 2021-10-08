@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.92.5, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'disjunkte-vereinigung-von-räumen-mit-verschiedener-fundamentalgruppe.pdf' (pdf, eps, ps)
+%% Accompanies image file 'k-blaettrige-ueberlagerung-des-kreises.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{679.85379437bp}%
+    \setlength{\unitlength}{714.46016567bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,14 +50,15 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.28997108)%
+  \begin{picture}(1,0.39460424)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
-    \put(0,0){\includegraphics[width=\unitlength,page=1]{disjunkte-vereinigung-von-räumen-mit-verschiedener-fundamentalgruppe.pdf}}%
-    \put(0.13151833,0.05001373){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$X_1$\end{tabular}}}}%
-    \put(0.55642622,0.0489043){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$X_2$\end{tabular}}}}%
-    \put(0.43013772,0.24746088){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$X \coloneqq  X_1 \coprod X_2$\end{tabular}}}}%
-    \put(0.17589514,0.12656372){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x$\end{tabular}}}}%
-    \put(0.56197331,0.11214125){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$x'$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{k-blaettrige-ueberlagerung-des-kreises.pdf}}%
+    \put(0.54149693,0.15419817){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$p$\end{tabular}}}}%
+    \put(0.24041761,0.19072042){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$z \mapsto z^4$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{k-blaettrige-ueberlagerung-des-kreises.pdf}}%
+    \put(0.24940937,0.10097995){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$S^1$\end{tabular}}}}%
+    \put(0.24887668,0.32999188){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$S^1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{k-blaettrige-ueberlagerung-des-kreises.pdf}}%
   \end{picture}%
 \endgroup%

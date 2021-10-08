@@ -31,6 +31,7 @@ env:
     - TEXINPUTS='LatexPackages//:'
 
 script:
+    - tree
     - make full-with-gnuplots
     - make gnuplots-master
     - touch full.gnuplots/.gitkeep
