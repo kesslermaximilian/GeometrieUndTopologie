@@ -4,19 +4,19 @@ TEXINPUTS=LatexPackages//:
 
 # Compiles the full document, assuming gnuplots already exist
 full: full.gnuplots
-	@TEXINPUTS=${TEXINPUTS} latexmk -pdf -dvi- full.tex
+	@TEXINPUTS=${TEXINPUTS} latexmk -pdf -dvi- -latexoption=-interaction=nonstopmode full.tex
 
 # Compiles the master document, assuming gnuplots already exist
 master: master.gnuplots
-	@TEXINPUTS=${TEXINPUTS} latexmk -pdf -dvi master.tex
+	@TEXINPUTS=${TEXINPUTS} latexmk -pdf -dvi- -latexoption=-interaction=nonstopmode master.tex
 
 # Runs pdflatex on the full document
 full-pdflatex: full.gnuplots
-	@TEXINPUTS=${TEXINPUTS} pdflatex full.tex
+	@TEXINPUTS=${TEXINPUTS} pdflatex -interaction=nonstopmode full.tex
 
 # Runs pdflatex on the master document
 master-pdflatex: master.gnuplots
-	@TEXINPUTS=${TEXINPUTS} pdflatex master.tex
+	@TEXINPUTS=${TEXINPUTS} pdflatex -interaction=nonstopmode master.tex
 
 # Compiles the full document, as well as re-computing the gnuplots.
 full-with-gnuplots: gnuplots-full
