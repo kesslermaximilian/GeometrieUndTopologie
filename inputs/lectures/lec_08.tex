@@ -155,24 +155,35 @@ Eine teilweise Antwort auf obige Frage gibt folgende Konstruktion:
     X_1 \coprod X_2 / \sim 
     .\] 
     wobei $\sim $ erzeugt wird durch $f_1(x) \sim f_2(x)$ für alle $x\in X_0$.
-    \missingfigure{Definition skizzieren}
+
+    \begin{minipage}{\textwidth}
+        \centering
+        \includegraphics[scale=0.25]{figures/handdrawn/definition-disjunkte-vereinigung.png}
+    \end{minipage}
 \end{definition}
+
 \begin{example}
     Betrachte zwei Kopien von $D^2$. Wir können $S^1$ jeweils kanonisch als Rand einbetten, dann erhalten wir
      \[
     D^2 \bigcup_{S^1}D^2 \cong S^2 
     .\] 
     (Das ist noch kein Beweis, aber die Intuition ist klar - mehr dazu später).
-    \missingfigure{Abbildung skizzieren}
+
+    \begin{minipage}{\textwidth}
+        \centering
+        \includegraphics[scale=0.25]{figures/handdrawn/beispiel-disjunkte-vereinigung.png}
+        \captionof{figure}{Disjunkte Vereinigung von $D^2$ und $D^2$ über $S^1$}
+    \end{minipage}
 \end{example}
 \begin{warning}
     Der Raum $X_1\bigcup\limits_{X_0} X_2$ hängt von den Abbildungen $f_1,f_2$ ab. Dazu folgendes:
 \end{warning}
 \begin{example}
     Betrachte wieder zwei Kopien von $D^2$, bette $f_1: S^1 \hookrightarrow  D^2$ kanonisch ein, und bilde $f_2: S^1 \to  D^2$ konstant in den Mittelpunkt ab. Dann erhalten wir eine 'Kugel auf einem runden Tisch'
-    \missingfigure{Disjunkte Vereinigung von zwei Kreisscheiben über $S^1$, 'Kugel auf Tisch'}
+
     \begin{minipage}{\textwidth}
-    \incfig{kugel-auf-tisch}
+        \centering
+        \includegraphics[scale=0.18]{figures/handdrawn/warning-disjunkte-vereinigung.png}
     \end{minipage}
 \end{example}
 
@@ -291,17 +302,18 @@ Damit haben wir überprüft, dass  $X_1\coprod X_2 / \sim $ alle Eigenschaften e
 Es ist z.B. $S^1\tsmash S^1 \cong S^2$ und sogar allgemein $S^n \tsmash S^n \cong S^{2n}$.
 \end{remark*}
 
-%\begin{gag}{$\frac{3}{4}$}
 \begin{definition}[Smash-Produkt]\label{def:smash-produkt}
     Seien $X,Y$ topologische Räume und  $x\in X, y\in Y$ Punkte. Dann ist das \vocab{Smash-Produkt} definiert als
     \[
         (X,x) \tsmash (Y,y) = X\times Y / (X\times \left \{y\right\} \cup \left \{x\right\} \times Y)
     .\] 
 \end{definition}
-%\end{gag}
 
-
-\missingfigure{Torus als Wedge-Produkt $S^1 \twedge S^1$ und $S^2$ als Smash Produkt $S^1 \tsmash S^1$}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.23]{figures/handdrawn/smash-produkt.png}
+    \caption{Entstehung des Torus als $S^1 \tsmash S^1$}
+\end{figure}
 %%%%%Für die Latex-Nutzer: Ich verwende die Befehle \twedge und \tsmash, um die topologischen wedge und smash- symbole zu erzeugen. Ich bin ein Fan von semantischen Commands, das ermöglich a) sich nicht verwirren zu lassen, wenn man TeXt, wenn man den Code wieder liest etc und vermeidet Konflikte mit anderen Definitionen bzw. Dateien (und verwirrt mich weniger). Außerdem hat es den Vorteil, dass ich jederzeit \twedge und \tsmash neu definieren kann, sollte es nötig sein. Die No tation ist etwas analog zu \land und \lor für 'logic and" und 'logic ar' etc.
 \begin{remark*}
     In der Pause stellte sich die Frage, ob es ein Beispiel für einen nicht-normalen Hausdorff-Raum gibt. Siehe hierzu \cite[][Gegenbeispiel 86]{counterexamples}.
@@ -375,7 +387,12 @@ Ist $f_1$ injektiv so ist $j_2$ injektiv. Ist  $f_2$ injektiv, so ist $j_1$ inje
         x = f_2(x_1) = f_2(x_2) = p_3 = = f_2(x_3) = f_2(x_4) = p_5 = \ldots = y
     .\] 
     und damit haben wir $x=y$ gezeigt und  $j_2$ ist wie gewünscht injektiv.
-    \missingfigure{Beweisskizze}
+
+    \begin{minipage}{\textwidth}
+        \centering
+        \includegraphics[scale=0.25]{figures/handdrawn/beweisskizze-lemma-8.6.png}
+        \captionof{figure}{Beweisskizze zu \autoref{lm:injektive-einbettung-ergibt-injetive-projektion-auf-koprodukt-über-basis}}
+    \end{minipage}
 \end{proof}
 
 Wir kehren nun zu unserer Ausgangssituation bzw. Ausgangsfrage zurück: \\
@@ -442,12 +459,7 @@ Wir zeigen die Aussage nur unter Verwendung von 2., der Fall 1. geht analog. Es 
     S^n \cong D^n \bigcup_{S^{n-1}} D^n
     .\] 
     gezeigt.
-    \missingfigure{Kugel skizzieren}
     \begin{warning}
         Auch hier ist wieder wichtig, dass wir $S^{n-1}\hookrightarrow D^n$ jeweils kanonisch einbetten, für andere Abbildungen haben wir bereits gesehen, dass wir andere Räume erhalten können.
     \end{warning}
 \end{example}
-
-
-
-

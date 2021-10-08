@@ -79,13 +79,13 @@ Meistens erfolgt das mit einer induktiven / rekursiven Konstruktion, indem wir n
 
 \begin{example}
     Ein 1-dimensionaler CW-Komplex heißt auch \vocab{Graph}. Er besteht aus 0-Zellen und 1-Zellen. Die 0-Zellen nennen wir \vocab{Ecken} oder auch \vocab{Knoten}, die 1-Zellen \vocab{Kanten}.
-\[
-    \begin{tikzpicture}
-        \draw (0,0) circle (1);
-        \fill (0,-1) circle (2pt);
-    \end{tikzpicture}
-\]
-\missingfigure{Graph}
+
+\begin{minipage}{\textwidth}
+\centering
+\includegraphics[scale=0.35]{figures/handdrawn/graph.png}
+\captionof{figure}{Einige Graphen als $CW$-Komplexe}
+\end{minipage}
+
 \begin{oral}
     \begin{warning}
         Man muss aufpassen, was passiert, wenn es unendlich viele Kanten in einem Punkt gib.
@@ -94,6 +94,8 @@ Meistens erfolgt das mit einer induktiven / rekursiven Konstruktion, indem wir n
 \end{example}
 
 \begin{example}[zwei-dimensional]
+Für eine Skizze siehe \autoref{fig:cw-komplex-s^n}.
+
     Die Sphäre kann auch als CW-Komplex realisiert werden, indem wir eine 0-Zelle und eine 2-Zelle verwenden. Starten wir mit einem Punkt, so gibt es eine offensichtliche Abbildung $\partial D^2 \to  X^0 = \left \{S\right\} $. Wir kleben dann einfach den Rand von $D^2$ an den Punkt und erhalten sofort die Kugel.
 
     Alternativ kann man $S^n$ auch induktiv aufbauen, indem wir verwenden, dass  $S^n$ der Äquator von  $S^{n+1}$ ist, und dann jeweils 2 $n+1$-Zellen an  $S^n$ kleben, um  $S^{n+1}$ zu erhalten.
@@ -110,6 +112,13 @@ Meistens erfolgt das mit einer induktiven / rekursiven Konstruktion, indem wir n
 
     Erinnern wir uns an $\R\mathbb{P}^2 \coloneqq  \faktor{S^2}{x \sim  -x} \cong \faktor{D^2}{x \sim  -x \text{ für }x \in \partial D^2}$. Damit erhalten wir wieder eine Darstellung von $\R\mathbb{P}^2$ als eine 0, eine 1 und eine 2-Zelle.
 \end{example}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.25]{figures/handdrawn/sphaere-cw-komplex.png}
+    \caption{CW-Komplex von $S^n$}
+    \label{fig:cw-komplex-s^n}
+\end{figure}
 
 
 \subsection{Berechnung der Fundamentalgruppe eines CW Komplexes}
@@ -141,12 +150,17 @@ Meistens erfolgt das mit einer induktiven / rekursiven Konstruktion, indem wir n
     Auch hier begnügen wir uns mit Beispielen, und führen keinen Beweis.
 \end{oral}
 
-\todo{TikZ von den Graph erstellen}
 \begin{example}
     \begin{itemize}
         \item 
     Betrachte folgenden Graph:
-    \missingfigure{Graph mit Baum}
+
+    \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[scale=0.25]{figures/handdrawn/graph-mit-baum.png}
+    \captionof{figure}{Ein Graph mit markiertem Teilbaum (grün markiert)}
+    \end{minipage}
+
     der grün markierte Teilgraph ist nun ein Baum. Für die Berechnung der Fundamentalgruppe ziehen wir nun den Baum zusammen, also erhalten wir noch:
     \[
        X \simeq Y \coloneqq 
@@ -166,7 +180,12 @@ Der zusammengezogene Raum $Y$ ist dann tatsächlich homotop zum ursprünglichen 
 \]
 Dann ist $\pi_1(Z) = \left< α,β \mid  \right> $. Die Erzeuger sind gegeben durch $a, bcb^{-1}$
 \item Ist $Z'$ der folgende Graph:
-    \missingfigure{Graph}
+
+    \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[scale=0.25]{figures/handdrawn/graph-mit-3-kreisen.png}
+    \end{minipage}
+    
     So sind die Erzeuger gegeben durch $a,bc b^{-1}, bd$
     \end{itemize}
 \end{example}

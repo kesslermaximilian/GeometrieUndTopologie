@@ -101,7 +101,10 @@
          U\subset X \setminus p_X(A)
     .\] 
     gelten, und damit ist dieses $U$ eine offene Umgebung von  $x\in X \setminus p_X(A)$.
-    \missingfigure{Beweisskizze}
+    \begin{figure}[h]
+        \includegraphics[scale=0.25]{figures/handdrawn/sketch-proof-thm-7.3.png}
+        \caption{Beweisskizze zu \autoref{thm:projektion-auf-x-ist-abgeschlossen-wenn-y-kompakt}}
+    \end{figure}
 \end{proof}
 \begin{lemma}[Subbasis der Produkttopologie]\label{lm:subbasis-der-produkttopologie}
     Seien $X,Y$ topologische Räume. Die Menge
@@ -181,7 +184,11 @@
                \left[0,1\right]^2 / \sim \ar[swap]{ur}{\varphi '}
            \end{tikzcd}
            wobei $\sim $ die Relation ist, die wir für die Konstruktion des Torus verwendet hatten. $\varphi '$ ist stetig und surjektiv nach der Universellen Eigenschaft, und wir sehen leicht, dass $\varphi '$ injektiv ist. Also ist $\varphi '$ stetig und bijektiv. Nun ist aber $[0,1]^2$ kompakt und $S^1 \times S^1$ Hausdorff (z.B. als metrisierbare Teilmenge von $\R^2 \times \R^2$), und somit ist $\varphi '$ ein Homöomorphismus nach \autoref{cor:stetige-bijektion-von-kompaktem-raum-in-hausdorff-raum-ist-homöomorphismus}
-           \missingfigure{Torus als $S^1 \times  S^1$}
+
+           \begin{minipage}{\textwidth}
+               \includegraphics[scale=0.25]{figures/handdrawn/sketch-torus-als-produkt-von-s1-und-s1.png}
+               \captionof{figure}{Die Einbettung von $T\cong S^1 \times  S^1$}
+           \end{minipage}
     \end{enumerate}
 \end{example}
 \begin{corollary}[Komponente eines Produkts]\label{cor:topologischer-raum-ist-natürlich-in-seinem-produkt-enthalten}
@@ -247,7 +254,12 @@ in $X\times \left \{y\right\} $ offen.
         V_y := \bigcap_{i=1} ^{n_Y} V_i^{y}
     .\] 
     Dann ist dies eine Überdeckung von $X\times V_y$. Die $V_y$ bilden nun eine offene Überdeckung von  $Y$, also finden wir wieder eine endliche Teilüberdeckung durch  $V_{y_1}, \ldots, V_{y_n}$. Da wir aber die $X\times V_{y_i}$ jeweils endlich überdeckt haben, können wir nun auch $X\times Y$ endlich überdecken.
-    \missingfigure{Beweis von Tychonoff für endlich viele Räume ohne Satz von Alexander skizzieren}
+
+    \begin{minipage}{\textwidth}
+        \centering
+        \includegraphics[scale=0.25]{figures/handdrawn/beweis-tychonoff-ohne-satz-von-alexander}
+        \captionof{figure}{Skizze für den alternativen Beweis von \autoref{thm:tychonoff} für endlich viele Räume.}
+    \end{minipage}
 \end{remark}
 \begin{ddefinition}[Produkt endlich vieler Mengen]\label{def:produkt-endlich-vieler-mengen}
 Seien $X_1,\ldots,X_n$ topologische Räume. Dann definieren wir ihr Produkt rekursiv durch
