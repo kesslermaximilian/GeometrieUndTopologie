@@ -23,7 +23,7 @@ Wir erinnern uns daran, dass wir gerade dabei waren, \autoref{thm:urysohn} zu be
 
 \begin{proof}[Beweis von \autoref{thm:urysohn} (\nameref{thm:urysohn})]
     \begin{goal}
-        $\forall r\in \Q\cap [0,1]$ konstruiere $V_r \subset X$ offen, sodass
+        $\forall r\in \mathbb{Q}\cap [0,1]$ konstruiere $V_r \subset X$ offen, sodass
          \begin{enumerate}[1.]
             \item $A\subset V_0$
             \item $B\subset X\setminus V_1$
@@ -36,7 +36,7 @@ Dies genügt, denn dann wissen wir mit \autoref{lm:stetige-abbildung-durch-famil
         f(x) & = & 0 \quad \forall x\in V_0 \supset A
         \\ f(x) & = & 1 \quad \forall x \in  X \setminus V_1\supset B
 \end{IEEEeqnarray*}
-Wähle hierzu eine Abzählung $p_1,p_2,\ldots$ von $\Q\cap [0,1]$, sodass $p_1 = 1$ und $p_2 = 0$. Definiere nun $\left \{V_r\right\} $ rekursiv, wobei wir auch induktiv die Invariante erhalten wollen, dass $r<r' \implies \overline{V_r} \subset V_{r'}$.
+Wähle hierzu eine Abzählung $p_1,p_2,\ldots$ von $\mathbb{Q}\cap [0,1]$, sodass $p_1 = 1$ und $p_2 = 0$. Definiere nun $\left \{V_r\right\} $ rekursiv, wobei wir auch induktiv die Invariante erhalten wollen, dass $r<r' \implies \overline{V_r} \subset V_{r'}$.
 \begin{itemize}
     \item $p_1 = 1$. Setze $V_1 \coloneqq X\setminus B$ (offen, weil $B$ abgeschlossen ist)
     \item  $p_2 = 0$. Nach \autoref{trennung-von-mengen-in-normalem-raum-für-urysohn-lemma} mit $A = A$ und  $U = X\setminus B$ finden wir $V_0$ offen mit 
@@ -107,7 +107,7 @@ Wir sehen jetzt das \nameref{thm:urysohn} in Action:
         Wir konstruieren eine Folge stetiger Funktionen \\
         $\left \{s_n : X \to  [-1,1]\right\}_{n\geq 1}$, sodass
         \begin{enumerate}[(i)]
-            \item $\left \{s_n\right\} $ konvergiert \vocab[Konvergenz!gleichmäßige]{gleichmäßig} gegen eine Funktion $s: X \to  [-1,1]$, d.h. für jedes $ε>0$ existiert  $N\in \N$, sodass 
+            \item $\left \{s_n\right\} $ konvergiert \vocab[Konvergenz!gleichmäßige]{gleichmäßig} gegen eine Funktion $s: X \to  [-1,1]$, d.h. für jedes $ε>0$ existiert  $N\in \mathbb{N}$, sodass 
                 \[
                 \emphasize{\forall} x \in X,n\geq N \colon\qquad    d(s_n(x), s(x))<ε
                 .\] 
@@ -170,7 +170,6 @@ Wir sehen jetzt das \nameref{thm:urysohn} in Action:
 \begin{remark*}
     In der Vorlesung kam die Frage auf, ob wir manche der gerade bewiesenen Resultate auch auf die Analysis übertragen können, indem wir z.B. den Fixpunktsatz von Banach anwenden.
 \end{remark*}
-\todo{darüber nachdenken}
 
 \begin{proof}[Fortsetzung des Beweises des \nameref{thm:tietze}]
     Definiere die Folgen $s_n$ induktiv. Dazu \\
@@ -202,7 +201,7 @@ Wir sehen jetzt das \nameref{thm:urysohn} in Action:
     s_{n+1} \coloneqq \sum_{i=1}^{n+1} g_i : X \to \R
     .\] 
     \begin{claim}
-        $s_n$ hat Bild in $[-1,1]$ für jedes  $n\in \N$.
+        $s_n$ hat Bild in $[-1,1]$ für jedes  $n\in \mathbb{N}$.
     \end{claim}
     \begin{subproof}
         \begin{IEEEeqnarray*}{rCl}
@@ -214,7 +213,7 @@ Wir sehen jetzt das \nameref{thm:urysohn} in Action:
         Die andere Schranke zeigt man völlig analog.
     \end{subproof}
     \begin{claim}
-        Die Folge $\left \{s_n\right\} _{n\in \N}$ konvergiert gleichmäßig gegen $s$.
+        Die Folge $\left \{s_n\right\} _{n\in \mathbb{N}}$ konvergiert gleichmäßig gegen $s$.
     \end{claim}
     \begin{subproof}
         Für $k>n$ ist 
@@ -228,7 +227,7 @@ Wir sehen jetzt das \nameref{thm:urysohn} in Action:
         \begin{enumerate}[(i)]
             \item Für jedes $x\in X$ ist $\left \{s_n(x)\right\}_{n\geq 1} $ eine Cauchy-Folge, also konvergiert sie zu einem Punkt $s(x) \in [-1,1]$.
             \item Intuitiv reicht es für gleichmäßige Stetigkeit schon zu sehen, dass in obiger Abschätzung kein $x$ vorkommt. Genauer: \\
-                Sei  $ε>0$, so  $\exists  N \in \N$ mit $\forall n > N \implies \left( \frac{2}{3} \right) ^n < ε$. Dann ist
+                Sei  $ε>0$, so  $\exists  N \in \mathbb{N}$ mit $\forall n > N \implies \left( \frac{2}{3} \right) ^n < ε$. Dann ist
                 \begin{IEEEeqnarray*}{rCl}
                     \abs{s(x) - s_n(x)} & = & \abs{\lim_{k \to \infty} s_k(x) - s_n(x)} \\
                                         & = & \lim_{k \to \infty} \abs{s_k(x) - s_n(x)} \\
@@ -278,11 +277,11 @@ Wir sehen jetzt das \nameref{thm:urysohn} in Action:
 \end{theorem}
 \begin{proof}
     \begin{strategy}
-        \underline{Schritt 1}: Betrachte $\prod_{\N} [0,1]$ in der Produkttopologie und zeige, dass der Raum emtrisierbar ist. Dieser Raum heißt \vocab{Hilbert-Würfel}.  \\
-        \underline{Schritt 2}: Sei $X$ normal mit abzählbarer Basis, wir zeigen, dass wir eine Einbettung  $F : X \to  \prod_{\N} [0,1]$ finden.
+        \underline{Schritt 1}: Betrachte $\prod_{\mathbb{N}} [0,1]$ in der Produkttopologie und zeige, dass der Raum emtrisierbar ist. Dieser Raum heißt \vocab{Hilbert-Würfel}.  \\
+        \underline{Schritt 2}: Sei $X$ normal mit abzählbarer Basis, wir zeigen, dass wir eine Einbettung  $F : X \to  \prod_{\mathbb{N}} [0,1]$ finden.
         Dann sind wir fertig, da 
         \[
-            X \cong F(X) \subset \prod_{\N}[0,1]
+            X \cong F(X) \subset \prod_{\mathbb{N}}[0,1]
         .\] 
         ein Unterraum eines metrischen Raumes ist.
     \end{strategy}

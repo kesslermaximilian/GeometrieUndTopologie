@@ -1,5 +1,5 @@
 %! TEX root = ../../master.tex
-\lecture[Bijektion zwischen Faser und Fundamentalgruppe für einfach zusammenhängende Überlagerungen. Fundamentalgruppe von $S^1$. Einfacher Zusammenhang von  $\R^n$, $ninn\N$ und $S^n$, $n\geq 2$. Stereographische Projektion $S^n \setminus \left\{\star\right\}\cong \R^n$. Lokal Wegzusammenhängende Räume und ihre Wegzusammenhangskomponenten. Überlagerungen über lokal wegzusammenhängenden Räumen. Allgemeiner Liftungssatz.]{Do 17 Jun 2021}{Die Fundamentalgruppe von $S^1$}
+\lecture[Bijektion zwischen Faser und Fundamentalgruppe für einfach zusammenhängende Überlagerungen. Fundamentalgruppe von $S^1$. Einfacher Zusammenhang von  $\R^n$, $ninn\mathbb{N}$ und $S^n$, $n\geq 2$. Stereographische Projektion $S^n \setminus \left\{\star\right\}\cong \R^n$. Lokal Wegzusammenhängende Räume und ihre Wegzusammenhangskomponenten. Überlagerungen über lokal wegzusammenhängenden Räumen. Allgemeiner Liftungssatz.]{Do 17 Jun 2021}{Die Fundamentalgruppe von $S^1$}
 
 \begin{notation*}
     Sei $p\colon  E \to  X$ eine Überlagerung, $w\colon  I \to  X$ ein Weg mit $w(0) = x$ und  $e\in p^{-1} (x)$. Dann notieren wir mit $L(w,e)$ die Hebung von  $w$ mit Anfangspunkt  $e$, die nach dem \nameref{thm:weghebungssatz} eindeutig existiert.
@@ -31,14 +31,14 @@
 \end{oral}
 
 \begin{theorem}\label{thm:fundamentalgruppe-von-s1-kreis}
-    Es ist $\pi_1(S^1,1) \cong \Z$.
+    Es ist $\pi_1(S^1,1) \cong \mathbb{Z}$.
 \end{theorem}
 
 \begin{proof}
     Wir betrachten die Überlagerung $\exp \colon  \R \to  S^1$. Zudem ist $\R$ einfach zusammenhängend. Wir wählen das Urbild $0\in \exp ^{-1}(1)$. Nach \autoref{thm:fundamentalgruppe-durch-überlagerung-mit-einfach-zusammenhängendem-raum} ist nun
         \begin{equation*}
         \varphi : \left| \begin{array}{c c l} 
-            \pi_1(S^1,1) & \longrightarrow & \exp ^{-1}(1) = \Z \subset \R \\
+            \pi_1(S^1,1) & \longrightarrow & \exp ^{-1}(1) = \mathbb{Z} \subset \R \\
             \left[w\right] & \longmapsto &  L(w,0)(1)
         \end{array} \right.
     \end{equation*}
@@ -55,10 +55,10 @@
     \[
         L(w',L(w,0)(1))(t) = L(w',0)(t) + L(w,0)(1)
     .\] 
-    Wir erhalten hier die Hebung an $0$ mit einer Verschiebung um  $L(w,0)(1)$ - diese ist auch eine Hebung, weil  $\exp (t+n) = \exp (t)$ periodisch ist, und $L(w,0)(1)\in \Z$ ein Vielfaches der Periode 1 ist.
+    Wir erhalten hier die Hebung an $0$ mit einer Verschiebung um  $L(w,0)(1)$ - diese ist auch eine Hebung, weil  $\exp (t+n) = \exp (t)$ periodisch ist, und $L(w,0)(1)\in \mathbb{Z}$ ein Vielfaches der Periode 1 ist.
 
     \begin{remark*}
-        An dieser Stelle - nämlich dass $L(w,0)(1)\in \Z$, und wir somit mit $L(w',0)(t) + L(w,0)(1)$ wieder eine Hebung von  $w'$ erhalten - geht maßgeblich in den Beweis ein, dass wir  $1\in S^1$ als Basispunkt für die definierte Abbildung $\varphi $ gewählt haben. $\varphi $ ist zwar auch für andere Basispunkte in $S^1$ eine Bijektion, nicht jedoch ein Gruppenhomomorphismus (das Urbild hat in diesem Fall auch gar keine Gruppenstruktur).
+        An dieser Stelle - nämlich dass $L(w,0)(1)\in \mathbb{Z}$, und wir somit mit $L(w',0)(t) + L(w,0)(1)$ wieder eine Hebung von  $w'$ erhalten - geht maßgeblich in den Beweis ein, dass wir  $1\in S^1$ als Basispunkt für die definierte Abbildung $\varphi $ gewählt haben. $\varphi $ ist zwar auch für andere Basispunkte in $S^1$ eine Bijektion, nicht jedoch ein Gruppenhomomorphismus (das Urbild hat in diesem Fall auch gar keine Gruppenstruktur).
     \end{remark*}
     Alles in allem können wir nun nachrechnen, dass
     \begin{IEEEeqnarray*}{rCl}
@@ -76,7 +76,7 @@
 \end{proof}
 
 \begin{oral}
-    Es ist hier ein bisschen Glück bzw. Zufall, dass die Bijektion $\varphi $ sogar ein Gruppenhomomorphismus ist. Im Allgemeinen wir dies nicht so sein, wir werden uns aber im Zuge von \textit{Gruppenwirkungen} dieser Thematik auch im Allgemeineren noch annähern.
+    Es ist hier ein bisschen Glück bzw. Zufall, dass die Bijektion $\varphi $ sogar ein Gruppenhomomorphismus ist. Im Allgemeinen wird dies nicht so sein, wir werden uns aber im Zuge von \textit{Gruppenwirkungen} dieser Thematik auch im Allgemeineren noch annähern.
 \end{oral}
 
 
@@ -102,7 +102,7 @@
 \end{proof}
 
 \begin{theorem}\label{thm:r^n-einfach-zusammenhängend}
-    $\forall n\in \N$ ist $\R^n$ einfach zusammenhängend, insbesondere $\pi_1(\R^n,0) = 0$.
+    $\forall n\in \mathbb{N}$ ist $\R^n$ einfach zusammenhängend, insbesondere $\pi_1(\R^n,0) = 0$.
 \end{theorem}
 
 \begin{remark*}
@@ -110,7 +110,7 @@
 \end{remark*}
 
 \begin{theorem}\label{thm:s^n-einfach-zusammenhängend-wenn-n-geq-2}
-    Sei $n\in \N$ mit $n\geq 2$. Dann ist $S^n$ einfach zusammenhägend, insbesondere $\pi_1(S^n,1) = 0$. 
+    Sei $n\in \mathbb{N}$ mit $n\geq 2$. Dann ist $S^n$ einfach zusammenhägend, insbesondere $\pi_1(S^n,1) = 0$. 
 \end{theorem}
 
 Als kleine Vorbereitung benötigen wir:
@@ -187,7 +187,7 @@ weswegen wir die obige Form der Abbildung erhalten.
     \[
     V \coloneqq  U_1 \cap U_2 = S^n \setminus \left \{(0,0,\ldots,1) , (0,0,\ldots,-1)\right\}  \cong S^{n-1}\times \R
     .\] 
-    wegzusammenhängend für $n\geq 2$. Nach dem Lebesguelemma existiert $n\in \N$, sodass
+    wegzusammenhängend für $n\geq 2$. Nach dem Lebesguelemma existiert $n\in \mathbb{N}$, sodass
     \[
         \forall i\leq n-1 \exists k\in \left \{1,2\right\} \text{ mit } w\left( \left[ \frac{i}{n},\frac{i+1}{n} \right]  \right) \subset U_k
     .\] 

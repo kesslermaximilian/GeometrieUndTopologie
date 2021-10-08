@@ -71,6 +71,7 @@ Der Aufbau ist wie folgt:
         \forall ε > 0 \; \exists \delta > 0 \; \forall x' \colon d(x,x') < \delta \implies d'(f(x), f(x')) < ε
     .\] 
     Eine Funktion $f$ heißt \vocab[Stetig]{stetig}, wenn sie in jedem Punkt  $x\in X$ stetig ist.
+
     \begin{minipage}{\textwidth}
         \centering
     \incfig{definition-von-stetigkeit-in-metrischen-raeumen}
@@ -160,9 +161,9 @@ Der Aufbau ist wie folgt:
     \end{enumerate}
 \end{theorem}
 \begin{warning}
-    Eigenschaft $2)$ gilt nicht für unendliche Schnitte. Es ist $\left( -\frac{1}{n},\frac{1}{n} \right) \subset \R$ offen für alle $n\in \N_{>0}$, allerdings ist dann
+    Eigenschaft $2)$ gilt nicht für unendliche Schnitte. Es ist $\left( -\frac{1}{n},\frac{1}{n} \right) \subset \R$ offen für alle $n\in \mathbb{N}_{>0}$, allerdings ist dann
     \[
-        \bigcap_{n\in \N_{>0}} \left( -\frac{1}{n},\frac{1}{n} \right)  = \left \{0\right\} 
+        \bigcap_{n\in \mathbb{N}_{>0}} \left( -\frac{1}{n},\frac{1}{n} \right)  = \left \{0\right\} 
     .\] 
     nicht offen.
 \end{warning}
@@ -246,7 +247,7 @@ Der Aufbau ist wie folgt:
     offen und wir sind fertig.
 \end{proof}
 
-\begin{example}
+\begin{example}\label{ex:sierpinski-raum}
     \begin{enumerate}[1)]
         \item Wähle $X = \left \{a,b\right\} $ und setze
             \[

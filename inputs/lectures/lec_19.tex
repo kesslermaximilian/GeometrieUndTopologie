@@ -1,10 +1,10 @@
 %! TEX root = ../../master.tex
-\lecture[Decktransformationen von $\exp\colon\R -> S^1$. Normalisatoren. Gruppenisomorphismus $\Delta(p)\cong H \backslash N_{pi1(X,x0)}H$ zwischen Decktransformationen und ~Fundamentalgruppe. Gruppenwirkungen. Semidirekte Produkte und die Fundamentalgruppe des Torus $\Z \rtimes \Z$.]{Di 29 Jun 2021}{Decktransformationen}
+\lecture[Decktransformationen von $\exp\colon\R -> S^1$. Normalisatoren. Gruppenisomorphismus $\Delta(p)\cong \cofaktor{H}{N_{\pi_1(X,x_0)}H}$ zwischen Decktransformationen und ~Fundamentalgruppe. Gruppenwirkungen. Semidirekte Produkte und die Fundamentalgruppe des Torus $\mathbb{Z} \rtimes \mathbb{Z}$.]{Di 29 Jun 2021}{Decktransformationen}
 \begin{example}
     \begin{enumerate}[1)]
         \item Betrachte wieder die Überlagerung $\exp \colon  \R \to  S^1$.
             \begin{claim*}
-                $\Delta(\exp) = \left \{T_n \mid  n\in \Z\right\} $ mit $T_n(x) = x+n$.
+                $\Delta(\exp) = \left \{T_n \mid  n\in \mathbb{Z}\right\} $ mit $T_n(x) = x+n$.
             \end{claim*}
             \begin{proof}
                 Wir zeigen zunächst, dass es sich überhaupt um Decktransformationen handelt. Offensichtlich sind das Automorphismen von $\R$, wir müssen noch zeigen, dass diese über $S^1$ sind, es ist hierzu
@@ -12,7 +12,7 @@
                      \exp (T_n(x)) = \exp (x+n) = \exp (x)
                 .\] 
 
-                Sei nun $f\in \Delta(\exp )$ eine beliebige Decktransformation. Dann ist $f(0) \in \Z$ weil $\exp ^{-1}(1) \in \Z$ und $f$ ein Morphismus über  $S^1$ ist. Betrachte nun
+                Sei nun $f\in \Delta(\exp )$ eine beliebige Decktransformation. Dann ist $f(0) \in \mathbb{Z}$ weil $\exp ^{-1}(1) \in \mathbb{Z}$ und $f$ ein Morphismus über  $S^1$ ist. Betrachte nun
                     \begin{equation*}
             \varphi \colon \left|        \begin{array}{c c l} 
                     \R & \longrightarrow & \R \\
@@ -23,7 +23,7 @@
                \[
                    \exp (f(x) - (x + f(0)) = \exp (f(x)) \cdot  \exp (x)^{-1} \cdot \exp (f(0))^{-1} = \exp (x) \exp (x)^{-1} = 1
                .\] 
-               Also ist $\varphi (\R) \in \Z$, also konstant weil $\Z$ die diskrete Topologie trägt. Mit $f(0) - (0 + f(0)) = 0$ sehen wir $\varphi  \equiv 0$.
+               Also ist $\varphi (\R) \in \mathbb{Z}$, also konstant weil $\mathbb{Z}$ die diskrete Topologie trägt. Mit $f(0) - (0 + f(0)) = 0$ sehen wir $\varphi  \equiv 0$.
                 \[
                     f(x) = x + f(0) \quad \implies \quad f = T_{f(0)}
                .\] 
@@ -43,10 +43,9 @@
                 stetig ist. Die Abbildung $\sgn$ ist also konstant, und es folgt  $f=\id_{S^n}$ für $\sgn \equiv 1$, und $f = ι$ für  $\sgn \equiv -1$.
             \end{proof}
 
-            Also ist $\Delta(p) \cong \Z / 2\Z$, denn es gibt nur eine Gruppe mit 2 Elementen.
+            Also ist $\Delta(p) \cong \mathbb{Z} / 2\mathbb{Z}$, denn es gibt nur eine Gruppe mit 2 Elementen.
     \end{enumerate}
 \end{example}
-\todo{Buchstabe für die Antipodalabbildung?}
 
 \begin{notation*}
     Ist $H$ eine Untergruppe von  $G$, so schreiben wir  $H \leq G$, nicht wie ansonsten üblich $H \subset G$.
@@ -69,7 +68,7 @@
 \end{remark}
 
 \begin{remark}
-    Per Definition ist $H$ normal in  $N_GH$. Also ist $H \backslash N_GH$ (die Menge der Linksnebenklassen) wieder eine Gruppe mittels
+    Per Definition ist $H$ normal in  $N_GH$. Also ist $\cofaktor{H}{N_GH}$ (die Menge der Linksnebenklassen) wieder eine Gruppe mittels
     \[
         (Hg) (Hg') = H(gg')
     .\] 
@@ -86,8 +85,14 @@
 e & \longmapsto &  \left[ p \circ  v \right] _H
     \end{array} \right.
 \end{equation*}
-eine Bijektion, wobei $v$ ein Weg von  $e_0$ nach $e$ sei.
-\todo{Erklärung davon}
+eine Bijektion, wobei $v$ ein Weg von  $e_0$ nach $e$ sei. Nach \autoref{thm:äquivalenz-von-überlagerungen-über-lokal-wegzsuammenhängendem-wegzusammenhängendem-raum} ist nämlich der Isomorphismus
+    \begin{equation*}
+    \begin{array}{c c l} 
+        E & \longrightarrow & E(H) \\
+        e_0 & \longmapsto &  \left[ c_{p(e_0)} \right] _H
+    \end{array}
+\end{equation*}
+durch Wegeliftung bestimmt. $\left[ p \circ  v \right] _H$ ist nun aber per Definition der Endpunkt der Liftung von $p \circ  v$ mit Startpunkt $\left[ c_{p(e_0)} \right] _{H}$, also genau das Bild von $e$ unter dem bereits bekannten Isomorphismus.
 
 Insbesondere erhalten wir auch eine Bijektion
 \[
@@ -99,12 +104,12 @@ Insbesondere erhalten wir auch eine Bijektion
     \begin{enumerate}[1)]
         \item Für $f\in \Delta(p)$ ist
             \[
-                \varphi (f(e_0)) \in H \backslash N_{\pi_1(X,x_0)}H
+                \varphi (f(e_0)) \in \cofaktor{H}{N_{\pi_1(X,x_0)}H}
             .\] 
         \item Die Abbildung
                 \begin{equation*}
                 \psi : \left| \begin{array}{c c l} 
-                    \Delta(p) & \longrightarrow & H \backslash N_{\pi_1(X,x_0)}H \\
+                    \Delta(p) & \longrightarrow & \cofaktor{H}{N_{\pi_1(X,x_0)}H} \\
                     f & \longmapsto &  \varphi (f(e_0))
                 \end{array} \right.
             \end{equation*}
@@ -154,7 +159,7 @@ Insbesondere erhalten wir auch eine Bijektion
     .\] 
     also folgt $[p \circ v] \in N_{\pi_1(X,x_0)} H$, und somit insbesondere
     \[
-        \varphi (f(e_0)) = [p \circ  v]_H \in H \backslash N_{\pi_1(X,x_0)} H
+        \varphi (f(e_0)) = [p \circ  v]_H \in \cofaktor{H}{N_{\pi_1(X,x_0)} H}
     .\] 
 \item
     \begin{description}
@@ -231,51 +236,51 @@ Eine Links-$G$-Menge ist nämlich nichts anderes als Ein Funktor  $\mathcat{G} \
 \end{trivial}
 
 \begin{example}
-    Ist $H\leq G$, so ist $H \backslash G$ eine  $G$-Menge mittels  $(Hg)g' = H(gg')$.
+    Ist $H\leq G$, so ist $\cofaktor{H}{G}$ eine  $G$-Menge mittels  $(Hg)g' = H(gg')$.
 \end{example}
 
 \begin{nexample}\label{ex:fundamentalgruppe-der-kleinschen-flasche-mittels-semidirektem-produkt-z-z}
-    Das semidirekte Produkt $\Z \rtimes Z$ von $\Z$ mit $\Z$ ist die Gruppe mit Menge $\Z\times \Z$ und Verknüpfung
+    Das semidirekte Produkt $\mathbb{Z} \rtimes Z$ von $\mathbb{Z}$ mit $\mathbb{Z}$ ist die Gruppe mit Menge $\mathbb{Z}\times \mathbb{Z}$ und Verknüpfung
     \[
         (n,m)(n',m') = (n+(-1)^m n', m + m')
     .\] 
     Es gibt eine Rechtswirkung
         \begin{equation*}
         \begin{array}{c c l} 
-            \R^2\times (\Z\rtimes \Z) & \longrightarrow & \R^2 \\
+            \R^2\times (\mathbb{Z}\rtimes \mathbb{Z}) & \longrightarrow & \R^2 \\
             ((x,y),(n,m)) & \longmapsto &  ((-1)^m(x+n),y+m)
         \end{array}
     \end{equation*}
     (Übung, dass das die Axiome erfüllt).
     \begin{claim*}
-        $\forall (x,y) \in \R^2 \; \exists (n,m) \in \Z\rtimes \Z$, sodass
+        $\forall (x,y) \in \R^2 \; \exists (n,m) \in \mathbb{Z}\rtimes \mathbb{Z}$, sodass
         \[
             (x,y).(n.m) \in I^2
         .\] 
     \end{claim*}
     \begin{proof}
-        Sei $(x,y) \in \R^2$ beliebig. Zunächst existiert ein $m\in \Z$, sodass $y + m \in I$, und dann existiert ein $n\in \Z$ mit $(-1)^m x + n\in I$, dann ist
+        Sei $(x,y) \in \R^2$ beliebig. Zunächst existiert ein $m\in \mathbb{Z}$, sodass $y + m \in I$, und dann existiert ein $n\in \mathbb{Z}$ mit $(-1)^m x + n\in I$, dann ist
         \[
             (x,y) . \underbrace{(0,m).(n,0)}_{=((-1)^mn, m)} = ((-1)^mx, y+m)(n,0) = ((-1)^mx + n, y+m)
         .\] 
     \end{proof}
-        Falls $x\not\in \Z, y\not\in \Z$, so sind $n,m$ eindeutig bestimmt. Mittels den Gleichungen
+        Falls $x\not\in \mathbb{Z}, y\not\in \mathbb{Z}$, so sind $n,m$ eindeutig bestimmt. Mittels den Gleichungen
         \[
             (t,0).(0,1) = (-t,1) \qquad (0,t).(1,0) = (1,t)
         .\] 
-        folgt nun, dass $\faktor{\R^2}{(\Z \rtimes \Z)}$ die Kleinsche Flasche ist.
+        folgt nun, dass $\faktor{\R^2}{(\mathbb{Z} \rtimes \mathbb{Z})}$ die Kleinsche Flasche ist.
         \begin{claim*}
-            Die Abbildung $\R^2 \to  \faktor{\R^2}{\Z \rtimes \Z}$ ist eine Überlagerung und $\Z \rtimes \Z$ sind die Decktransformationen.
+            Die Abbildung $\R^2 \to  \faktor{\R^2}{\mathbb{Z} \rtimes \mathbb{Z}}$ ist eine Überlagerung und $\mathbb{Z} \rtimes \mathbb{Z}$ sind die Decktransformationen.
         \end{claim*}
         \begin{proof}
             Übung.
         \end{proof}
         Da $\R^2$ einfach zusammenhängend ist, folgt mit \autoref{cor:bei-universeller-überlagerung-sind-decktransformationen-isomorph-zu-fundamentalgruppe}, dass
         \[
-            \pi_1(K) \cong \Z \rtimes \Z
+            \pi_1(K) \cong \mathbb{Z} \rtimes \mathbb{Z}
         .\] 
 \end{nexample}
 
 \begin{oral}
-    Semidirekte Produkte machen zwischen beliebigen Gruppen $G, H$ sind, wenn wir eine Wirkung von $G$ auf  $H$ haben. In obigem Fall gibt es aber nur eine nichttriviale Wirkung von  $\Z$ auf $\Z$, weswegn wir von \textit{dem} semidirekten Produkt $\Z \rtimes \Z$ sprechen können. 
+    Semidirekte Produkte machen zwischen beliebigen Gruppen $G, H$ Sinn, wenn wir eine Wirkung von $G$ auf  $H$ haben. In obigem Fall gibt es aber nur eine nichttriviale Wirkung von  $\mathbb{Z}$ auf $\mathbb{Z}$, weswegn wir von \textit{dem} semidirekten Produkt $\mathbb{Z} \rtimes \mathbb{Z}$ sprechen können. 
 \end{oral}

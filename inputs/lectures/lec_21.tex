@@ -1,11 +1,8 @@
 %! TEX root = ../../master.tex
-\lecture[Beispiele zu Seifert van Kampen. $k$-Zellen. CW-Komplexe. Realisierung von Sphären, Tori und  $\R\mathbb{P}^n$ als CW-Komplexe.]{Di 06 Jul 2021}{CW-Komplexe}
 
-\begin{orga}
-    Es gibt jetzt mehr Infos zur Klausur. Dazu findet sich auf eCampus ein Merkblatt zur Klausur. Das wichtigste ist vor allem, eine Ausweiskopie vorher einzusenden.
-\end{orga}
+\lecture[Satz von Seifert van Kampen. Wiederholung: Pushouts. Freie und amalgisierte Produkte von Gruppen als Pushouts in $\Grp$. Die Fundamentalgruppe  $F_2$ von  $S^1 \twedge S^1$. Konstruktion von Räumen mit 'fast' freier Fundamentalgruppe.]{Do 01 Jul 2021}[20]{Seifert van Kampen}[Fortsetzung]
 
-\section{Der Satz von Seifert von Kampen und CW-Komplexe}
+\section{Der Satz von Seifert von Kampen}\label{sec:seifert-van-kampen}
 
 \begin{restatable}[Seifert-van-Kampen]{theorem}{ThmSeifertVanKampen}\label{thm:seifert-van-kampen}
     Sei $X$ ein Raum, seien  $U_1,U_2\subset X$ offen, sodass $U_1\cup U_2 = X$, und bezeichne  $U_3 \coloneqq  U_1 \cap U_2$.
@@ -26,6 +23,85 @@
     \]
 \end{restatable}
 
+
+
+Wir geben zunächst einige Erklärungen und Beispiele zu \autoref{thm:seifert-van-kampen}:
+
+\begin{remark}
+    Ein Pushout in Gruppen ist ein sogenanntes \textit{amalgisiertes Produkt}, d.h.
+    \[
+    \begin{tikzcd}
+        H \ar[swap]{d}{} \ar{r}{} & G_1 \ar{d}{} \\
+        G_2 \ar[swap]{r}{} & G_1 \star_H G_2
+    \end{tikzcd}
+    \]
+    ist ein Pushout.
+\end{remark}
+
+\begin{ddefinition}[Amalgisiertes Produkt]
+    Seien $G_1,G_2$ zwei Gruppen. Sind $G_i = \left< E_i \mid  R_i \right> $ Darstellungen der Gruppen, so ist das \vocab{freie Produkt} von $G_1$ und $G_2$ die Gruppe bestimmt durch
+    \[
+G_1 \star G_2 \coloneqq      \left< E_1 \cup E_2\mid R_1 \cup R_2 \right> 
+    .\] 
+    ,d.h. die Menge aller (endlichen) Wörter mit Elementen aus $G_1$ und $G_2$ mit den kanonischen Verknupfungen von Elementen aus $G_1,G_2$, aber keinerlei weiteren Relationen.
+
+    Sind $\varphi_1\colon H \to  G_1$ und $\varphi_2\colon H\to G_2$ Gruppenhomomorphismen, so ist das \vocab{amalgasierte Produkt} von $G_1$ und $G_2$ über $H$ (mit den Morphismen  $\varphi_1,\varphi_2$) definiert als
+\[
+    G_1\star_H G_2 \coloneqq  \faktor{G_1 \star G_2}{\varphi_1(h) \sim  \varphi_2(h)}
+.\] 
+\end{ddefinition}
+
+\begin{example}\label{ex:fundamentalgruppe-von-s1-wedge-s1}
+    Betrachte $S^1 \twedge S^1$, wir wollen $\pi_1(S^1 \twedge S^1, 1)$ berechnen, und haben dazu $U_1 = ι_1(S^1)$ und $U_2 = ι_2(S^1)$, dann sind beide offenen Mengen nichtleer und wegzusammenhängend, und es ist $U_1 \cap U_2 = \left \{1\right\} $ einelementig. Also ergibt sich
+    \[
+        \pi_1(S^1 \twedge S^1,1) \cong \pi_1(S^1,1) \star_{\pi_1(\left \{1\right\} ,1)} \pi_1(S^1,1) \cong \pi_1(S^1,1) \star \pi_1(S^1,1) \cong \mathbb{Z} \star \mathbb{Z} \cong F_2 = \left< a,b \right> 
+    .\] 
+    \begin{oral}
+        Eigentlich hätten wir $U_1,U_2$ hier offen wählen müssen, um den Satz anwenden zu können. Die Umgebung 'ein bisschen' größer zu machen zerstört aber offensichtlich nichts an der Fundamentalgruppe von $S^1$, deswegen ist das in Ordnung und einfach ein formales Ausformulieren.
+    \end{oral}
+\end{example}
+
+\begin{example}[Nicht-Beispiel]
+    Der Wegzusammenhang ist essentiell!. Wenn wir $S^1 = D^1 \cup_{S^0} D^1$ schreiben, so ist der Schnitt nicht zusammenhängend, weswegen wir nicht die falsche Aussage
+    \[
+        \mathbb{Z} \cong \pi_1(S^1,1) \cong \pi_1(D^1,1) \star_{\pi_1(S^0,1)} \pi_1(D^1,1) \cong \left \{1\right\}  \star_{\left \{1\right\} \star \left \{1\right\} } \cong \left \{1\right\} 
+    .\] 
+    folgern.
+
+    Es ist ebenfalls essentiell, die Offenheit zu fordern, sonst können wir z.B. $S^1$ einfach 'auftrennen'.
+\end{example}
+
+
+\begin{oral}
+    Man kann die Aussage verallgemeinern und die Annahme des Wegzusammenhangs fallen lassen, wenn man statt den Fundamentalgruppen die Fundamentalgruppoide verwendet. Das ist aber nicht unser Ziel, weil dann die Pushouts deutich komplizierter werden.
+\end{oral}
+
+\begin{example}
+    Sei $G = \left< a_1,\ldots,a_n\mid r \right> $ eine Gruppe auf $n$ Erzeugern und einer Relation  $r$. Wir wollen einen Raum konstruieren, der  $\pi_1(X,x_0) = G$ ergibt.
+
+    Betrachte dazu
+    \[
+    Y \coloneqq  \bigvee_{i=1}^{n} S^1
+    .\] 
+    d.h. ein Zusammenkleben von $n$ Schleifen, dann erhalten wir $\pi_1(Y,1) \cong \left< a_1,\ldots,a_n \right> $ als freie Gruppe in $n$ Erzeugern (folgt induktiv aus \autoref{ex:fundamentalgruppe-von-s1-wedge-s1}). Wähle nun eine Schleife $S^1 \stackrel{f}{\longrightarrow} Y$, die $r$ repräsentiert. Definiere nun den Raum  $X$ als das Pushout
+     \[
+    \begin{tikzcd}
+        S^1 \ar[swap]{d}{} \ar{r}{f} & Y \ar{d}{} \\
+        D^2 \ar[swap]{r}{} & X
+    \end{tikzcd}
+    \]
+   und betrachte
+   \[
+       U_1 \coloneqq  {D^2}\degree, \qquad U_2\coloneqq X \setminus \left \{\text{Mittelpunkt von $D^2$}\right\} \simeq Y
+   .\] 
+   Dann ist $U_3 \cong {D^2}\degree \setminus \left \{\text{Mittelpunkt}\right\} \simeq S^1$ und somit
+   \[
+       \pi_1(X) \cong \pi_1(U_1) \star_{\pi_1(U_3)} \pi_1(U_2) \cong \left \{1\right\} \star_{\mathbb{Z}} \pi_1(Y) \cong \faktor{\pi_1(Y)}{\left< \left< r \right>  \right> } = \left< a_1,\ldots,a_n|r \right>  = G
+   .\] 
+\end{example}
+
+\lecture[Beispiele zu Seifert van Kampen.]{Di 06 Jul 2021}[21]{CW-Komplexe}
+
 \begin{figure}[ht]
     \centering
     \incfig{skizze-zu-seifert-van-kampen}
@@ -33,8 +109,7 @@
     \label{fig:skizze-zu-seifert-van-kampen}
 \end{figure}
 
-Betrachte Abbildung \ref{fig:skizze-zu-seifert-van-kampen}, da 'sieht man' viel zur Intuition von Seifert van Kampen.
-
+Betrachte nun \autoref{fig:skizze-zu-seifert-van-kampen}, da 'sieht man' viel zur Intuition von Seifert van Kampen: Einen Weg $α$, der in  $X = U_1 \cup U_2$ verläuft, können wir aufteilen in einzelne kleinere Wege, die in $U_1$ oder $U_2$ verlaufen. Mit Hilfswegen $r_1,r_2$ machen wir daraus Schleifen an $x_0$, die nun in $U_1$ oder $U_2$ verlaufen. So erhalten wir bereits zumindest eine Projektion vom freien Produkt $\pi_1(U_1,x_0) \amalgprod  \pi_1(U_2, x_0)$ nach $\pi_1(X,x_0)$.
 
 Wir erinnerns uns hier auch noch an \autoref{def:wedge-produkt}, das letztendlich auch nur ein Pushout von Räumen ist. Wir können also Seifert van Kampen auch umformulieren zu 'Seifert van Kampen erhält \textit{schöne} Pushouts'.
 
@@ -106,12 +181,12 @@ Wählen wir nun Gruppendarstellungen
         \pi_1(X) \cong \pi_1(U_1,x ) \star_{\pi_1(U_3,x)} \pi_1(U_2, x) 
     .\] 
 
-Da wir schon wissen, dass $\pi_1(T_1) \cong \Z \times  \Z$ die Fundamentalgruppe des Torus ist, und das lässt sich darstellen als
+Da wir schon wissen, dass $\pi_1(T_1) \cong \mathbb{Z} \times  \mathbb{Z}$ die Fundamentalgruppe des Torus ist, und das lässt sich darstellen als
 \begin{IEEEeqnarray*}{rCl}
     \pi_1(T_1) & = & \left< a,b \mid  ab a^{-1} b^{-1} \right> \\
     \pi_1(T_2)               & = & \left< c,d \mid  cdc^{-1}d^{-1} \right> 
 \end{IEEEeqnarray*}
-Man überlegt sich noch, dass $U_3 = A_1 \cup A_2 \simeq S^1$, auch indem wir die extra 'Schläuche' stetig verkürzen, also $\pi_1(U_3) = \Z = \left< γ \mid  \right> $.
+Man überlegt sich noch, dass $U_3 = A_1 \cup A_2 \simeq S^1$, auch indem wir die extra 'Schläuche' stetig verkürzen, also $\pi_1(U_3) = \mathbb{Z} = \left< γ \mid  \right> $.
 \begin{IEEEeqnarray*}{rCl}
     \pi_1(X,x) & = & \left< a,b,c,d \mid  aba^{-1}b^{-1}, cdc^{-1}d^{-1}, a  =  c \right> \\
                                                                             & = & \left< a,b,c,d \mid aba^{-1}b^{-1}, cdc^{-1}d^{-1}, ac^{-1} \right> 
@@ -132,118 +207,13 @@ Man überlegt sich noch, dass $U_3 = A_1 \cup A_2 \simeq S^1$, auch indem wir di
 \end{example}
 
 \begin{dnotation}[Freie Gruppen]
-    Die Notation $\left< a \mid  \right> $ heißt natürlich, dass wir keine Relationen fordern, also $\left<  a \mid  \right>  \cong \Z$. Manchmal lässt man diesen Strich dann auch weg, und schreibt einfach sofort
+    Die Notation $\left< a \mid  \right> $ heißt natürlich, dass wir keine Relationen fordern, also $\left<  a \mid  \right>  \cong \mathbb{Z}$. Manchmal lässt man diesen Strich dann auch weg, und schreibt einfach sofort
     \[
-    \left< a \right>  \cong \Z
+    \left< a \right>  \cong \mathbb{Z}
     .\] 
     Das darf man aber nicht verwechseln mit der von $g$ erzeugten Untergruppe, wenn  $g\in G$ bereits ein Element ist, hier erhalten wir natürlich implizit alle Relationen, die $g$ als Element von $G$ besitzt.
 \end{dnotation}
 
-\begin{definition}[$k$-Zelle]\label{def:k-zelle}
-    Eine \vocab{$k$-Zelle},  $k\geq 0$, ist ein Raum der homöomorph zu $D^k$ ist. Eine \vocab{offene $k$-Zelle} ist eine ein Raum, der homöomorph zu ${D^k}\degree$  ist, wobei wie üblich
-    \[
-        D^k \coloneqq  \left \{(x,\ldots,x_k) \mid  \sum x_i ^2 \leq  1\right\} \\
-        {D^k}\degree \coloneqq  \left \{(x_1,\ldots,x_k) \mid  \sum x_i^2 < 1\right\} 
-    .\] 
-    Wir nenen $k$ die  \vocab{Dimension} der Zelle. 
-\end{definition}
-
-\begin{definition}{CW-Komplex}\label{def:cw-komplex}
-    Ein CW-Komplex  $X$ ist ein Hausdorff-Raum, der in offene Zellen  $\left \{c_i\right\} _{i \in I}$ zerfällt, wobei gilt:
-    \begin{enumerate}[1.]
-        \item Zu jeder $k$-Zelle  $c_i \subset X$ existiert eine stetige Abbildung $f_i \colon  D^k \to  X$, sodass ${D^k}\degree \subset D^k$ homöomorph auf $c_i$ und der Rand  $\partial D^k = S^{k-1} \subset D^k$ in eine Vereinigung von endlich vielen Zellen der Dimension $<k$ abgebildet wird. 
-        \item $M\subset X$ ist genau dann offen, wenn $M \cap f_i(D^k)$ für alle $i\in I$ offen ist.
-    \end{enumerate}
-\end{definition}
-
-\begin{oral}
-    $C$ stet für 'closure finite', und  $W$ steht für 'weak'.
-\end{oral}
-
-\begin{dnotation}
-    Das \vocab{k}-Gerüst oder auch \vocab{k}-Skeleet von $X$, notiert  $X^k$, ist die Vereinigung aller seiner Zellen der Dimension  $\leq k$.  
-\end{dnotation}
-
-\begin{remark}
-    Jeder CW-Komplex ist normal (und Hausdorff) sowie lokal zusammenziehbar, d.h. jeder Punkt besitzt eine zusammenziehbare Umgebung.
-
-    Insbesondere ist jeder CW-Komplex
-    \begin{itemize}
-        \item lokal wegzusammenhängend
-        \item (semi) lokal einfachzusammenhängend
-    \end{itemize}
-    und damit besitzt er eine universelle Überlagerung.
-\end{remark}
-
-
-\begin{question}
-    Wie bildet man einen CW-Komplex?
-\end{question}
-
-Meistens erfolgt das mit einer induktiven / rekursiven Konstruktion, indem wir nacheinander die $k$-Skelette spezifizieren. Wir starten mit 
- \begin{enumerate}[1.]
-     \item $X^0$, das  $0$-Gerüst, ist ein diskreter Raum (Punkte sind  $0$-Zellen).
-     \item Haben wir das $k$-Gerüst $X^k$, $k\geq 0$ bereits gegebn, und eine Abbildung
-         \[
-         \varphi _{α}\colon  \partial D^{k+1} = S^k \longrightarrow  X^k
-         .\] 
-         so können wir eine $k+1$-Zelle an  $X^k$ 'ankleben'. Dazu betrachte
-          \[
-\faktor{X^k \bigsqcup D^{k+1}}{x \sim  \varphi _{α}(x)} =: X^k \cup_{\varphi _{α}} D^{k+1}
-         .\] 
-         so setzen wir
-         \[
-             X^{k+1} \coloneqq  X^k \cup _{\left \{\varphi _{α}\right\} } (D^{k+1})_{α}
-         .\] 
-         indem wir alle $k+1$-Zellen gleichzeitig ankleben.
-\end{enumerate}
-
-\begin{remark}
-    Für endliche CW-Komplexe stimmen die Quotiententopologie und die schwache Topologie überein.
-\end{remark}
-
-\begin{oral}
-    Für unendliche Räume erhalten wir genau die Koprodukttopologie.
-\end{oral}
-
-\begin{oral}
-    Der Hawaiianische Ohrring ist kein CW-Komplex.
-\end{oral}
-
-\begin{notation*}
-    Ist $X$ ein CW-Komplex, und existiert  $N$, sodass  $X = X^N$ mit  $N$ minimal, so heißt  $N$ die  \vocab{Dimension} von $X$. 
-\end{notation*}
-
-\begin{example}
-    Ein 1-dimensionaler CW-Komplex heißt auch \vocab{Graph}. Er besteht aus 0-Zellen und 1-Zellen. Die 0-Zellen nennen wir \vocab{Ecken} oder auch \vocab{Knoten}, die 1-Zellen \vocab{Kanten}.
-\[
-    \begin{tikzpicture}
-        \draw (0,0) circle (1);
-        \fill (0,-1) circle (2pt);
-    \end{tikzpicture}
-\]
-\missingfigure{Graph}
-\begin{oral}
-    \begin{warning}
-        Man muss aufpassen, was passiert, wenn es unendlich viele Kanten in einem Punkt gib.
-    \end{warning}
-\end{oral}
-\end{example}
-
-\begin{example}[zwei-dimensional]
-    Die Sphäre kann auch als CW-Komplex realisiert werden, indem wir eine 0-Zelle und eine 2-Zelle verwenden. Starten wir mit einem Punkt, so gibt es eine offensichtliche Abbildung $\partial D^2 \to  X^0 = \left \{S\right\} $. Wir kleben dann einfach den Rand von $D^2$ an den Punkt und erhalten sofort die Kugel.
-
-    Alternativ kann man $S^n$ auch induktiv aufbauen, indem wir verwenden, dass  $S^n$ der Äquator von  $S^{n+1}$ ist, und dann jeweils 2 $n+1$-Zellen an  $S^n$ kleben, um  $S^{n+1}$ zu erhalten.
-
-    Schauen wir nun auf $\R\mathbb{P}^n \coloneqq  \faktor{S^n}{x \sim -x}$, so sehen wir, dass wir die beiden Zellen, die wir für $S^n$ bekommen haben, jeweils identifizieren. Wir können  $\R\mathbb{P}^n$ also realisieren als CW-Komplex mit einer 0, einer 1, \ldots, und einer $n$-Zelle.
-
-    Ein weiterer toller Punkt dieser auf den ersten Blick aufwendigeren Zellstruktur für  $S^n $ ist, dass wir nun
-    \[
-    S^{\infty} \coloneqq  \bigcup_{k=0}^{\infty} S^k 
-    .\] 
-    als die unendlich-dimensionale Sphäre als CW-Komplex definiert / realisiert haben.
-
-    Der Torus kann ebenfalls so realisiert werden, hierzu benötigen wir eine 0-Zelle, zwei 1-Zellen sowie eine 2-Zelle.
-
-    Erinnern wir uns an $\R\mathbb{P}^2 \coloneqq  \faktor{S^2}{x \sim  -x} \cong \faktor{D^2}{x \sim  -x \text{ für }x \in \partial D^2}$. Damit erhalten wir wieder eine Darstellung von $\R\mathbb{P}^2$ als eine 0, eine 1 und eine 2-Zelle.
-\end{example}
+\begin{remark*}
+    Vorlesung 21 setzt hier direkt mit CW-Komplexen, d.h. \autoref{sec:cw-komplexe} fort. Wir geben hier direkt den Rest von \autoref{sec:seifert-van-kampen} wieder.
+\end{remark*}
